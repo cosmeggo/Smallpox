@@ -1,3 +1,11 @@
+SMODS.Atlas({
+    key = "grinch", 
+    path = "jokers\grinch.png", 
+    px = 71,
+    py = 95,
+    atlas_table = "ASSET_ATLAS"
+})
+
 if ( SMODS.Mods["MyDreamJournal"] or {} ).can_load then
     if not MyDreamJournal then
         MyDreamJournal = {}
@@ -91,7 +99,6 @@ end
 
 SMODS.Joker {
     key = "grinch",
-    pos = { x = 2, y = 1 },
     rarity = 2,
     blueprint_compat = true,
     demicolon_compat = true,
@@ -99,7 +106,7 @@ SMODS.Joker {
     cost = 4,
     discovered = true,
     config = { extra = { add = 16, loss = 2 }, },
-    atlas = 'CustomJokers',
+    atlas = 'grinch',
     pronouns = "he_him",
     pools = {Food = true},
     loc_vars = function(self, info_queue, card)
