@@ -25,6 +25,19 @@ return {
                 }
             },
         },
+        Joker = {
+            j_smallpox_blackjack = {
+                            name = {
+                                "Blackjack",
+                                "{s:0.5}Idea by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
+                                "{s:0.3}Code by {s:0.5,C:mult,E:1}Markiplier idk{}{}",
+                            },
+                            text = {
+                                "If you {C:attention}play{} two",
+                                "cards that total {C:attention}21{},",
+                            },
+                        },
+                    },
     }
 }
 
