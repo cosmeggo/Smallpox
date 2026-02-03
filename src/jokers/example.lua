@@ -1,3 +1,12 @@
+-- Example Joker Atlas
+SMODS.Atlas({
+    key = "examplejoker", 
+    path = "jokers\ExampleJoker.png", 
+    px = 71,
+    py = 95,
+    atlas_table = "ASSET_ATLAS"
+})
+
 -- Example Joker
 SMODS.Joker {
     key = "examplejoker",
@@ -7,7 +16,7 @@ SMODS.Joker {
     cost = 2,
     discovered = true,
     config = { extra = { mult = 5 }, },
-    atlas = 'CustomJokers',
+    atlas = 'examplejoker',
 
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult } }
@@ -22,11 +31,4 @@ SMODS.Joker {
     end
 }
 
--- Example Joker Atlas
-SMODS.Atlas({
-    key = "examplejoker", 
-    path = "ExampleJoker.png", 
-    px = 71,
-    py = 95,
-    atlas_table = "ASSET_ATLAS"
-})
+
