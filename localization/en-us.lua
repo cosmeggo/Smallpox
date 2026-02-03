@@ -5,7 +5,7 @@ return {
                                 name = "Blackjack",
                                 text = {
                                     "If you {C:attention}play{} two",
-                                    "cards that total 21,",
+                                    "cards that total {C:attention}21{},",
                                 },
                             },
                         },
