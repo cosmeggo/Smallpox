@@ -127,7 +127,7 @@ SMODS.Joker {
                     scalar_value = "loss", -- the key to the value to scale by, in the ref_table by default
                     operation = "-",
                     scaling_message = {
-                        message = localize { type = 'variable', key = 'a_mult_minus', vars = { card.ability.extra.mult_loss } },
+                        message = localize { type = 'variable', key = 'a_mult_minus', vars = { card.ability.extra.loss } },
                         colour = G.C.GREEN
 				    }
 				})
