@@ -30,7 +30,7 @@ SMODS.Joker {
     atlas = "CustomJokers",
     pos = { x = 3, y = 1 },
 
-    config = { extra = { min = 3, max = 20, moneymin = 1, moneymax = 20} },
+    config = { extra = { min = 4, max = 20, moneymin = 1, moneymax = 20} },
 
     loc_txt = {
         name = "Blackjack",
@@ -114,6 +114,7 @@ SMODS.Joker {
         if context.joker_main and context.full_hand then
             local faces = 0
             local aces = 0
+            local numbers = 0
 
             for _, c in ipairs(context.full_hand) do
                 if c:get_id() == 11 or c:get_id() == 12 or c:get_id() == 13 or c:get_id() == 10 then
@@ -122,10 +123,13 @@ SMODS.Joker {
                 if c:get_id() == 14 then
                     aces = aces + 1
                 end
+                if c:get_id() < 10 then
+                    numbers = numbers + 1
+                end
             end
 
 
-            if faces == 1 and aces == 1 then
+            if faces == 1 and aces == 1 and numbers == 0 then
                 return {
                     Xmult = pseudorandom('BJrandMult', card.ability.extra.min, card.ability.extra.max),
                     dollars  = math.floor(pseudorandom('BJrandMoney', card.ability.extra.moneymin, card.ability.extra.moneymax) + 0.5),
