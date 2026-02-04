@@ -29,12 +29,28 @@ return {
             j_smallpox_blackjack = {
                             name = {
                                 "Blackjack",
-                                "{s:0.5}Idea by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
+                                "{s:0.5}Created by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
                             },
                             text = {
                                 "If you {C:attention}play{} two",
                                 "cards that total {C:attention}21{},",
                             },
+                        },
+                    },
+        Joker = {
+                    j_smallpox_Tatsu = {
+                            name = {
+                                "Butterfly Effect",
+                                "{s:0.5}Created by {s:0.5,C:legendary,E:1}Tatsu{}{}",
+                                "{s:0.4}Programmed by {s:0.4,C:smallpox_typ0,E:1}SLDTyp0{}{}"
+                            },
+                            text = {
+                                "{C:attention}Sell this card{} to",
+                                "{C:red}destroy all other Jokers{}[s]",
+                                "and create an {C:attention}equal{}",
+                                "amount of {C:rare}Rare{} Jokers [s}",
+                                "{C:inactive,s:0.8}(Sustains {}{C:dark_edition,s:0.8}Negative{}{C:inactive,s:0.8}){}"
+                            }
                         },
                     },
     }
