@@ -27,7 +27,7 @@ SMODS.Joker {
     cost = 9,
     discovered = true,
     config = { extra = { emult = 2 }, },
-    atlas = 'examplejoker',
+    atlas = 'mys_minty_vaccine',
 
     loc_vars = function(self, info_queue, card)
         local key = self.key
