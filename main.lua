@@ -29,6 +29,11 @@ SMODS.Atlas({
 
 assert(SMODS.load_file("./src/backs.lua"))()
 assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
+assert(SMODS.load_file("./src/jokers/typ0.lua"))() -- im so goated
+
+assert(SMODS.load_file("./src/jokers/tatsu.lua"))()
+
+assert(SMODS.load_file("./src/jokers/inky.lua"))() -- i rlly like the card art on this one
 
 -- Unsure what this does (apparently it's Talisman stuff)
 local NFS = require("nativefs")
