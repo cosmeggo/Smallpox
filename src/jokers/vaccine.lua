@@ -36,8 +36,10 @@ SMODS.Joker {
             key = key,
             vars = {
                 card.ability.extra.emult,
+                localize("mintypox_name"),
                 colours = {
-                    spcol
+                    spcol,
+                    HEX("CA7CA7")
                 }
             }
         }

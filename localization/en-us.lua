@@ -25,7 +25,10 @@ return {
                 }
             },
             j_smallpox_mys_minty_vaccine = {
-                name = "Vaccine",
+                name = {
+                    "Vaccine",
+                    "{s:0.5}By {s:0.5,V:2}#2#{}"
+                },
                 text = {
                     "{X:dark_edition}^#1#{} Mult if all",
                     "other Jokers are",
@@ -33,7 +36,10 @@ return {
                 }
             },
             j_smallpox_mys_minty_vaccine_alt = {
-                name = "Vaccine",
+                name = {
+                    "Vaccine",
+                    "{s:0.5}By {s:0.5,V:2}#2#{}"
+                },
                 text = {
                     "{X:dark_edition}^#1#{} Mult if",
                     "no other Jokers",
@@ -41,6 +47,11 @@ return {
                 }
             }
         },
+    },
+    misc = {
+        dictionary = {
+            mintypox_name = "mys. minty"
+        }
     }
 }
 
