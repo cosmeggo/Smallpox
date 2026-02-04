@@ -21,7 +21,14 @@ SMODS.Joker{
     eternal_compat = false,
     perishable_compat = false,
 
-    
+    loc_vars = function(self, info_queue, card)
+        return{
+            vars = {
+                colours = { HEX('E51068') }
+            }
+        }
+        
+    end,
 
     remove_from_deck = function(self, card, from_debuff)
         if from_debuff then return end

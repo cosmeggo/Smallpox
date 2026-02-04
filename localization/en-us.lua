@@ -41,7 +41,7 @@ return {
                     j_smallpox_Tatsu = {
                             name = {
                                 "Butterfly Effect",
-                                "{s:0.5}Created by {s:0.5,C:legendary,E:1}Tatsu{}{}",
+                                "{s:0.5}Created by {s:0.5,V:1,E:1}Tatsu{}{}",
                                 "{s:0.3}Programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
                             },
                             text = {
