@@ -25,7 +25,10 @@ return {
                 }
             },
             j_smallpox_grinch = {
-                name = 'The Grinch',
+                name = {
+                    'The Grinch',
+                    '{s:0.5}created by {s:0.5,C:green}soulware{}',
+                },
                 text = {
                    {
                     "{X:mult,C:white}+#1#{} to all {C:mult}+Mult{}",
@@ -42,7 +45,7 @@ return {
             j_smallpox_mys_minty_vaccine = {
                 name = {
                     "Vaccine",
-                    "{s:0.5}By {s:0.5,V:2}#2#{}"
+                    "{s:0.5}created by {s:0.5,V:2}#2#{}"
                 },
                 text = {
                     "{X:dark_edition}^#1#{} Mult if all",
@@ -53,7 +56,7 @@ return {
             j_smallpox_mys_minty_vaccine_alt = {
                 name = {
                     "Vaccine",
-                    "{s:0.5}By {s:0.5,V:2}#2#{}"
+                    "{s:0.5}created by {s:0.5,V:2}#2#{}"
                 },
                 text = {
                     "{X:dark_edition}^#1#{} Mult if",
@@ -62,7 +65,10 @@ return {
                 }
             },
             j_smallpox_demon_core = {
-                name = "Demon Core",
+                name = {
+                    "Demon Core",
+                    '{s:0.5}created by {s:0.5,C:white}ThunderEdge{}',
+                },
                 text = {
                     "When {C:attention}Blind{} is selected,",
                     "this {C:attention}Joker{} gains {X:mult,C:white}X#1#{} Mult",
@@ -87,7 +93,7 @@ return {
             j_smallpox_blackjack = {
               name = {
                 "Blackjack",
-                "{s:0.5}Created by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
+                "{s:0.5}created by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
               },
               text = {
                 "If you {C:attention}play{} two",
@@ -97,8 +103,8 @@ return {
             j_smallpox_Tatsu = {
             name = {
               "Butterfly Effect",
-              "{s:0.5}Created by {s:0.5,C:legendary,E:1}Tatsu{}{}",
-              "{s:0.3}Programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
+              "{s:0.5}created by {s:0.5,C:legendary,E:1}Tatsu{}{}",
+              "{s:0.3}programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
             },
             text = {
               "{C:attention}Sell this card{} to",
@@ -111,8 +117,8 @@ return {
             j_smallpox_Inky = {
               name = {
                 "Restaurant Menu",
-                "{s:0.5}Created by {s:0.5,C:green,E:1}Inky{}{}",
-                "{s:0.3}Programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
+                "{s:0.5}created by {s:0.5,C:green,E:1}Inky{}{}",
+                "{s:0.3}programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
                 },
               text = {
                 "{C:attention}When Sold,{}",
