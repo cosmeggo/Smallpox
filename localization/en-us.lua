@@ -29,10 +29,8 @@ return {
                 text = {
                     "When {C:attention}Blind{} is selected,",
                     "this {C:attention}Joker{} gains {X:mult,C:white}X#1#{} Mult",
-                    "After defeating a {C:attention}Boss",
-                    "{C:attention}Blind{}, if a {C:spectral}Spectral{} Card",
-                    "was not used this {C:attention}Ante,",
-                    "{C:red}debuffs{} {C:attention}1{} random {C:attention}Joker",
+                    "and {C:attention}destroys{} a random",
+                    "card in deck",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
                 }
             }

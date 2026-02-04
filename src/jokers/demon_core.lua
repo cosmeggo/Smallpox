@@ -11,11 +11,11 @@ SMODS.Atlas({
 SMODS.Joker({
 	key = "demon_core",
 	pos = { x = 0, y = 0 },
-	rarity = 2,
+	rarity = 3,
 	blueprint_compat = true,
-	cost = 6,
+	cost = 10,
 	discovered = true,
-	config = { extra = { xmult = 1, xmult_gain = 0.5, spectral_used = false } },
+	config = { extra = { xmult = 1, xmult_gain = 0.25 } },
 	atlas = "demon_core",
 
 	loc_vars = function(self, info_queue, card)
@@ -29,35 +29,14 @@ SMODS.Joker({
 			}
 		end
         if context.setting_blind then
+            local target = pseudorandom_element(G.playing_cards, "demon_core")
+            if target then
+                SMODS.destroy_cards(target)
+            end
             SMODS.scale_card(card, {
                 ref_value = "xmult",
                 scalar_value = "xmult_gain"
             })
         end
-		if context.using_consumeable and context.consumeable.ability.set == "Spectral" then
-			card.ability.extra.spectral_used = true
-		end
-		if
-			context.end_of_round
-			and context.main_eval
-			and not context.game_over
-			and not context.blueprint
-			and context.beat_boss
-		then
-			if not card.ability.extra.spectral_used then
-                local pool = {}
-                for _, c in ipairs(G.jokers.cards) do
-                    if c ~= card then
-                        pool[#pool+1] = c
-                    end
-                end
-				local target = pseudorandom_element(pool)
-                if target then
-                    SMODS.debuff_card(target, true, "smallpox_demon_core")
-                end
-			else
-				card.ability.extra.spectral_used = false
-			end
-		end
 	end,
 })
