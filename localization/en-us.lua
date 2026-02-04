@@ -45,13 +45,73 @@ return {
                     "no other Jokers",
                     "are from {V:1}Smallpox"
                 }
-            }
+            },
+            j_smallpox_demon_core = {
+                name = "Demon Core",
+                text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "this {C:attention}Joker{} gains {X:mult,C:white}X#1#{} Mult",
+                    "and {C:attention}destroys{} a random",
+                    "card in deck",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+                },
+            },
+
+            j_smallpox_bliss = {
+                name = {
+                    'Bliss',
+                    '{s:0.5}created by {s:0.5,C:edition}LasagnaFelidae{}',
+                },
+                text = { 
+                  "Gains {C:chips}#1#{} Chips if {C:attention}#2#{} suits or",
+                  "more have been played.",
+                  "{C:inactive}(Currently {}{C:chips}#3#{}{C:inactive} Chips.)"
+                },
+            },
+       
+            j_smallpox_blackjack = {
+              name = {
+                "Blackjack",
+                "{s:0.5}Created by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
+              },
+              text = {
+                "If you {C:attention}play{} two",
+                "cards that total {C:attention}21{},",
+              },
+            },
+            j_smallpox_Tatsu = {
+            name = {
+              "Butterfly Effect",
+              "{s:0.5}Created by {s:0.5,C:legendary,E:1}Tatsu{}{}",
+              "{s:0.3}Programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
+            },
+            text = {
+              "{C:attention}Sell this card{} to",
+              "{C:red}destroy all other Jokers{}",
+              "and create an {C:attention}equal{}",
+              "amount of {C:rare}Rare{} Jokers",
+              "{C:inactive,s:0.8}(Sustains {}{C:dark_edition,s:0.8}Negative{}{C:inactive,s:0.8}){}"
+              }
+            },
+            j_smallpox_Inky = {
+              name = {
+                "Restaurant Menu",
+                "{s:0.5}Created by {s:0.5,C:green,E:1}Inky{}{}",
+                "{s:0.3}Programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
+                },
+              text = {
+                "{C:attention}When Sold,{}",
+                "Create a random",
+                "{C:attention}Food Joker{}"
+                }
+            },
         },
+  },
+  misc = {
+    dictionary = {
+      mintypox_name = "mys. minty"
     },
-    misc = {
-        dictionary = {
-            mintypox_name = "mys. minty"
-        }
-    }
+  },        
 }
+
 
