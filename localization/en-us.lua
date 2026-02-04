@@ -67,7 +67,7 @@ return {
             j_smallpox_demon_core = {
                 name = {
                     "Demon Core",
-                    '{s:0.5}created by {s:0.5,C:white}ThunderEdge{}',
+                    '{s:0.5}created by {s:0.5,V:1}ThunderEdge{}',
                 },
                 text = {
                     "When {C:attention}Blind{} is selected,",

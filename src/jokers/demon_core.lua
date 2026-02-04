@@ -7,6 +7,15 @@ SMODS.Atlas({
 	atlas_table = "ASSET_ATLAS",
 })
 
+local gradient = SMODS.Gradient({
+	key = "thunderedge_gradient",
+	colours = {
+		HEX("89C41B"),
+		HEX("C5CC41"),
+	},
+	cycle = 5,
+})
+
 -- Example Joker
 SMODS.Joker({
 	key = "demon_core",
@@ -19,7 +28,7 @@ SMODS.Joker({
 	atlas = "demon_core",
 
 	loc_vars = function(self, info_queue, card)
-		return { vars = { card.ability.extra.xmult_gain, card.ability.extra.xmult, } }
+		return { vars = { card.ability.extra.xmult_gain, card.ability.extra.xmult, colours = { gradient } } }
 	end,
 
 	calculate = function(self, card, context)
