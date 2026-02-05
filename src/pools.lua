@@ -1,12 +1,11 @@
---taken from cryptid
+-- taken from cryptid
 -- Pool used by Food Jokers
 SMODS.ObjectType({
 	key = "Food",
-	default = "j_reserved_parking",
+	default = "j_joker",
 	cards = {},
 	inject = function(self)
 		SMODS.ObjectType.inject(self)
-		-- insert base game food jokers
 		self:inject_card(G.P_CENTERS.j_gros_michel)
 		self:inject_card(G.P_CENTERS.j_egg)
 		self:inject_card(G.P_CENTERS.j_ice_cream)
@@ -21,7 +20,7 @@ SMODS.ObjectType({
 
 SMODS.ObjectType({
 	key = "Landscape",
-	default = "j_reserved_parking",
+	default = "j_joker",
 	cards = {},
 	inject = function(self)
 		SMODS.ObjectType.inject(self)
@@ -37,15 +36,13 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
-	object_type = "ObjectType",
 	key = "Meme",
-	default = "j_mr_bones",
+	default = "j_joker",
 	cards = {},
 	inject = function(self)
 		SMODS.ObjectType.inject(self)
-		-- insert base game meme jokers
 		self:inject_card(G.P_CENTERS.j_mr_bones)
-		self:inject_card(G.P_CENTERS.j_four_fingers) --loss reference
+		self:inject_card(G.P_CENTERS.j_four_fingers)
 		self:inject_card(G.P_CENTERS.j_obelisk)
 		self:inject_card(G.P_CENTERS.j_jolly)
 		self:inject_card(G.P_CENTERS.j_space)
@@ -54,21 +51,20 @@ SMODS.ObjectType({
 
 SMODS.ObjectType({
 	key = "Scaling",
-	default = "j_reserved_parking",
+	default = "j_joker",
 	cards = {},
 	inject = function(self)
 		SMODS.ObjectType.inject(self)
-		-- insert base game food jokers
 		self:inject_card(G.P_CENTERS.j_hiker)
 		self:inject_card(G.P_CENTERS.j_bootstraps)
-		self:inject_card(G.P_CENTERS.j_burnt_joker)
-		self:inject_card(G.P_CENTERS.j_glass_joker)
+		self:inject_card(G.P_CENTERS.j_burnt)
+		self:inject_card(G.P_CENTERS.j_glass)
 		self:inject_card(G.P_CENTERS.j_throwback)
-		self:inject_card(G.P_CENTERS.j_flash_card)
+		self:inject_card(G.P_CENTERS.j_flash)
 		self:inject_card(G.P_CENTERS.j_perkeo)
 		self:inject_card(G.P_CENTERS.j_bull)
-		self:inject_card(G.P_CENTERS.j_spare_trousers)
-        self:inject_card(G.P_CENTERS.j_square_joker)
+		self:inject_card(G.P_CENTERS.j_trousers)
+		self:inject_card(G.P_CENTERS.j_square)
 		self:inject_card(G.P_CENTERS.j_vampire)
 		self:inject_card(G.P_CENTERS.j_ride_the_bus)
 		self:inject_card(G.P_CENTERS.j_egg)
@@ -77,19 +73,19 @@ SMODS.ObjectType({
 		self:inject_card(G.P_CENTERS.j_red_card)
 		self:inject_card(G.P_CENTERS.j_hologram)
 		self:inject_card(G.P_CENTERS.j_lucky_cat)
-        self:inject_card(G.P_CENTERS.j_obelisk)
-        self:inject_card(G.P_CENTERS.j_castle)
-        self:inject_card(G.P_CENTERS.j_campfire)
-        self:inject_card(G.P_CENTERS.j_hit_the_road)
-        self:inject_card(G.P_CENTERS.j_wee_joker)
-        self:inject_card(G.P_CENTERS.j_canio)
-        self:inject_card(G.P_CENTERS.j_yorick)
+		self:inject_card(G.P_CENTERS.j_obelisk)
+		self:inject_card(G.P_CENTERS.j_castle)
+		self:inject_card(G.P_CENTERS.j_campfire)
+		self:inject_card(G.P_CENTERS.j_hit_the_road)
+		self:inject_card(G.P_CENTERS.j_wee)
+		self:inject_card(G.P_CENTERS.j_caino)
+		self:inject_card(G.P_CENTERS.j_yorick)
 	end,
 })
 
 SMODS.ObjectType({
 	key = "Smallpox",
-	default = "j_smallpox_smallpox",
+	default = "j_joker",
 	cards = {},
 	inject = function(self)
 		SMODS.ObjectType.inject(self)

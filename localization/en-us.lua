@@ -24,7 +24,7 @@ return {
                     "{C:mult}+#1#{} Mult"
                 }
             }
-        
+        }
     }
 }
 
