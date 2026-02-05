@@ -164,7 +164,12 @@ return {
                     "{C:attention}#1#%{}",
                     },
                 },
-            
+            j_smallpox_examplejoker = {
+                name = 'Joker+',
+                text = {
+                    "{C:mult}+#1#{} Mult"
+                }
+            },
         },
   },
   misc = {
@@ -173,6 +178,7 @@ return {
     },
   },        
 }
+
 
 
 
