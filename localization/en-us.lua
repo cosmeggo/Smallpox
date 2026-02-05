@@ -19,18 +19,32 @@ return {
         },
         Joker = {
             j_smallpox_astro = {
-			  name = {
-                    "Astro",
-                    '{s:0.5}created by {s:0.5,C:blue}Astro{}',
-                    "{s:0.5}programmed by {s:0.5,C:edition}LasagnaFelidae{}{}"
+                name = {
+                     "Astro",
+                     '{s:0.5}created by {s:0.5,C:blue}Astro{}',
+                     "{s:0.5}programmed by {s:0.5,C:edition}LasagnaFelidae{}{}"
                 },
-			  text = { 
-				"Grants {C:chips}#1#{} Chips",
-				"for each {V:1}#2#{} card",
-                "in your deck.",
-				"{s:0.8,C:inactive}(Currently {}{s:0.8,C:chips}#3#{}{s:0.8,C:inactive} Chips. [#4#])"
-			  }
-			},
+                text = { 
+                    "Grants {C:chips}#1#{} Chips",
+                    "for each {V:1}#2#{} card",
+                    "in your deck.",
+                    "{s:0.8,C:inactive}(Currently {}{s:0.8,C:chips}#3#{}{s:0.8,C:inactive} Chips. [#4#])"
+                }
+            },
+            j_smallpox_scales_of_justice = {
+                name = {
+                  "Scales of Justice", 
+                  "{s:0.5}created by {C:purple,s:0.5}Revo",
+                  "{s:0.5}art by {C:blue,s:0.5}Plasma"
+                },
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult if the",
+                    "{C:attention}sum{} of the scored cards' ranks is even", 
+                    "Gives an {C:green}extra{} {X:mult,C:white}X#2#{} Mult",
+                    "if there are {C:attention}equal{} amounts of jokers",
+                    "to this card's left and right.",
+                }
+            }
             j_smallpox_functions = {
                 name = {
                     'Functions',
@@ -179,12 +193,3 @@ return {
     },
   },        
 }
-
-
-
-
-
-
-
-
-

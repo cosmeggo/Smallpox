@@ -28,11 +28,13 @@ SMODS.Atlas({
 -- ASSERTS
 
 assert(SMODS.load_file("./src/backs.lua"))()
+assert(SMODS.load_file("./src/pools.lua"))()
 assert(SMODS.load_file("./src/ui.lua"))() -- The use button
 assert(SMODS.load_file("./src/pools.lua"))()
 assert(SMODS.load_file("./src/sounds.lua"))()
 
 assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
+assert(SMODS.load_file("./src/jokers/scales_of_justice.lua"))() -- Scales of Justice by Revo
 assert(SMODS.load_file("./src/jokers/breuhh.lua"))() -- Functions by Breuhh
 assert(SMODS.load_file("./src/jokers/miller.lua"))() -- VOIDWALKER by Abel
 assert(SMODS.load_file("./src/jokers/grinch.lua"))() -- Grinch by Soulware
