@@ -14,18 +14,32 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
--- Example Joker
+--[[
+Example Joker
+CardPronouns prons: "she_her", "he_him", "they_them", "any_all", "it_its", "she_they", "he_they"
+Pools must always have ["Smallpox"] = true, for other pools, check src/pools.lua if it exists already, if not, WARN the Helpers!
+please set cost according to rarity
++-----+------------+----------+
+|  #  |  Rarity    |  Cost    |
+|-----+------------+----------+
+|  1  |  Common    |  $3-5    |
+|  2  |  Uncommon  |  $5-8    |
+|  3  |  Rare      |  $8-10   |
+|  4  |  Legendary |  $15-20  |
++-----+------------+----------+
+]]
 SMODS.Joker {
     key = "examplejoker",
+    atlas = 'examplejoker',
     pos = { x = 0, y = 0 },
     rarity = 1,
-    blueprint_compat = true,
-    cost = 2,
-    pools = {["Smallpox"]= true}, -- must always have smallpox pool, check pools.lua for other defined pools
+    cost = 3,
+    pools = {["Smallpox"] = true}, -- see comment at the top
+    blueprint_compat = true, -- set to false if you dont want blueprint to copy
     discovered = true,
+    unlocked = true,
     config = { extra = { mult = 5 }, },
-    atlas = 'examplejoker',
-    pronouns = 'he_they', -- "she_her" "he_him" "they_them" "any_all" "it_its" "she_they" "he_they"
+    pronouns = "he_they", -- see comment at top
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult } }
     end,
@@ -40,5 +54,3 @@ SMODS.Joker {
         end
     end
 }
-
-
