@@ -28,8 +28,8 @@ SMODS.Atlas({
 -- ASSERTS
 
 assert(SMODS.load_file("./src/backs.lua"))()
-assert(SMODS.load_file("./src/pools.lua"))()
-assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
+assert(SMODS.load_file("./src/jokers/breuhh/joker.lua"))() -- The breuhh joker
+assert(SMODS.load_file("./src/jokers/breuhh/ui.lua"))() -- The use button
 
 -- Unsure what this does (apparently it's Talisman stuff)
 local NFS = require("nativefs")

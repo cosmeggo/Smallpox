@@ -18,16 +18,19 @@ return {
             },
         },
         Joker = {
-            j_smallpox_smallpox = {
-                name = 'Smallpox',
+            j_smallpox_functions = {
+                name = 'Functions',
                 text = {
-                    "{X:mult,C:white} X#1# {} Mult",
-                    "{C:green}#2# in #3#{} chance for a",
-                    "random Joker to become",
-                    "{V:1}infected{} with {C:attention}Smallpox{}"
+                    "After {C:attention}scoring{} or being {C:attention}used{}:", 
+                    "{C:attention}Randomize{} the {C:spectral,E:1}Scoring Operator",
+                    "between {C:chips}Chips{} and {C:mult}Mult{}.",
+                    "{C:inactive}(Currently {V:1,E:2}#1#{C:inactive})",
+                    " ",
+                    "Can only be {C:attention}used",
+                    "{C:attention}once{} per round",
                 }
-            }
-        }
+            },
+        },
     }
 }
 
