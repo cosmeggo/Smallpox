@@ -19,6 +19,8 @@ SMODS.Joker{
     atlas = "miller", --change later
     cost = 8,
     rarity = 3,
+    pools = {["Smallpox"] = true},
+    pronouns = "he_him",
     discovered = true,
     calculate = function(self, card, context)
         if context.setting_blind and G.GAME.blind.in_blind then
@@ -36,5 +38,6 @@ SMODS.Joker{
         end
     end
 }
+
 
 
