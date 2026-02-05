@@ -1,13 +1,13 @@
 SMODS.Sound({
     key="miller_laugh",
-    path="devil3.ogg",
+    path="miller_laugh.ogg",
     pitch=1,
     volume=0.5,
 })
 
 SMODS.Sound({
     key="miller_drain",
-    path="drain.ogg",
+    path="miller_drain.ogg",
     pitch=1,
     volume=0.3,
 })
