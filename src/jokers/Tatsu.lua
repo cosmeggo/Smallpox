@@ -6,9 +6,6 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
-
-SMODS.Sound({key = "tatsusfx", path = "tatsu.mp3", sync = true,})
-
 SMODS.Joker{
     key = "Tatsu",
 
@@ -58,7 +55,7 @@ SMODS.Joker{
             end
         end
 
-        play_sound('smallpox_tatsusfx', 0.9 + math.random()*0.1, 0.8)
+        play_sound('smallpox_tatsu_sfx', 0.9 + math.random()*0.1, 0.8)
 
         for i = 1, joker_count do
             local pool = {}
