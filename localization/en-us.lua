@@ -26,7 +26,7 @@ return {
                 text = {
                    {
                     "After {C:attention}scoring{} or {C:attention}use{}",
-                    "{C:attention}randomise{} the {C:spectral,E:1}scoring operator{}",
+                    "{C:attention}randomize{} the {C:spectral,E:1}scoring operator{}",
                     "between {C:blue}Chips{} and {C:red}Mult{}",
                     "{C:inactive}(Currently {V:1,E:2}#1#{C:inactive})",
                    },
@@ -96,8 +96,8 @@ return {
                     '{s:0.5}created by {s:0.5,C:edition}LasagnaFelidae{}',
                 },
                 text = { 
-                    "Gains {C:chips}#1#{} Chips if",
-                    "{C:attention}#2#{} or more Suits",
+                    "Gains {C:chips}#1#{} Chips ",
+                    "if {C:attention}#2#{} or more Suits",
                     "have been played",
                     "{C:inactive}(Currently {}{C:chips}#3#{}{C:inactive} Chips.)"
                 },
@@ -160,4 +160,5 @@ return {
     },
   },        
 }
+
 
