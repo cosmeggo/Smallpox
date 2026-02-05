@@ -19,7 +19,10 @@ return {
         },
         Joker = {
             j_smallpox_functions = {
-                name = 'Functions',
+                name = {
+                    'Functions',
+                    '{s:0.5}created by Breuuh',
+                },
                 text = {
                     "After {C:attention}scoring{} or being {C:attention}used{}:", 
                     "{C:attention}Randomize{} the {C:spectral,E:1}Scoring Operator",
@@ -90,20 +93,20 @@ return {
                     '{s:0.5}created by {s:0.5,C:edition}LasagnaFelidae{}',
                 },
                 text = { 
-                  "Gains {C:chips}#1#{} Chips if {C:attention}#2#{} suits or",
-                  "more have been played.",
-                  "{C:inactive}(Currently {}{C:chips}#3#{}{C:inactive} Chips.)"
+                    "Gains {C:chips}#1#{} Chips if {C:attention}#2#{} suits or",
+                    "more have been played.",
+                    "{C:inactive}(Currently {}{C:chips}#3#{}{C:inactive} Chips.)"
                 },
             },
        
             j_smallpox_blackjack = {
               name = {
-                "Blackjack",
-                "{s:0.5}created by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
+                    "Blackjack",
+                    "{s:0.5}created by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
               },
               text = {
-                "If you {C:attention}play{} two",
-                "cards that total {C:attention}21{},",
+                    "If you {C:attention}play{} two",
+                    "cards that total {C:attention}21{},",
               },
             },
             j_smallpox_Tatsu = {
@@ -122,16 +125,28 @@ return {
             },
             j_smallpox_Inky = {
               name = {
-                "Restaurant Menu",
-                "{s:0.5}created by {s:0.5,C:green,E:1}Inky{}{}",
-                "{s:0.3}programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
+                    "Restaurant Menu",
+                    "{s:0.5}created by {s:0.5,C:green,E:1}Inky{}{}",
+                    "{s:0.3}programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
                 },
               text = {
-                "{C:attention}When Sold,{}",
-                "Create a random",
-                "{C:attention}Food Joker{}"
+                    "{C:attention}When Sold,{}",
+                    "Create a random",
+                    "{C:attention}Food Joker{}"
                 }
             },
+            j_smallpox_miller = {
+                name = {
+                    "VOIDWALKER",
+                    "{s:0.5}created by Abel",
+                }
+                text = {
+                    "Reduced blind",
+                    "requirements by", 
+                    "{C:attention}#1#%{}",
+                    },
+                },
+            
         },
   },
   misc = {
@@ -140,3 +155,4 @@ return {
     },
   },        
 }
+
