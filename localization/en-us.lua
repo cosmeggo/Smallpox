@@ -24,22 +24,22 @@ return {
                     '{s:0.5}created by Breuuh',
                 },
                 text = {
-                    {
-                        "After {C:attention}scoring{} or {C:attention}use{}:", 
-                        "{C:attention}randomize{} the {C:spectral,E:1}scoring operator",
-                        "between {C:chips}Chips{} and {C:mult}Mult{}.",
-                        "{C:inactive}(Currently {V:1,E:2}#1#{C:inactive})",
-                    },
-                    {
-                        "Can only be {C:attention}used",
-                        "{C:attention}once{} per round",
-                    }
+                   {
+                    "After {C:attention}scoring{} or {C:attention}use{}",
+                    "{C:attention}randomise{} the {C:spectral,E:1}scoring operator{}",
+                    "between {C:blue}Chips{} and {C:red}Mult{}",
+                    "{C:inactive}(Currently {V:1,E:2}#1#{C:inactive})",
+                   },
+                   {
+                    "Can only be {C:attention}used",
+                    "{C:attention}once{} per round",
+                   }
                 }
             },
             j_smallpox_smallpox = {
                 name = {
                     'Smallpox',
-                    '{s:0.5}created by {s:0.5,V:1}Plasma{}',
+                    '{s:0.5}created by {s:0.5,C:blue}Plasma{}',
                 },
                 text = {
                     "{X:mult,C:white} X#1# {} Mult",
@@ -96,9 +96,9 @@ return {
                     '{s:0.5}created by {s:0.5,C:edition}LasagnaFelidae{}',
                 },
                 text = { 
-                    "Gains {C:chips}#1#{} Chips",
-                    "if {C:attention}#2#{} or more suits",
-                    "have been played.",
+                    "Gains {C:chips}#1#{} Chips if",
+                    "{C:attention}#2#{} or more Suits",
+                    "have been played",
                     "{C:inactive}(Currently {}{C:chips}#3#{}{C:inactive} Chips.)"
                 },
             },
@@ -109,8 +109,9 @@ return {
                     "{s:0.5}created by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
               },
               text = {
-                    "If you {C:attention}play{} two",
-                    "cards that total {C:attention}21{},",
+                    "If {C:attention}two{} cards",
+                    "are {C:attention}played{} that total {C:attention}21{}",
+                    "in Chips, gain"
               },
             },
             j_smallpox_Tatsu = {
@@ -120,8 +121,8 @@ return {
                     "{s:0.3}Programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
                 },
                 text = {
-                    "{C:attention}Sell this card{} to",
-                    "{C:red}destroy all other Jokers{}",
+                    "{C:attention}Sell{} this card to",
+                    "{C:red}destroy{} all other Jokers",
                     "and create an {C:attention}equal{}",
                     "amount of {C:rare}Rare{} Jokers",
                     "{C:inactive,s:0.8}(Sustains {}{C:dark_edition,s:0.8}Negative{}{C:inactive,s:0.8}){}"
@@ -134,7 +135,7 @@ return {
                     "{s:0.3}programmed by {s:0.3,C:smallpox_typ0,E:1}SLDTyp0{}{}"
                 },
               text = {
-                    "{C:attention}When Sold,{}",
+                    "When {C:attention}sold,{}",
                     "Create a random",
                     "{C:attention}Food Joker{}"
                 }
@@ -159,5 +160,4 @@ return {
     },
   },        
 }
-
 
