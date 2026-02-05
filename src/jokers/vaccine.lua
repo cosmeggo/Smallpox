@@ -2,7 +2,7 @@ local debug = false
 local counted = false
 local count = {}
 
-local debuff = SMODS.current_mod.set_debuff or function ()
+local debuff = SMODS.current_mod.set_debuff or function (card)
     return nil
 end
 SMODS.current_mod.set_debuff = function (card)
