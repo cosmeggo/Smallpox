@@ -22,17 +22,13 @@ SMODS.Joker{
     pools = {["Smallpox"] = true},
     pronouns = "he_him",
     discovered = true,
-    config = { extra = { percentage = 0.25}, },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { percentage * 100, }
-    end,
     calculate = function(self, card, context)
         if context.setting_blind and G.GAME.blind.in_blind then
                 return {
                     message = "Drained", colour = G.C.RED,
                     play_sound("smallpox_miller_drain"),
                     func = function()
-                        G.GAME.blind.chips = G.GAME.blind.chips * (1 - card.ability.extra.percentage)
+                        G.GAME.blind.chips = G.GAME.blind.chips * 0.75
                         G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
                     end
                 }
