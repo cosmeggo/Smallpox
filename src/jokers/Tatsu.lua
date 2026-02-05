@@ -6,9 +6,6 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
-
-SMODS.Sound({key = "tatsusfx", path = "tatsu.mp3", sync = true,})
-
 SMODS.Joker{
     key = "Tatsu",
 
