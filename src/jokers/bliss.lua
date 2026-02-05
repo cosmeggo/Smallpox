@@ -13,6 +13,7 @@ SMODS.Joker {
     unlocked = true,
     pools = {["Smallpox"] = true, ["Scaling"] = true, ["Landscape"] = true},
     blueprint_compat = false,
+    pronouns = "it_its",
     rarity = 2,
     cost = 8,
     config = { extra = { change = 10, suits = 3, chips = 10 } },
