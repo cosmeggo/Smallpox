@@ -26,7 +26,7 @@ return {
                     "random Joker to become",
                     "{V:1}infected{} with {C:attention}Smallpox{}"
                 }
-            }
+            },
             j_smallpox_miller = {
                 name = "{C:smallpox_miller}VOIDWALKER{}",
                 text = {
@@ -35,9 +35,9 @@ return {
                         "a {C:attention}25%{}",
                 },
             },
-        },
         }
     }
 }
+
 
 
