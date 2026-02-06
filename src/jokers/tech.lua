@@ -43,14 +43,7 @@ SMODS.Joker {
             }
         end
 
-        if context.retrigger_joker_check and not context.retrigger_joker and context.other_card.config.center.mod == SMODS.Mods['smallpox'] and (context.other_card:is_rarity('Rare') or context.other_card:is_rarity('Legendary')) then
-
-            return {
-                message = "Again!",
-                repetitions = 1,
-                card = card
-            }
-        end
+        
 
         
 

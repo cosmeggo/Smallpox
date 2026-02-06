@@ -196,7 +196,6 @@ return {
                     {
                     'For every {C:attention}Smallpox{} Joker',
                     'give Xmult according to their {C:red}rarity.{}',
-                    'If the Jokers rarity is {C:red}Rare{} or above, Retrigger it.',
                     },
                     {
                     '{C:inactive}[{}{C:common}Common:{}{C:inactive}{C:mult} 1.5X Mult,{} {C:uncommon}Uncommon:{}{C:mult} 2X Mult{}{C:inactive}]{}',
