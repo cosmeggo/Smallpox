@@ -186,20 +186,26 @@ return {
                 }
             },
 
-            j_smallpox_Tech = {
+            j_smallpox_poxofthewild = {
                 name = {
                     'The Pox of The Wild',
-                    "{s:0.5}created by {s:0.5,C:spectral,E:1}Tech{}{}",
-                    "{s:0.5}programmed by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}"
+                    "{s:0.5}created by {s:0.5,C:spectral,E:smallpox_rainbow_wiggle}Tech{}{}",
+                    "{s:0.5}programmed by {s:0.5,C:edition}LasagnaFelidae{}{}",
+					"{s:0.5}art by {s:0.5,C:blue}Plasma{}{}"
                 },
                 text = {
                     {
                     'For every {C:attention}Smallpox{} Joker',
-                    'give Xmult according to their {C:red}rarity.{}',
+                    'give {C:mult}xMult{} according to their {C:dark_edition}rarity.{}',
+					},
+					{
+					'For every {C:attention}Smallpox{} {C:rare}Rare{} and {C:legendary}Legendary{} Joker,',
+					'retrigger {c:attention}#6#{} time(s) this Joker.',
+					'{X:green,C:white}Meme{} and {X:purple,C:white}Disease{} Jokers give an extra {X:mult,C:white}X#5#{} xMult',
                     },
                     {
-                    '{C:inactive}[{}{C:common}Common:{}{C:inactive}{C:mult} 1.5X Mult,{} {C:uncommon}Uncommon:{}{C:mult} 2X Mult{}{C:inactive}]{}',
-                    '{C:inactive}[{}{C:rare}Rare:{} {C:mult}2.5X Mult,{} {C:legendary}Legendary:{} {C:mult}3X Mult{}{C:inactive}]{}',
+                    '{C:inactive}{C:common}Common{}: {X:mult,C:white}X#1#{}, {C:uncommon}Uncommon{}: {X:mult,C:white}X#2#{}{}',
+                    '{C:inactive}{C:rare}Rare{}: {X:mult,C:white}X#3#{}, {C:legendary}Legendary{}: {X:mult,C:white}X#4#{}{}',
                     }
                 }
             },
