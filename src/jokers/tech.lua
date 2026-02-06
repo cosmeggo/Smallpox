@@ -19,16 +19,7 @@ SMODS.Joker {
     end,
      calculate = function(self, card, context)
 
-        print(SMODS.optional_features.retrigger_joker)
-
-        if context.retrigger_joker_check and not context.retrigger_joker and context.other_card.config.center.mod == SMODS.Mods['smallpox'] and (context.other_card:is_rarity('Rare') or context.other_card:is_rarity('Legendary')) then
-            print('work')
-            return {
-                message = "Again!",
-                repetitions = 1,
-                card = card
-            }
-        end
+       
 
         if context.other_joker and context.other_joker.config.center.pools and context.other_joker.config.center.pools['Smallpox_Pool'] and (context.other_joker.config.center.rarity == 1 or context.other_joker.config.center.rarity == "Common") and not context.retrigger_joker_check  then
             return {
@@ -51,6 +42,17 @@ SMODS.Joker {
                 xmult = card.ability.extra.lxmult
             }
         end
+
+        if context.retrigger_joker_check and not context.retrigger_joker and context.other_card.config.center.mod == SMODS.Mods['smallpox'] and (context.other_card.rarity == 3 or context.other_card.rarity == 4) and  (context.other_card.rarity ~= 1 and context.other_card.rarity ~= 2) then
+
+            return {
+                message = "Again!",
+                repetitions = 1,
+                card = card
+            }
+        end
+
+        
 
        
     end,

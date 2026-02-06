@@ -102,20 +102,4 @@ SMODS.ObjectType({
 	end,
 })
 
-SMODS.ObjectType({
-	key = "Rare_Smallpox_Pool",
-	default = "j_smallpox_smallpox",
-	cards = {},
-	inject = function(self)
-		SMODS.ObjectType.inject(self)
-	end,
-})
 
-SMODS.ObjectType({
-	key = "Legendary_Smallpox_Pool",
-	default = "j_smallpox_smallpox",
-	cards = {},
-	inject = function(self)
-		SMODS.ObjectType.inject(self)
-	end,
-})
