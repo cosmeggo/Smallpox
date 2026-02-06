@@ -212,7 +212,7 @@ return {
                 },
                 text = {
                     "Played {C:attention}Glass{} cards",
-                    "earn {C:chips}X#1#{} when scored",
+                    "earn {C:diamonds}X#1#{} when scored",
                 }
             },
         },
