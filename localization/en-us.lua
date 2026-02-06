@@ -185,6 +185,19 @@ return {
 					"{C:inactive,s:0.8}our lovely chud son"
                 }
             },
+            j_smallpox_hunter = {
+                name = {
+                    "Notebook Sketch",
+                    "{s:0.5}created by {s:0.5,C:planet,E:1}Hunter{}{}",
+                    "{s:0.5}programmed by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}"
+                },
+                text = {
+                    "Gain {C:mult}X0.1 Mult{}",
+                    "Per hand drawn.",
+                    "{C:attention}Halves{} at end of ante.",
+                    "{C:inactive,s:0.8}[Currently {C:mult}X#1#{C:inactive,s:0.8}]"
+                }
+            },
         },
   },
   misc = {

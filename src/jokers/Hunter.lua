@@ -10,13 +10,13 @@ SMODS.Joker {
     key = "hunter",
     atlas = 'hunter',
     pos = { x = 0, y = 0 },
-    rarity = 1,
-    cost = 3,
+    rarity = 3,
+    cost = 9,
     pools = {["Smallpox"] = true}, -- see comment at the top
     blueprint_compat = true, -- set to false if you dont want blueprint to copy
     discovered = true,
     unlocked = true,
-    config = { extra = { mult = 5, increase = 0.1 }, },
+    config = { extra = { mult = 1, increase = 0.1 }, },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult } }
     end,
