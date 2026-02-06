@@ -1,3 +1,11 @@
+SMODS.Atlas({
+    key = "voidwalker", 
+    path = "jokers/miller.png", 
+    px = 71,
+    py = 95,
+    atlas_table = "ASSET_ATLAS"
+})
+
 -- OK, fiiine, im not killing the Example Joker
 
 SMODS.Joker{
@@ -32,6 +40,7 @@ SMODS.Joker{
         end
     end
 }
+
 
 
 
