@@ -25,14 +25,6 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
-SMODS.Atlas({
-    key = "voidwalker", 
-    path = "miller.png", 
-    px = 71,
-    py = 95,
-    atlas_table = "ASSET_ATLAS"
-})
-
 -- ASSERTS
 assert(SMODS.load_file("./src/sounds.lua"))()-- They werent loaded
 assert(SMODS.load_file("./src/ui.lua"))() -- They werent loaded
