@@ -31,6 +31,8 @@ SMODS.current_mod.optional_features = {
 	post_trigger = true,
 }
 
+SMODS.optional_features.retrigger_joker = true
+
 -- ASSERTS
 
 assert(SMODS.load_file("./src/backs.lua"))()

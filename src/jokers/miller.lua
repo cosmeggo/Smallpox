@@ -19,7 +19,7 @@ SMODS.Joker{
     atlas = "miller",
     cost = 8,
     rarity = 3,
-    pools = {["Smallpox_Pool"] = true},
+    pools = {["Smallpox_Pool"] = true, ["Rare_Smallpox_Pool"] = true},
     pronouns = "he_him",
     discovered = true,
     config = { extra = { percentage = 0.25}, },

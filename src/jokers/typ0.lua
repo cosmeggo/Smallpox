@@ -22,7 +22,7 @@ SMODS.Gradient {
 SMODS.Joker {
     key = "blackjack",
     blueprint_compat = true,
-    rarity = 3,
+    rarity = 2,
     cost = 4,
     atlas = "Typ0",
     pos = { x = 0, y = 0 },
