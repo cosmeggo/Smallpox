@@ -33,7 +33,7 @@ SMODS.Joker {
             card.ability.extra.mult = card.ability.extra.mult / 2
             return {
                 xmult = card.ability.extra.mult,
-                message = "Halved!",
+                message = "Crumpled Page!",
                 colour = G.C.FILTER
              }
         end
