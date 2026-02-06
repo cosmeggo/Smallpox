@@ -28,6 +28,7 @@ SMODS.Atlas({
 -- ASSERTS
 
 assert(SMODS.load_file("./src/backs.lua"))()
+assert(SMODS.load_file("./src/pools.lua"))()
 assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
 assert(SMODS.load_file("./src/jokers/pi_cubed.lua"))()
 
