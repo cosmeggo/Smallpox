@@ -34,7 +34,8 @@ SMODS.Atlas({
 })
 
 -- ASSERTS
-
+assert(SMODS.load_file("./src/sounds.lua"))()-- They werent loaded
+assert(SMODS.load_file("./src/ui.lua"))() -- They werent loaded
 assert(SMODS.load_file("./src/backs.lua"))()
 assert(SMODS.load_file("./src/pools.lua"))()
 assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
