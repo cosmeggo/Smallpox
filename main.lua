@@ -67,7 +67,7 @@ assert(SMODS.load_file("./src/jokers/polymorphine.lua"))() -- Polymorphine by Ni
 assert(SMODS.load_file("./src/jokers/meta.lua"))() -- Susie by Meta
 
 
--- Unsure what this does
+-- Unsure what this does (apparently it's Talisman stuff)
 local NFS = require("nativefs")
 to_big = to_big or function(a) return a end
 lenient_bignum = lenient_bignum or function(a) return a end
