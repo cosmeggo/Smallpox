@@ -11,11 +11,11 @@ SMODS.Joker {
     atlas = "bliss",
     pos = { x = 0, y = 0 },
     unlocked = true,
-    pools = {["Smallpox"] = true, ["Scaling"] = true, ["Landscape"] = true},
+    pools = {["Smallpox_Pool"] = true, ["Scaling"] = true, ["Landscape"] = true},
     blueprint_compat = false,
     pronouns = "it_its",
-    rarity = 2,
-    cost = 8,
+    rarity = 1,
+    cost = 5,
     config = { extra = { change = 10, suits = 3, chips = 10 } },
     loc_vars = function(self, info_queue, card)
         return { vars = {card.ability.extra.change, card.ability.extra.suits, card.ability.extra.chips} }

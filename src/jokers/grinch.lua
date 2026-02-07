@@ -108,7 +108,7 @@ SMODS.Joker {
     config = { extra = { add = 16, loss = 2 }, },
     atlas = 'grinch',
     pronouns = "he_him",
-    pools = {["Smallpox"] = true,["Meme"] = true,["Food"] = true},
+    pools = {["Smallpox_Pool"] = true,["Meme"] = true,["Food"] = true},
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.add, card.ability.extra.add/10, card.ability.extra.loss } }
     end,

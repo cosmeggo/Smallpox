@@ -101,6 +101,8 @@ function Card.highlight(self, is_highlighted)
 
 end
 
+
+
 if SMODS.DynaTextEffect then
 	SMODS.DynaTextEffect {
 			key = "rainbow_wiggle",
@@ -121,11 +123,27 @@ if SMODS.DynaTextEffect then
 		}
 end
 
+if SMODS.DynaTextEffect then
+	SMODS.DynaTextEffect {
+			key = "pink",
+			func = function (dynatext, index, letter)
+				letter.colour = SPOX.hsl2rgb(293, 1, 0.80)
+			end
+		}
+end
+
 SMODS.Gradient{
-    key = "smallpox_fire",
+    key = "fire",
     colours = {
         HEX("ff7300"),
         HEX("ffd900"),
     },
     cycle = 1
 }
+
+
+--[[
+SPOX.Tooltip{
+    key = "potw_table",
+}
+]]
