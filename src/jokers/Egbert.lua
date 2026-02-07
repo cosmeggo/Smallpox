@@ -7,8 +7,8 @@ DO NOT DELETE OUR CHUD SON EXAMPLE JOKER
 
 -- Example Joker Atlas
 SMODS.Atlas({
-    key = "examplejoker", 
-    path = "jokers/ExampleJoker.png", 
+    key = "eg", 
+    path = "jokers/Egbert.png", 
     px = 71,
     py = 95,
     atlas_table = "ASSET_ATLAS"
@@ -29,29 +29,40 @@ please set cost according to rarity
 +-----+------------+----------+
 ]]
 SMODS.Joker {
-    key = "examplejoker",
-    atlas = 'examplejoker',
+    key = "egbert",
+    atlas = 'eg',
     pos = { x = 0, y = 0 },
-    rarity = 1,
-    cost = 3,
+    soul_pos = { x = 1, y = 0 },
+    rarity = 4,
+    cost = 20,
     pools = {["Smallpox"] = true}, -- see comment at the top
-
     blueprint_compat = true, -- set to false if you dont want blueprint to copy
     discovered = true,
     unlocked = true,
-    config = { extra = { mult = 5 }, },
-    pronouns = "he_they", -- see comment at top
+    config = { extra = { xchips = 1, xchips_gain = 1 }, },
+    pronouns = "he_him", -- see comment at top
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult } }
+        return { vars = { card.ability.extra.xchips, card.ability.extra.xchips_gain } }
     end,
     
     calculate = function(self, card, context)
         if context.joker_main then
             return {
-                mult = card.ability.extra.mult,
-                message = "test!",
-                colour = HEX('a4eaf4')
+                xchips = card.ability.extra.xchips
             }
+        end
+    if context.individual and context.cardarea == G.play then
+            if (context.other_card:get_id() <= 10 and
+                    context.other_card:get_id() >= 0 and
+                    context.other_card:get_id() % 2 == 1) or
+                (context.other_card:get_id() == 14) then
+                SMODS.scale_card(card, {
+					ref_table = card.ability.extra,
+					ref_value = "xchips",
+					scalar_value = "xchips_gain",
+					message_colour = G.C.CHIPS,
+				})
+            end
         end
     end
 }

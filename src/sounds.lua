@@ -8,3 +8,26 @@ SMODS.Sound({
   sync = true
 }) ext can be wav, mp3, ogg
 ]]
+SMODS.Sound({
+    key="miller_laugh",
+    path="miller_laugh.ogg",
+    pitch=1,
+    volume=0.5,
+})
+
+SMODS.Sound({
+    key="miller_drain",
+    path="miller_drain.ogg",
+    pitch=1,
+    volume=0.3,
+})
+
+SMODS.Sound({
+    key = "tatsu_sfx", 
+    path = "tatsu.mp3", 
+})
+
+SMODS.Sound({
+    key = "poxofthewild_pop",
+    path = "poxofthewild_pop.ogg",
+})
