@@ -39,7 +39,7 @@ SMODS.Joker {
     blueprint_compat = true, -- set to false if you dont want blueprint to copy
     discovered = true,
     unlocked = true,
-    config = { extra = { xchips = 1, xchips_gain = .1 }, },
+    config = { extra = { xchips = 1, xchips_gain = .3 }, },
     pronouns = "he_him", -- see comment at top
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.xchips, card.ability.extra.xchips_gain } }
