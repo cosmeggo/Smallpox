@@ -18,6 +18,18 @@ return {
             },
         },
         Joker = {
+            j_smallpox_settheory = {
+                name = {
+                      "Set Theory",
+                      '{s:0.5}created by {s:0.5,C:dark_edition}IamArta{}',
+
+                }
+                text = {
+                    "Played cards with a {C:attention}rank{} that",
+                    "scored in the {C:attention}last{} played hand",
+                    "give {X:mult,C:white}X#1#{} Mult when scored"
+                }
+            }
             j_smallpox_astro = {
                 name = {
                      "Astro",
@@ -281,3 +293,4 @@ return {
     },
   },        
 }
+
