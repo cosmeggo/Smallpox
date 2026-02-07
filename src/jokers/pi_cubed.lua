@@ -20,7 +20,7 @@ SMODS.Joker {
     atlas = 'picubed_atlas',
     pools = { ['Smallpox'] = true },
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.dollars } }
+        return { vars = { card.ability.extra.dollars, colours = { HEX("E14159") } } }
     end,
     --[[update = function(self, card, dt) -- replace this with a love.update hook, and check all cards in G.your_collection[1,2,3] and/or G.joker to see if they're j_smallpox_spikedball
 		if not G.SETTINGS.reduced_motion then
