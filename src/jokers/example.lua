@@ -35,6 +35,7 @@ SMODS.Joker {
     rarity = 1,
     cost = 3,
     pools = {["Smallpox"] = true}, -- see comment at the top
+
     blueprint_compat = true, -- set to false if you dont want blueprint to copy
     discovered = true,
     unlocked = true,
@@ -47,7 +48,9 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.joker_main then
             return {
-                mult = card.ability.extra.mult
+                mult = card.ability.extra.mult,
+                message = "test!",
+                colour = HEX('a4eaf4')
             }
         end
     end

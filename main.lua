@@ -1,3 +1,9 @@
+SPOX = SMODS.current_mod
+SPOX.optional_features = {
+	post_trigger = true,
+	retrigger_joker = true,
+	}
+
 -- STANDARD ATLASES
 
 SMODS.Atlas({
@@ -25,12 +31,41 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
--- ASSERTS
 
-assert(SMODS.load_file("./src/backs.lua"))()
-assert(SMODS.load_file("./src/pools.lua"))()
+-- ASSERTS
+assert(SMODS.load_file("./src/pre.lua"))() -- PRELOADING FUNCTIONS
+assert(SMODS.load_file("./src/ui.lua"))() -- UI
+assert(SMODS.load_file("./src/backs.lua"))() -- DECKS
+assert(SMODS.load_file("./src/pools.lua"))() -- JOKER POOLS
+assert(SMODS.load_file("./src/sounds.lua"))() -- SOUNDS
+--assert(SMODS.load_file("./src/atlasses.lua"))() -- ATLASSES
+
 assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
-assert(SMODS.load_file("./src/jokers/puzzlevision.lua"))()
+
+assert(SMODS.load_file("./src/jokers/GhostSalt.lua"))() -- No Littering by GhostSalt
+assert(SMODS.load_file("./src/jokers/settheory.lua"))() -- Set Theory by Arta
+assert(SMODS.load_file("./src/jokers/pi_cubed.lua"))() -- Spike Ball by Pi_cubed
+assert(SMODS.load_file("./src/jokers/scales_of_justice.lua"))() -- Scales of Justice by Revo
+assert(SMODS.load_file("./src/jokers/breuhh.lua"))() -- Functions by Breuhh
+assert(SMODS.load_file("./src/jokers/miller.lua"))() -- VOIDWALKER by Abel
+
+assert(SMODS.load_file("./src/jokers/grinch.lua"))() -- Grinch by Soulware
+assert(SMODS.load_file("./src/jokers/vaccine.lua"))() -- Vaccine by mys.minty
+assert(SMODS.load_file("./src/jokers/sillyzteto.lua"))() -- Kasane Teto by Sillyz
+assert(SMODS.load_file("./src/jokers/astro.lua"))() -- Astro by Astro, p: LasagnaFelidae
+assert(SMODS.load_file("./src/jokers/demon_core.lua"))() -- Demon Core by ThunderEdge
+assert(SMODS.load_file("./src/jokers/bliss.lua"))() -- Bliss by LasagnaFelidae
+assert(SMODS.load_file("./src/jokers/typ0.lua"))() -- Blackjack by Typ0
+assert(SMODS.load_file("./src/jokers/tatsu.lua"))() -- Butterfly Effect by Tatsu, p: Typ0
+assert(SMODS.load_file("./src/jokers/inky.lua"))() -- Restaurant Menu by Inky, p: Typ0
+assert(SMODS.load_file("./src/jokers/smallpox.lua"))() -- Smallpox by Plasma
+assert(SMODS.load_file("./src/jokers/hunter.lua"))() -- Notebook Sketch by Hunter
+assert(SMODS.load_file("./src/jokers/tech.lua"))() -- Pox Of The Wild by Tech, p: LasagnaFelidae, a: Plasma
+
+--- THESE JOKERS HAVE PLACEHOLDER ART!!!!!!!!!!
+assert(SMODS.load_file("./src/jokers/polymorphine.lua"))() -- Polymorphine by NinjaBanana
+assert(SMODS.load_file("./src/jokers/meta.lua"))() -- Susie by Meta
+
 
 -- Unsure what this does (apparently it's Talisman stuff)
 local NFS = require("nativefs")

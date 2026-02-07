@@ -19,6 +19,16 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
+	key = "Disease",
+	default = "j_joker",
+	cards = {},
+	inject = function(self)
+		SMODS.ObjectType.inject(self)
+		self:inject_card(G.P_CENTERS.j_dna)
+	end,
+})
+
+SMODS.ObjectType({
 	key = "Landscape",
 	default = "j_joker",
 	cards = {},
