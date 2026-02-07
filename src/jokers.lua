@@ -10,7 +10,7 @@ SMODS.Joker {
     atlas = 'CustomJokers',
 
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.x_mult, card.ability.extra.mult, card.ability.extra.dollars * ( #G.jokers.cards ) } }
+        return { vars = { card.ability.extra.x_mult, card.ability.extra.mult, card.ability.extra.dollars } }
     end,
     
     calculate = function(self, card, context)
