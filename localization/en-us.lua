@@ -49,12 +49,12 @@ return {
             j_smallpox_sillyzteto = {
                 name = {
 					"Kasane Teto",
-					"{s:0.5}created by {C:purple,s:0.5}Revo",
+					"{s:0.5}created by {C:purple,s:0.5}Sillyz",
                   	"{s:0.5}art by {C:blue,s:0.5}Plasma,{} {C:edition,s:0.5}LasagnaFelidae{}{}"
 					},
                 text = {
                     "Gain {X:mult,C:white}X#1#{} Mult for every",
-                    "{C:attention}Ace of Hearts{} destroyed",
+                    "{C:attention}Ace{} of {C:hearts}Hearts{} destroyed",
                     "{C:inactive}(Currently{} {X:mult,C:white}X#2#{} {C:inactive}Mult)",
                 },
             },
