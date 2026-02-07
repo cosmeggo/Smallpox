@@ -185,6 +185,28 @@ return {
 					"{C:inactive,s:0.8}our lovely chud son"
                 }
             },
+
+            j_smallpox_poxofthewild = {
+                name = {
+                    'The Pox of The Wild',
+                    "{s:0.5}created by {s:0.5,C:spectral,E:smallpox_rainbow}Tech{}{}",
+                    "{s:0.5}programmed by {s:0.5,C:edition}LasagnaFelidae{}{}",
+					          "{s:0.5}art by {s:0.5,C:blue}Plasma{}{}"
+                },
+                text = {
+                    {
+                      'For every {C:attention}Smallpox{} Joker:',
+                      '{X:common,C:white}+#1#{}/{X:uncommon,C:white}+#2#{}/{X:rare,C:white}+#3#{}/{X:legendary,C:white}+#4#{} xMult',
+                      'according to their {C:dark_edition}rarity.{}',
+                      '{X:green,C:white}Meme{} and {X:purple,C:white}Disease{} Jokers grant',
+                      'an additional {X:mult,C:white}+#5#{} xMult',
+                    },
+                    {
+                      'For every {C:rare}Rare{} and {C:legendary}Legendary{} Joker:',
+                      'retrigger {C:attention}#6#{} time{C:inactive}(s){} this Joker.',
+                    },
+                },
+            },
             j_smallpox_spikedball = {
                 name = {
                     'Spiked Ball',
@@ -204,6 +226,17 @@ return {
                 }
             },
         },
+		tooltips = {
+			tt_smallpox_potw_table = {
+				name = "Rarity xMults",
+				text = {
+					'{C:common}Common{}: {X:mult,C:white}X#1#{}',
+					'{C:uncommon}Uncommon{}: {X:mult,C:white}X#2#{}',
+					'{C:rare}Rare{}: {X:mult,C:white}X#3#{}',
+					'{C:legendary}Legendary{}: {X:mult,C:white}X#4#{}',
+				},
+			},
+		},
   },
   misc = {
     dictionary = {
