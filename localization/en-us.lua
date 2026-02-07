@@ -23,7 +23,7 @@ return {
                       "Set Theory",
                       '{s:0.5}created by {s:0.5,C:dark_edition}IamArta{}',
 
-                }
+                },
                 text = {
                     "Played cards with a {C:attention}rank{} that",
                     "scored in the {C:attention}last{} played hand",
@@ -294,7 +294,6 @@ return {
                 },
             },
         },
-    },
 		tooltips = {
 			tt_smallpox_potw_table = {
 				name = "Rarity xMults",
@@ -314,5 +313,6 @@ return {
     },
   },        
 }
+
 
 
