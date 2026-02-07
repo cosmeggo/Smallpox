@@ -60,7 +60,7 @@ assert(SMODS.load_file("./src/jokers/inky.lua"))() -- Restaurant Menu by Inky, p
 assert(SMODS.load_file("./src/jokers/smallpox.lua"))() -- Smallpox by Plasma
 assert(SMODS.load_file("./src/jokers/hunter.lua"))() -- Notebook Sketch by Hunter
 assert(SMODS.load_file("./src/jokers/tech.lua"))() -- Pox Of The Wild by Tech, p: LasagnaFelidae, a: Plasma
-
+assert(SMODS.load_file("./src/jokers/Egbert.lua"))() -- John Egbert, by First Try
 --- THESE JOKERS HAVE PLACEHOLDER ART!!!!!!!!!!
 assert(SMODS.load_file("./src/jokers/polymorphine.lua"))() -- Polymorphine by NinjaBanana
 assert(SMODS.load_file("./src/jokers/meta.lua"))() -- Susie by Meta

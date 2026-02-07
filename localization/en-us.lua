@@ -1,3 +1,4 @@
+
 return {
     descriptions = {
         Back = {
@@ -147,6 +148,19 @@ return {
                     "{X:mult,C:white}-#3#{} {C:attention}Base{} per round played",
                     "{C:inactive}(Base: #1#)"
                    }
+                }
+            },
+            j_smallpox_egbert = {
+                name = {
+                    'John Egbert',
+                    '{s:0.5}created by {s:0.5,C:spectral}FirstTry{}{}',
+                    },    
+                text = {
+                    "Gain {X:chips,C:white}X#2#{} Chips when",
+                    "scoring hands with",
+                    "{C:attention}odd{} ranked cards",
+                    "{C:inactive}(A, 9, 7, 5, 3)",
+                    "{C:inactive}(Currently {C:white,X:chips}X#1#{C:inactive} Chips){}"
                 }
             },
             j_smallpox_mys_minty_vaccine = {
@@ -344,8 +358,4 @@ return {
     },
   },        
 }
-
-
-
-
 
