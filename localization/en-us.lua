@@ -278,7 +278,7 @@ return {
             j_smallpox_susie = {
                 name = {
 					"Susie",
-					"{s:0.5}created by {s:0.5,C:smallpox_pink}MetaNite64{}{}",
+					"{s:0.5}created by {s:0.5,C:white,E:smallpox_pink}MetaNite64{}{}",
 					"{s:0.5}art by {s:0.5,C:money,E:smallpox_rainbow}???{}{}",
 				},
                 text = {
@@ -313,6 +313,7 @@ return {
     },
   },        
 }
+
 
 
 
