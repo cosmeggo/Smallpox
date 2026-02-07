@@ -1,5 +1,10 @@
 
 return {
+    misc = {
+        dictionary = {
+            k_smallpox_rhythm_miss = "Missed." 
+        },
+    },
     descriptions = {
         Back = {
             b_smallpox_showman = {
@@ -19,6 +24,18 @@ return {
             },
         },
         Joker = {
+            j_smallpox_rhythm = {
+                name = {
+                        'Amp Up!',
+                        '{s:0.5}created by {s:0.5,V:1}M0xes{}',
+                },
+                text = {
+                    "This Joker gains {C:chips}+#1#{} Chips",
+					"per {C:attention}consective{} hand played",
+					'when "{C:attention}Joker!{}" is lit',
+					"{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)"
+                },
+            },
             j_smallpox_puzzlevision = {
                 name = {
                     "Puzzlevision",
