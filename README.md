@@ -1,7 +1,5 @@
 # Smallpox
-A collaborative Balatro mod led by Plasma!
+A collaborative Balatro mod where everyone adds one Joker!
 
-## What is it?
-
-Smallpox is a small-scale unbalanced Balatro mod where each participant can only submit one Joker.
-This project is directly inspired by Hot Potato.
+## Who Made What Joker?
+_Coming Soon!_

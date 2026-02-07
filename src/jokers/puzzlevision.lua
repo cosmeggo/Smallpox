@@ -1,3 +1,12 @@
+-- Puzzlevision Atlas
+SMODS.Atlas({
+    key = "PuzzleVision", 
+    path = "jokers/PuzzleVision.png", 
+    px = 71,
+    py = 95,
+    atlas_table = "ASSET_ATLAS"
+})
+
 -- Puzzlevision
 SMODS.Joker {
     key = "puzzlevision",
@@ -7,7 +16,7 @@ SMODS.Joker {
     cost = 7,
     discovered = true,
     config = { extra = { x_mult = 1, mult = 1, dollars = 1 }, },
-    atlas = 'CustomJokers',
+    atlas = 'PuzzleVision',
 
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.x_mult, card.ability.extra.mult, card.ability.extra.dollars } }
