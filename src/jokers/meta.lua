@@ -17,6 +17,9 @@ SMODS.Joker {
     config = { extra = { chips = 86 }, },
     atlas = 'susie',
 
+    pools = { ["Smallpox"] = true },
+    pronouns = "she_her",
+
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_CENTERS.m_steel
         return { vars = { card.ability.extra.chips } }
