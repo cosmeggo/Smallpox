@@ -35,6 +35,7 @@ SMODS.Joker {
         current_operator = {name = "none", colour = G.C.UI.TEXT_INACTIVE},
         been_used = false
     },
+    pools = {["Smallpox"] = true, ["Math"] = true},
     atlas = "smallpox_breuhh",
 
     loc_vars = function(self,ifq,card)

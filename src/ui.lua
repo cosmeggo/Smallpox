@@ -100,3 +100,32 @@ function Card.highlight(self, is_highlighted)
   return highlight_ref(self, is_highlighted)
 
 end
+
+if SMODS.DynaTextEffect then
+	SMODS.DynaTextEffect {
+			key = "rainbow_wiggle",
+			func = function (dynatext, index, letter)
+				letter.colour = SPOX.hsl2rgb(math.fmod((G.TIMERS.REAL + index) * 50, 360), 1, 0.75)
+				letter.offset.y = math.cos(G.TIMERS.REAL * 2.95 + index) * 9
+				letter.scale = (((math.sin((G.TIMERS.REAL + index)*2.9443) + 1)/2) + 6 )/6
+			end
+		}
+end
+
+if SMODS.DynaTextEffect then
+	SMODS.DynaTextEffect {
+			key = "rainbow",
+			func = function (dynatext, index, letter)
+				letter.colour = SPOX.hsl2rgb(math.fmod((G.TIMERS.REAL + index) * 50, 360), 1, 0.75)
+			end
+		}
+end
+
+SMODS.Gradient{
+    key = "smallpox_fire",
+    colours = {
+        HEX("ff7300"),
+        HEX("ffd900"),
+    },
+    cycle = 1
+}

@@ -94,6 +94,17 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
+	key = "Math",
+	default = "j_joker",
+	cards = {},
+	inject = function(self)
+		SMODS.ObjectType.inject(self)
+		self:inject_card(G.P_CENTERS.j_fibonacci)
+		self:inject_card(G.P_CENTERS.j_oops)
+	end,
+})
+
+SMODS.ObjectType({
 	key = "Smallpox",
 	default = "j_joker",
 	cards = {},
