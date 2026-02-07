@@ -42,10 +42,12 @@ return {
                 name = {
                     "Stained Glass Window",
                     '{s:0.5}created by {s:0.5,C:smallpox_fire}missingnumber{}',
+					"{s:0.5}programmed by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}",
                 },
                 text = {
                     "Played {C:hearts}Hearts{} cards become {C:attention}Glass{}.",
-                    "{C:hearts}Glass Hearts{} grant {X:blue,C:white}X1.5{} Chips when played{}",
+                    "{C:hearts}Glass Hearts{} cards grant", 
+					"{X:blue,C:white}X1.5{} Chips when scored{}",
                 }
             },
             j_smallpox_roomtemperaturecarrot = {
@@ -383,6 +385,7 @@ return {
     },
   },        
 }
+
 
 
 
