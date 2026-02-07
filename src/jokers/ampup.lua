@@ -18,7 +18,7 @@ SMODS.Joker {
 	pools = {["Smallpox"] = true},
 	pronouns = "it_its", 
 	loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.chip_mod, card.ability.extra.chips } }
+        return { vars = { card.ability.extra.chip_mod, card.ability.extra.chips, colours = {HEX('501299'),} } }
     end,
     calculate = function(self, card, context)
         if context.press_play and
