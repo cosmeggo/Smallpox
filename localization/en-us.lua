@@ -18,6 +18,49 @@ return {
             },
         },
         Joker = {
+            j_smallpox_puzzlevision = {
+                name = {
+                    "Puzzlevision",
+                    '{s:0.5}created by {s:0.5,C:blue}FireIce421{}',
+                },
+                text = {
+                    {
+                    "Gain {C:mult}Mult{} based on the run's {C:attention}Round{}",
+                    "Gain {X:mult,C:white}XMult{} based on the run's {C:attention}Ante{}",
+                    "Gain {C:money}Money{} based on the amount of owned {C:attention}Jokers{}",
+                    "{C:inactive}Currently: {C:mult}+#2# Mult{C:inactive}, {X:mult,C:white}X#1#{C:inactive} XMult, and {C:money}#3#${}",
+                    "{s:0.9,C:inactive}Updates when Blind is selected"
+                    },{
+                        "{s:0.9,C:inactive}It's TV Time; with your friend, Mr. Puzzles!",
+                        "{s:0.9,C:inactive}It's TV Time; take a break from your troubles!",
+                        "{s:0.9,C:inactive}WTF IS A COPYRIGHT 2023-2026"
+                    }
+                }
+            },
+            j_smallpox_nolittering = {
+                name = {
+                      'No Littering',
+                      '{s:0.5}created by {s:0.5,C:white}GhostSalt{}{}',
+                }
+                text = {
+                    "Gains {C:mult}+#1#{} Mult if",
+                    "hand is played with",
+                    "{C:red}no discards{} used",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult){}"
+                }
+            },
+            j_smallpox_settheory = {
+                name = {
+                      "Set Theory",
+                      '{s:0.5}created by {s:0.5,C:dark_edition}IamArta{}',
+
+                },
+                text = {
+                    "Played cards with a {C:attention}rank{} that",
+                    "scored in the {C:attention}last{} played hand",
+                    "give {X:mult,C:white}X#1#{} Mult when scored"
+                }
+            },
             j_smallpox_astro = {
                 name = {
                      "Astro",
@@ -34,8 +77,8 @@ return {
             j_smallpox_scales_of_justice = {
                 name = {
                   "Scales of Justice", 
-                  "{s:0.5}created by {C:purple,s:0.5}Revo",
-                  "{s:0.5}art by {C:blue,s:0.5}Plasma"
+                  "{s:0.5}created by {C:purple,s:0.5}Revo{}{}",
+                  "{s:0.5}art by {C:blue,s:0.5}Plasma{}{}"
                 },
                 text = {
                     "{X:mult,C:white}X#1#{} Mult if the",
@@ -44,6 +87,19 @@ return {
                     "if there are {C:attention}equal{} amounts of jokers",
                     "to this card's left and right.",
                 }
+            },
+
+            j_smallpox_sillyzteto = {
+                name = {
+					"Kasane Teto",
+					"{s:0.5}created by {C:purple,s:0.5}Sillyz",
+                  	"{s:0.5}art by {C:blue,s:0.5}Plasma, {C:edition,s:0.5}LasagnaFelidae{}{}{}"
+					},
+                text = {
+                    "Gain {X:mult,C:white}X#1#{} Mult for every",
+                    "{C:attention}Ace{} of {C:hearts}Hearts{} destroyed",
+                    "{C:inactive}(Currently{} {X:mult,C:white}X#2#{} {C:inactive}Mult)",
+                },
             },
             j_smallpox_functions = {
                 name = {
@@ -66,7 +122,7 @@ return {
             j_smallpox_smallpox = {
                 name = {
                     'Smallpox',
-                    '{s:0.5}created by {s:0.5,C:blue}Plasma{}',
+                    '{s:0.5}created by {s:0.5,C:blue}Plasma{}{}',
                 },
                 text = {
                     "{X:mult,C:white} X#1# {} Mult",
@@ -78,7 +134,7 @@ return {
             j_smallpox_grinch = {
                 name = {
                     'The Grinch',
-                    '{s:0.5}created by {s:0.5,C:green}soulware{}',
+                    '{s:0.5}created by {s:0.5,C:green}soulware{}{}',
                 },
                 text = {
                    {
@@ -176,8 +232,9 @@ return {
                     "Reduce blind",
                     "requirements by", 
                     "{C:attention}#1#%{}",
-                    },
-                },
+            	},
+            },
+		
             j_smallpox_examplejoker = {
                 name = 'Joker+',
                 text = {
@@ -223,7 +280,7 @@ return {
             j_smallpox_spikedball = {
                 name = {
                     'Spiked Ball',
-                    "{s:0.5}created by {s:0.5,C:dark_edition}Pi_Cubed{}{}",
+                    "{s:0.5}created by {s:0.5,V:1}pi_cubed{}",
                 },
                 text = {
                     {
@@ -240,14 +297,32 @@ return {
             },
             j_smallpox_polymorphine = {
                 name = {
-					'Polymorphine',
-					"{s:0.5}created by {s:0.5,C:money}NinjaBanana{}{}",
-					"{s:0.5}art by {s:0.5,C:money,E:smallpox_rainbow}???{}{}",
-				},
+                    'Polymorphine',
+                    "{s:0.5}created by {s:0.5,C:blue}NinjaBanana{}{}",
+                    "{s:0.5}art by {s:0.5,C:money,E:smallpox_rainbow}???{}{}",
+                  },
                 text = {
                     "On reroll, {C:attention}randomize{}",
                     "held consumeables"
-                }
+                },
+            },
+            j_smallpox_susie = {
+                name = {
+                      "Susie",
+                      "{s:0.5}created by {s:0.5,C:white,E:smallpox_pink}MetaNite64{}{}",
+                      "{s:0.5}art by {s:0.5,C:money,E:smallpox_rainbow}???{}{}",
+                    },
+                text = {
+                    {
+                        "Scored {C:attention}8{}s and {C:attention}6{}s are",
+                        "enhanced to {C:attention}Steel{} cards",
+                        "when played"
+                    },
+                    {
+                        "Played {C:attention}Steel{} cards give",
+                        "{C:chips}+#1#{} Chips when scored"
+                    },
+                },
             },
         },
 		tooltips = {
@@ -264,7 +339,13 @@ return {
   },
   misc = {
     dictionary = {
-      mintypox_name = "mys. minty"
+      mintypox_name = "mys. minty",
+      k_steel = "Steel",
     },
   },        
 }
+
+
+
+
+

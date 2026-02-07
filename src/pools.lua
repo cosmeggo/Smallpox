@@ -94,12 +94,10 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
-	key = "Smallpox_Pool",
+	key = "Smallpox",
 	default = "j_joker",
 	cards = {},
 	inject = function(self)
 		SMODS.ObjectType.inject(self)
 	end,
 })
-
-
