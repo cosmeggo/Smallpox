@@ -39,7 +39,7 @@ SMODS.Joker {
             xmult = 2
         },
     },
-    pools = {["Smallpox"] = true},
+    pools = {["Smallpox_Pool"] = true},
     atlas = 'mys_minty_vaccine',
 
     loc_vars = function(self, info_queue, card)
