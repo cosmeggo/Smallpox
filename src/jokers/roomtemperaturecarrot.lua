@@ -3,7 +3,7 @@ local converting = false
 
 SMODS.Atlas({
     key = "carrot", 
-    path = "jokers/examplejoker.png", 
+    path = "jokers/RoomTemperatureCarrot.png", 
     px = 71,
     py = 95,
     atlas_table = "ASSET_ATLAS"
@@ -11,7 +11,7 @@ SMODS.Atlas({
 
 SMODS.Joker {
     key = "roomtemperaturecarrot",
-    atlas = 'examplejoker',
+    atlas = 'carrot',
     pos = { x = 0, y = 0 },
     rarity = 3,
     cost = 10,
