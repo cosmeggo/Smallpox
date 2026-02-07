@@ -123,6 +123,14 @@ if SMODS.DynaTextEffect then
 		}
 end
 
+SMODS.Gradient{
+    key = "smallpox_fire",
+    colours = {
+        HEX("ff7300"),
+        HEX("ffd900"),
+    },
+    cycle = 1
+}
 --[[
 SPOX.Tooltip{
     key = "potw_table",
