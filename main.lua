@@ -42,6 +42,7 @@ assert(SMODS.load_file("./src/sounds.lua"))() -- SOUNDS
 
 assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
 
+assert(SMODS.load_file("./src/jokers/GhostSalt.lua"))() -- No Littering by GhostSalt
 assert(SMODS.load_file("./src/jokers/settheory.lua"))() -- Set Theory by Arta
 assert(SMODS.load_file("./src/jokers/pi_cubed.lua"))() -- Spike Ball by Pi_cubed
 assert(SMODS.load_file("./src/jokers/scales_of_justice.lua"))() -- Scales of Justice by Revo

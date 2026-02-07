@@ -18,6 +18,19 @@ return {
             },
         },
         Joker = {
+
+            j_smallpox_nolittering = {
+                name = {
+                      'No Littering',
+                      '{s:0.5}created by {s:0.5,C:white}GhostSalt{}{}',
+                }
+                text = {
+                    "Gains {C:mult}+#1#{} Mult if",
+                    "hand is played with",
+                    "{C:red}no discards{} used",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult){}"
+                }
+            },
             j_smallpox_settheory = {
                 name = {
                       "Set Theory",
