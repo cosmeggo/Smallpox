@@ -26,8 +26,17 @@ return {
                     "random Joker to become",
                     "{V:1}infected{} with {C:attention}Smallpox{}"
                 }
+            },
+            j_smallpox_settheory = {
+                name = "Set Theory",
+                text = {
+                    "Played cards with a {C:attention}rank{} that",
+                    "scored in the {C:attention}last{} played hand",
+                    "give {X:mult,C:white}X#1#{} Mult when scored"
+                }
             }
         }
     }
 }
+
 
