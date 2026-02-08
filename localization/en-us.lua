@@ -41,7 +41,7 @@ return {
                 text = {
                     "This Joker gains {C:chips}+#1#{} Chips",
 					"per {C:attention}consective{} hand played",
-					'when "{C:attention}Joker!{}" is lit',
+					'when "{C:attention}JOKER!{}" is lit',
 					"{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)"
                 },
             },
