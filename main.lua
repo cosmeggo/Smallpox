@@ -28,7 +28,7 @@ SMODS.Atlas({
 -- ASSERTS
 
 assert(SMODS.load_file("./src/backs.lua"))()
-assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
+assert(SMODS.load_file("./src/jokers/seethroughthejoke.lua"))() -- Flynn's awesometistic joker!
 
 -- Unsure what this does (apparently it's Talisman stuff)
 local NFS = require("nativefs")
@@ -60,4 +60,4 @@ function Game:main_menu(change_context)
         })
 
     return ret
-end
+    end

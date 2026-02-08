@@ -18,10 +18,12 @@ return {
             },
         },
         Joker = {
-            j_smallpox_examplejoker = {
-                name = 'Joker+',
+            j_smallpox_ = {
+                name = 'See Through The Joke',
                 text = {
-                    "{C:mult}+#1#{} Mult"
+                    "{C:attention}+6 Hand Size{}"
+                    "{C:red}-4 card selection limit{}"
+                    "{C:inactive}Art and code done by FlynnsaneFellow{}"
                 }
             },
         },
