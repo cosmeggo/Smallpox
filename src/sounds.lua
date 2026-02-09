@@ -31,3 +31,8 @@ SMODS.Sound({
     key = "poxofthewild_pop",
     path = "poxofthewild_pop.ogg",
 })
+
+SMODS.Sound({
+    key = "tigerthawk_gunshot", 
+    path = "tigerthawk_gunshot.wav", 
+})

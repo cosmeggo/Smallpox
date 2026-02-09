@@ -402,6 +402,20 @@ return {
                     },
                 },
             },
+            j_smallpox_gun = {
+                name = {
+                    "Rock Singer",
+                    "{s:0.5}created by {s:0.5,E:smallpox_pink}TigerTHawk{}{}",
+                    "{s:0.5}programmed by {s:0.5,C:smallpox_typ0,E:1}SLDTyp0{}{}"
+                },
+                text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "destroy Joker to left and the right",
+                    "and permanently add {C:attention}1.5x of {}",
+                    "its sell value to this {C:red}Mult",
+                    "{C:inactive}(Currently {C:white,X:red}x#1#{C:inactive} Mult)",
+                },
+            },
         },
 		tooltips = {
 			tt_smallpox_potw_table = {
