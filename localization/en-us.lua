@@ -24,6 +24,21 @@ return {
             },
         },
         Joker = {
+
+            j_smallpox_factory_line = {
+                name = {
+                    "Factory Line",
+                    "{s:0.5}created by {C:lily_pink,s:0.5}Lily Felli{}{}",
+                },
+                text = {
+                    "When the counter reaches {C:attention}#1#{},",
+                    "create a random {C:rare}Rare{} Joker",
+                    "Counter increases by {C:attention}#3#{} for every",
+                    "other Joker owned at end of round",
+                    "{s:1.2,C:attention}#2#{} / {s:1.2,C:attention}#1#{}",
+                    "{C:inactive}(Must have room)",
+                }
+            },
             j_smallpox_tjetsu_sumi = {
                 name = {
                     "Sumi",
@@ -38,7 +53,7 @@ return {
                     "after a {C:hearts}Heart{}"},
                     {"{C:inactive}(Last scored : {V:1}#3#{}{C:inactive}){}"}
                 }
-            }
+            },
  
             j_smallpox_seethrujoke = {
                 name = {
@@ -50,7 +65,7 @@ return {
                     "{C:red}-4 card selection limit{}"
                     "{C:inactive}Art and code done by FlynnsaneFellow{}"
                   }
-              }
+              },
                j_smallpox_zucchiniatlas = {
                 name = {
                   "Atlas", 

@@ -40,6 +40,9 @@ assert(SMODS.load_file("./src/pools.lua"))() -- JOKER POOLS
 assert(SMODS.load_file("./src/sounds.lua"))() -- SOUNDS
 --assert(SMODS.load_file("./src/atlasses.lua"))() -- ATLASSES
 
+
+
+
 ---COMMON
 assert(SMODS.load_file("./src/jokers/ampup.lua"))() -- Amp Up by M0x3s
 assert(SMODS.load_file("./src/jokers/bliss.lua"))() -- Bliss by LasagnaFelidae
@@ -50,6 +53,7 @@ assert(SMODS.load_file("./src/jokers/GhostSalt.lua"))() -- No Littering by Ghost
 assert(SMODS.load_file("./src/jokers/astro.lua"))() -- Astro by Astro, p: LasagnaFelidae
 assert(SMODS.load_file("./src/jokers/Atlas.lua"))() -- Atlas by ABuffZucchini
 assert(SMODS.load_file("./src/jokers/typ0.lua"))() -- Blackjack by Typ0
+assert(SMODS.load_file("./src/jokers/factoryline.lua"))() -- Factory Line by Lily Felli
 assert(SMODS.load_file("./src/jokers/inky.lua"))() -- Restaurant Menu by Inky, p: Typ0
 assert(SMODS.load_file("./src/jokers/settheory.lua"))() -- Set Theory by Arta
 assert(SMODS.load_file("./src/jokers/tjetsu_sumi.lua"))() -- Sumi by Tsutje
@@ -76,6 +80,7 @@ assert(SMODS.load_file("./src/jokers/miller.lua"))() -- VOIDWALKER by Abel
 ---LEGENDARY
 assert(SMODS.load_file("./src/jokers/Egbert.lua"))() -- John Egbert, by First Try
 assert(SMODS.load_file("./src/jokers/tech.lua"))() -- Pox Of The Wild by Tech, p: LasagnaFelidae, a: Plasma
+
 
 
 
