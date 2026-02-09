@@ -12,6 +12,7 @@ SMODS.Joker {
     pos = { x = 0 , y = 0 },
     rarity = 2,
     blueprint_compat = true,
+    pools = {["Smallpox"] = true},
     cost = 7,
     config = { extra = { s_chips = 10, suit = 'Spades', s_count = 0}, },
     loc_vars = function(self, info_queue, card)

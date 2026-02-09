@@ -15,7 +15,7 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
     discovered = false,
     atlas = 'sillyzteto',
-
+    pools = {["Smallpox"] = true},
     config = { extra = { xmult = 1, xmult_gain = 0.5 } },
 
     loc_vars = function(self, info_queue, card)

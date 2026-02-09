@@ -11,7 +11,7 @@ SMODS.Joker {
     atlas = "bliss",
     pos = { x = 0, y = 0 },
     unlocked = true,
-    pools = {["Smallpox_Pool"] = true, ["Scaling"] = true, ["Landscape"] = true},
+    pools = {["Smallpox"] = true, ["Scaling"] = true, ["Landscape"] = true},
     blueprint_compat = false,
     pronouns = "it_its",
     rarity = 1,

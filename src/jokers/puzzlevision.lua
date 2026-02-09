@@ -17,7 +17,7 @@ SMODS.Joker {
     discovered = true,
     config = { extra = { x_mult = 1, mult = 1, dollars = 1 }, },
     atlas = 'PuzzleVision',
-
+    pools = {["Smallpox"] = true},
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.x_mult, card.ability.extra.mult, card.ability.extra.dollars } }
     end,

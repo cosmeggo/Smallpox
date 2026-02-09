@@ -13,7 +13,7 @@ SMODS.Joker{
     cost = 9,
     atlas = "tatsu",
     pos = { x = 0, y = 0 },
-    pools = {["Smallpox_Pool"] = true},
+    pools = {["Smallpox"] = true},
     pronouns = "she_they",
     blueprint_compat = false,
     eternal_compat = false,

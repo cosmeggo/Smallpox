@@ -12,6 +12,7 @@ SMODS.Joker {
     atlas = 'placeholder',
     pos = { x = 0, y = 0 },
     rarity = 3,
+    pools = {["Smallpox"] = true},
     blueprint_compat = false,
     cost = 7,
     discovered = true,
