@@ -3,7 +3,8 @@ SMODS.Atlas({
     path = "jokers/tigerthawk.png", 
     px = 71,
     py = 95,
-    atlas_table = "ASSET_ATLAS"
+    atlas_table = "ANIMATION_ATLAS",
+    frames = 10
 })
 
 SMODS.Joker {
@@ -15,7 +16,7 @@ SMODS.Joker {
     atlas = "tigerthawk",
     pos = { x = 0, y = 0 },
     pools = {["Smallpox_Pool"] = true},
-    config = { extra = { mult = 0 } },
+    config = { extra = { mult = 1 } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult } }
     end,
