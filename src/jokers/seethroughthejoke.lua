@@ -17,7 +17,7 @@ SMODS.Joker {
     config = { extra = { h_size = 6 } },
     discovered = true,
     atlas = 'eyejoker',
-
+    pools = {["Smallpox"] = true},
     calculate = function(self, card, context)
     end
 

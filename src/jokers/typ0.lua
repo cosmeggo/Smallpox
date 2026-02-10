@@ -26,7 +26,7 @@ SMODS.Joker {
     cost = 4,
     atlas = "Typ0",
     pos = { x = 0, y = 0 },
-    pools = {["Smallpox_Pool"] = true},
+    pools = {["Smallpox"] = true},
 
     config = { extra = { min = 7, max = 35, moneymin = 1, moneymax = 40, mult_n = 1, mult_d = 2, X_n = 1, X_d = 2} }, --kept throwing errors when i tried to uses mult_n and mult_d directly and X_n and X_d so idk
 

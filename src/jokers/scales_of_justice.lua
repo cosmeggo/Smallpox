@@ -14,7 +14,7 @@ SMODS.Joker {
     cost = 4,
     discovered = true,
     config = { extra = { xmult = 1.5,xmult2 = 1.5 }, },
-
+    pools = {["Smallpox"] = true},
     loc_vars = function(self, info_queue, card)
         local cae = card.ability.extra
         return { vars = { cae.xmult,cae.xmult2 } }
