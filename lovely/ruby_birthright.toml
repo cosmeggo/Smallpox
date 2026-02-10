@@ -390,3 +390,28 @@ match_indent = true
 payload = '''
 if self.name == 'Plasma Deck' and args.context == 'final_scoring_step' and not (Smallpox.get_selected_deck() == "b_plasma" and next(SMODS.find_card("j_smallpox_birthright"))) then
 '''
+
+# Sprite in description
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = '''
+if args.type == 'name' then
+    final_line[#final_line+1] = {n=G.UIT.C, config={align = "m", colour = part.control.B and args.vars.colours[tonumber(part.control.B)] or part.control.X and loc_colour(part.control.X) or nil, r = 0.05, padding = 0.03, res = 0.15}, nodes={}}
+'''
+position = "at"
+payload = '''
+    if part.control.IMG then
+        local sprite_mod = (part.control.s and tonumber(part.control.s) or 1) * desc_scale
+        local atlas = SMODS.get_atlas(part.control.IMG)
+        local w_mod = atlas.px / atlas.py
+        final_line[#final_line + 1] = {
+            n = G.UIT.O,
+            config = {
+                object = SMODS.create_sprite(0, 0, sprite_mod * w_mod, sprite_mod, atlas, {x = 0, y = 0})
+            }
+        }
+    elseif args.type == 'name' then
+        final_line[#final_line+1] = {n=G.UIT.C, config={align = "m", colour = part.control.B and args.vars.colours[tonumber(part.control.B)] or part.control.X and loc_colour(part.control.X) or nil, r = 0.05, padding = 0.03, res = 0.15}, nodes={}}
+'''
+match_indent = true

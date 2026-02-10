@@ -31,10 +31,21 @@ return {
                     "{V:1}infected{} with {C:attention}Smallpox{}"
                 }
             },
+            j_smallpox_birthright = {
+                name = {
+                    "Birthright",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
+                },
+                text = {
+                    "Has a different effect",
+                    "based on the {C:attention}Selected{} Deck"
+                }
+            },
             j_smallpox_birthright_red = {
                 name = {
                     "Birthright",
                     "{s:0.8,C:inactive}Venemous Slander{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -49,6 +60,7 @@ return {
                 name = {
                     "Birthright",
                     "{s:0.8,C:inactive}Conjoined{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -65,6 +77,7 @@ return {
                 name = {
                     "Birthright",
                     "{s:0.8,C:inactive}Money, Money. Money{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -80,7 +93,8 @@ return {
             j_smallpox_birthright_green = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Regurgitate{}"
+                    "{s:0.8,C:inactive}Regurgitate{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -111,7 +125,8 @@ return {
             j_smallpox_birthright_magic = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Samsara{}"
+                    "{s:0.8,C:inactive}Samsara{}{s:0.35} {}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -128,7 +143,8 @@ return {
             j_smallpox_birthright_nebula = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Interstellar{}"
+                    "{s:0.8,C:inactive}Interstellar{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     "Using a Planet card",
@@ -141,7 +157,8 @@ return {
             j_smallpox_birthright_abandoned = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Make Your Destiny{}"
+                    "{s:0.8,C:inactive}Make Your Destiny{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     "Once per ante open",
@@ -152,7 +169,8 @@ return {
             j_smallpox_birthright_checkered = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Chromatic Aberration{}"
+                    "{s:0.8,C:inactive}Chromatic Aberration{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -168,7 +186,8 @@ return {
             j_smallpox_birthright_zodiac = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Dominion, Attuned{}"
+                    "{s:0.8,C:inactive}Dominion, Attuned{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -182,7 +201,8 @@ return {
             j_smallpox_birthright_zodiac_Spectral = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Dominion, Attuned{}"
+                    "{s:0.8,C:inactive}Dominion, Attuned{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -202,7 +222,8 @@ return {
             j_smallpox_birthright_zodiac_Planet = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Dominion, Attuned{}"
+                    "{s:0.8,C:inactive}Dominion, Attuned{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -220,7 +241,8 @@ return {
             j_smallpox_birthright_zodiac_Tarot = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Dominion, Attuned{}"
+                    "{s:0.8,C:inactive}Dominion, Attuned{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -239,7 +261,8 @@ return {
                 name = {
                     "Birthright",
                     "{s:0.8,C:inactive}The World looks White{}",
-                    "{s:0.8,C:inactive}The World looks Red{}"
+                    "{s:0.8,C:inactive}The World looks Red{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -252,7 +275,8 @@ return {
             j_smallpox_birthright_anaglyph = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Bifurcated{}"
+                    "{s:0.8,C:inactive}Bifurcated{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -269,7 +293,8 @@ return {
             j_smallpox_birthright_plasma = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}REACTOR MELTDOWN IMMINENT{}"
+                    "{s:0.8,C:inactive}REACTOR MELTDOWN IMMINENT{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     {
@@ -288,7 +313,8 @@ return {
             j_smallpox_birthright_erratic = {
                 name = {
                     "Birthright",
-                    "{s:0.8,C:inactive}Absolute Entropy{}"
+                    "{s:0.8,C:inactive}Absolute Entropy{}",
+                    "{s:0.5}created & art by {IMG:smallpox_ruby_paw,s:0.35}a{}{s:0.35} {}{C:red,s:0.5}Ruby{}",
                 },
                 text = {
                     

@@ -25,6 +25,9 @@ SMODS.Atlas({
     py = 34,
 })
 function Smallpox.get_selected_deck()
+    if G.STATE == G.STATES.MENU then
+        return
+    end
     return G.GAME.selected_back and G.GAME.selected_back.effect and G.GAME.selected_back.effect and G.GAME.selected_back.effect.center.key
 end
 
@@ -44,7 +47,7 @@ SMODS.Joker {
     },
     blueprint_compat = true,
     loc_vars = function(self, q, card)
-        local key = Smallpox.get_selected_deck():sub(3, 999)
+        local key = Smallpox.get_selected_deck() and Smallpox.get_selected_deck():sub(3, 999) or nil
         local vars = {}
         if key == "erratic" then
             card.ability.erratic_lines = Smallpox.randomize_desc(card.ability.erratic_lines)
@@ -88,7 +91,7 @@ SMODS.Joker {
         end
         return {
             vars = vars,
-            key = "j_smallpox_birthright_"..key
+            key = key and "j_smallpox_birthright_"..key or nil
         }
     end,
     add_to_deck = function(self, card)
@@ -1973,3 +1976,10 @@ function G.FUNCS.buy_cardshop(e)
     G.FUNCS.exit_overlay_menu()
     G.GAME.birthright_cant_cardshop = true
 end
+
+SMODS.Atlas {
+    key = "ruby_paw",
+    path = "ruby_paw.png",
+    px = 18,
+    py = 18,
+}
