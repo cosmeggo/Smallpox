@@ -2,7 +2,7 @@ SMODS.Atlas {
     key = "pk_thunder_ANIM",
     px = 71,
     py = 95,
-    path = 'pkthunder.png',
+    path = 'jokers/pkthunder.png',
     atlas_table = 'ANIMATION_ATLAS',
     frames = 24,
     fps = 18
