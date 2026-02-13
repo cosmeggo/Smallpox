@@ -30,6 +30,20 @@ return {
                     "random Joker to become",
                     "{V:1}infected{} with {C:attention}Smallpox{}"
                 }
+            },
+
+            j_smallpox_ins_oro = {
+                name = {
+                    "Ouroboros",
+                    "{s:0.5}created by {C:blue,s:0.5}candycanearter",
+                    "{s:0.5}art by {C:blue,s:0.5}candycanearter"
+                },
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult",
+                    "When card is {C:attention}sold or {C:attention}destroyed",
+                    "create a copy in the next shop",
+                    "with an extra {X:mult,C:white}X#2#{} Mult"
+                }
             }
         }
     }
