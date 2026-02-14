@@ -71,8 +71,9 @@ assert(SMODS.load_file("./src/jokers/breuhh.lua"))() -- Functions by Breuhh
 assert(SMODS.load_file("./src/jokers/sillyzteto.lua"))() -- Kasane Teto by Sillyz
 assert(SMODS.load_file("./src/jokers/hunter.lua"))() -- Notebook Sketch by Hunter
 assert(SMODS.load_file("./src/jokers/ouro.lua"))() -- Ouroboros by candycanearter
-assert(SMODS.load_file("./src/jokers/polymorphine.lua"))() -- Polymorphine by NinjaBanana, a: LasagnaFelidae
 assert(SMODS.load_file("./src/jokers/claus dies.lua"))() -- PK Thunder by isotypical
+assert(SMODS.load_file("./src/jokers/polymorphine.lua"))() -- Polymorphine by NinjaBanana, a: LasagnaFelidae
+assert(SMODS.load_file("./src/jokers/puzzlevision.lua"))() -- Puzzlevision by FireIce
 assert(SMODS.load_file("./src/jokers/tigerthawk.lua"))() -- Rock Singer by TigerTHawk
 assert(SMODS.load_file("./src/jokers/roomtemperaturecarrot.lua"))() -- Room Temp. Carrot by Rainstar
 assert(SMODS.load_file("./src/jokers/scales_of_justice.lua"))() -- Scales of Justice by Revo
