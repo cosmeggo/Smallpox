@@ -459,7 +459,7 @@ return {
                 text = {
                     "When {C:attention}Blind{} is selected,",
                     "destroy Joker to left and the right",
-                    "and permanently add {C:attention}1.5x of {}",
+                    "and permanently add {C:attention}#2#x of {}",
                     "its sell value to this {C:red}Mult",
                     "{C:inactive}(Currently {C:white,X:red}x#1#{C:inactive} Mult)",
                 },
@@ -791,7 +791,7 @@ return {
                     "When a {C:attention}Joker{} is {C:attention}destroyed{}",
                     "gain {C:money}$#1#{}"
                 }
-            }
+            },
             j_smallpox_theriantropy = {
                 name = {
                     "Theriantropy",
@@ -898,6 +898,9 @@ return {
       k_enhancement = "Enhancement",
       k_buy_card = "Buy Card",
       k_smallpox_rhythm_miss = "Missed." ,
+      spox_flash_warn = 
+            "Welcome to Smallpox!\nThis mod was made by 45 developers and artists\nover the course of just under 3 weeks.\n\nPlease note that some jokers utilise\nFlashing lights.\nThere is a config option for this\nIf it effects you.\n\nEnjoy the mod! -Smallpox Team"
+      
     },
   },        
 

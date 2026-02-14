@@ -37,12 +37,13 @@ assert(SMODS.load_file("./src/ui.lua"))() -- UI
 assert(SMODS.load_file("./src/backs.lua"))() -- DECKS
 assert(SMODS.load_file("./src/pools.lua"))() -- JOKER POOLS
 assert(SMODS.load_file("./src/sounds.lua"))() -- SOUNDS
+assert(SMODS.load_file("./src/config_menu.lua"))() -- CONFIG MENU
 --assert(SMODS.load_file("./src/atlasses.lua"))() -- ATLASSES
 
 ---COMMON
 assert(SMODS.load_file("./src/jokers/ampup.lua"))() -- Amp Up by M0x3s
 assert(SMODS.load_file("./src/jokers/bliss.lua"))() -- Bliss by LasagnaFelidae
-assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
+assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker our chud son
 assert(SMODS.load_file("./src/jokers/GhostSalt.lua"))() -- No Littering by GhostSalt
 assert(SMODS.load_file("./src/jokers/theriantropy.lua"))() -- Theriantropy by Jewel
 ---UNCOMMON
@@ -119,6 +120,19 @@ function Game:main_menu(change_context)
 
 end
 
+if SPOX_CONFIG.SPOX_Startup_Message then
+    local mm = Game.main_menu
+    function Game:main_menu(change_context, ...)
+        mm(self, change_context, ...)
+                G.FUNCS.overlay_menu{
+                    definition = smallpox_create_Flash_Warning()
+                }
+    end
+
+    SPOX_CONFIG.SPOX_Startup_Message = false
+
+end
+
 --moved here for merging sake
 SPOX.calculate = function(self, context)
     if context.ante_end then
@@ -137,4 +151,5 @@ SPOX.calculate = function(self, context)
             })
         end
     end
+    
 end

@@ -36,3 +36,9 @@ SMODS.Sound({
     key = "tigerthawk_gunshot", 
     path = "tigerthawk_gunshot.wav", 
 })
+
+SMODS.Sound{
+    key = "birthright_zodiac_attune",
+    path = "birthright_zodiac_attune.ogg",
+    volume = 1.4
+}

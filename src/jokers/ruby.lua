@@ -1,6 +1,6 @@
 SMODS.Atlas({
     key = "ruby_birthright", 
-    path = "ruby_birthright.png", 
+    path = "jokers/ruby_birthright.png", 
     px = 71,
     py = 95,
 })
@@ -11,12 +11,6 @@ SMODS.Atlas({
     px = 71,
     py = 95,
 })
-
-SMODS.Sound{
-    key = "birthright_zodiac_attune",
-    path = "birthright_zodiac_attune.ogg",
-    volume = 1.4
-}
 
 SMODS.Atlas({
     key = "ruby_planets", 
@@ -431,7 +425,7 @@ function _G.create_UIBox_stocks()
                         {n=G.UIT.R, config={align = "cm", padding = 0.07}, nodes={
                         {n=G.UIT.R, config={func = "can_increase_perc", button = 'toggle_shop', align = "cm",  minw = 0.4, minh = 1, r=0.15,colour = {0,0,0,0}, shadow = true, colour = G.C.GREEN}, nodes={
                             {n=G.UIT.T, config={text = "^", scale = 0.4, colour = G.C.WHITE, shadow = true}}
-                        }},
+                        }}, 
                         {n=G.UIT.R, config={func = "can_decrease_perc", button = 'toggle_shop', align = "cm", minw = 0.4, minh = 1, r=0.15,colour = {0,0,0,0}, shadow = true, colour = G.C.RED}, nodes={
                             {n=G.UIT.T, config={text = "v", scale = 0.4, colour = G.C.WHITE, shadow = true}}
                         }}   

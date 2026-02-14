@@ -16,7 +16,7 @@ SMODS.Joker {
     discovered = false,
     unlocked = true,
     pronouns = "she_they", 
-    config = {extra = {chance = 2, chance2 = 15, edition = 'm_wild'}}, 
+    config = {extra = {chance = 2, chance2 = 15, edition = 'm_wild'}},
 	loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_CENTERS.m_wild
         local a, b = SMODS.get_probability_vars(card, 1, card.ability.extra.chance)

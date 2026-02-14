@@ -142,6 +142,31 @@ SMODS.Gradient{
 }
 
 
+function G.FUNCS.close_popup()
+    G.FUNCS.exit_overlay_menu()
+end
+
+function smallpox_create_Flash_Warning()
+    return create_UIBox_generic_options({
+        back_func = "exit_overlay_menu", 
+        no_back = true,                  
+        contents = {
+            { n = G.UIT.R, config = { align = "cm", padding = 0.2, T = { w = 15, h = 20 } }, nodes = {
+                { n = G.UIT.T, config = { text = localize("spox_flash_warn"), colour = G.C.UI.TEXT_LIGHT, scale = 0.5, shadow = true } }
+            }},
+            {
+              n = G.UIT.R,
+              config = { minh = 5 }  
+            },
+            { n = G.UIT.R, config = { align = "cm", padding = 0.2 }, nodes = {
+                { n = G.UIT.C, config = { button = "exit_overlay_menu", colour = G.C.RED, r = 0.1, padding = 0.05, align = "cm" }, nodes = {
+                    { n = G.UIT.T, config = { text = "Close", colour = G.C.WHITE, scale = 0.5, shadow = true } }
+                }}
+            }}
+        }
+    })
+end
+
 --[[
 SPOX.Tooltip{
     key = "potw_table",
