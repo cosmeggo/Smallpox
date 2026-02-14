@@ -1,22 +1,38 @@
+SMODS.Atlas({
+    key = "iwillnever", 
+    path = "jokers/iwillnever.png", 
+    px = 71,
+    py = 95,
+    atlas_table = "ASSET_ATLAS"
+})
+
+
 SMODS.Joker {
     atlas = 'iwillnever',
     pos = { x = 0, y = 0 },
     pools = {["Smallpox"] = true },
     key = "smallpox_iwillnever",
-	  pronouns = "she_they",
+	pronouns = "she_they",
     rarity = 1,
     cost = 5,
   	config = {
   		extra = {
   			xmult = 3
-  			}, 
+  		}, 
   		jokerforge = {
   			sucks = false,
   			set = false,
-  			},
+  		},
   	},
     loc_vars = function(self, info_queue, card)
-		return { vars = {card.ability.extra.xmult } }
+		return { 
+			vars = {
+				card.ability.extra.xmult,
+				colours = {
+					HEX('91583D'),
+				}, 
+			},
+		}
     end,
 	
   	add_to_deck = function(self,card,from_debuff)
