@@ -19,6 +19,16 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
+	key = "Disease",
+	default = "j_joker",
+	cards = {},
+	inject = function(self)
+		SMODS.ObjectType.inject(self)
+		self:inject_card(G.P_CENTERS.j_dna)
+	end,
+})
+
+SMODS.ObjectType({
 	key = "Landscape",
 	default = "j_joker",
 	cards = {},
@@ -80,6 +90,17 @@ SMODS.ObjectType({
 		self:inject_card(G.P_CENTERS.j_wee)
 		self:inject_card(G.P_CENTERS.j_caino)
 		self:inject_card(G.P_CENTERS.j_yorick)
+	end,
+})
+
+SMODS.ObjectType({
+	key = "Math",
+	default = "j_joker",
+	cards = {},
+	inject = function(self)
+		SMODS.ObjectType.inject(self)
+		self:inject_card(G.P_CENTERS.j_fibonacci)
+		self:inject_card(G.P_CENTERS.j_oops)
 	end,
 })
 
