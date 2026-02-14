@@ -40,7 +40,7 @@ return {
                 },
                 text = {
                     "{X:mult,C:white}X#1#{} Mult",
-                    "When card is {C:attention}sold or {C:attention}destroyed",
+                    "When this card is {C:attention}sold or {C:attention}destroyed",
                     "create a copy in the next shop",
                     "with an extra {X:mult,C:white}X#2#{} Mult"
                 }
