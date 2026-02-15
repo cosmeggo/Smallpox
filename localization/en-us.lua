@@ -30,6 +30,18 @@ return {
                     "random Joker to become",
                     "{V:1}infected{} with {C:attention}Smallpox{}"
                 }
+            },
+            j_smallpox_lexi_fire_alarm = {
+                name = {
+                    "Fire Alarm",
+                    "{s:0.5}created by Lexi",
+                },
+                text = {
+                    "This Joker gains",
+                    "{C:mult}+#2#{} Mult when the",
+                    "score catches on fire",
+                    "{C:inactive}(Currently {C:mult}+#1# {C:inactive}Mult)"
+                }
             }
         }
     }
