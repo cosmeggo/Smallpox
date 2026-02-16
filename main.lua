@@ -30,6 +30,7 @@ SMODS.Atlas({
 assert(SMODS.load_file("./src/backs.lua"))()
 assert(SMODS.load_file("./src/pools.lua"))()
 assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
+assert(SMODS.load_file("./src/jokers/fableofthemirrorbreaker.lua"))()
 
 -- Unsure what this does (apparently it's Talisman stuff)
 local NFS = require("nativefs")
@@ -38,6 +39,8 @@ lenient_bignum = lenient_bignum or function(a) return a end
 
 SMODS.current_mod.optional_features = function()
     return {
+        post_trigger = true,
+        retrigger_joker = true,
         cardareas = {} 
     }
 end
