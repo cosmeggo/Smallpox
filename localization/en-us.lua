@@ -30,7 +30,7 @@ return {
                     "random Joker to become",
                     "{V:1}infected{} with {C:attention}Smallpox{}"
                 }
-            }
+            },
              j_smallpox_thecoin = {
                 name = {
                   "THE COIN", 
@@ -44,6 +44,7 @@ return {
         }
     }
 }
+
 
 
 
