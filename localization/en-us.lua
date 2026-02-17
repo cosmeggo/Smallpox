@@ -34,8 +34,8 @@ return {
              j_smallpox_thecoin = {
                 name = {
                   "THE COIN", 
-                  "{s:0.5}created by {C:blue,s:0.5}Lyre{}{}",
-                  "{s:0.5}art by {C:purple,s:0.5}Lyre{}{}"
+                  "{s:0.5}created by {C:legendary,s:0.5}Lyre{}{}",
+                  "{s:0.5}art by {C:legendary,s:0.5}Lyre{}{}"
                 },
                 text = {
                     "{C:attention}Flips{} a coin when you need it most."
@@ -44,6 +44,7 @@ return {
         }
     }
 }
+
 
 
 
