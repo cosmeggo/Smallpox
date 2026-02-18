@@ -1,0 +1,417 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''
+delay(0.3)
+SMODS.cards_to_draw = (SMODS.cards_to_draw or 0) + space_taken
+'''
+position = "before"
+payload = '''
+if next(SMODS.find_card("j_smallpox_birthright")) and
+    G.smallpox_discarded_cards and 
+    SPOX.get_selected_deck() == "b_red" and
+    (G.GAME.current_round.hands_played > 0 or
+    G.GAME.current_round.discards_used > 0) then
+        hand_space = math.min(#G.deck.cards, G.smallpox_discarded_cards + #SMODS.find_card("j_smallpox_birthright"))
+        G.smallpox_discarded_cards = nil
+end
+'''
+match_indent = true
+
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''
+G.FUNCS.discard_cards_from_highlighted = function(e, hook)
+'''
+position = "after"
+payload = '''
+G.smallpox_discarded_cards = #G.hand.highlighted
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''
+SMODS.calculate_context({full_hand = G.play.cards, scoring_hand = scoring_hand, scoring_name = text, poker_hands = poker_hands, after = true})
+'''
+position = "after"
+payload = '''
+if G.GAME.smallpox_invested then
+    G.FUNCS.progress_stocks()
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'engine/sprite.lua'
+pattern = '''for k, v in pairs(self.children) do'''
+position = 'before'
+match_indent = true
+payload = '''
+if self and self.config.tag and self.config.tag.ability and self.config.tag.ability.negative then
+	self.ARGS.send_to_shader = self.ARGS.send_to_shader or {}
+	self.ARGS.send_to_shader[1] = math.min(self.VT.r*3, 1) + G.TIMERS.REAL/28 + (self.juice and self.juice.r*10 or 0) + (self.tilt_var and self.tilt_var.amt or 0)
+
+	self.ARGS.send_to_shader[2] = G.TIMERS.REAL*2
+	
+	self:draw_shader("negative", nil, self.ARGS.send_to_shader)
+	self:draw_shader('negative_shine', nil, self.ARGS.send_to_shader)
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'engine/sprite.lua'
+pattern = '''
+if self.draw_steps then 
+    for k, v in ipairs(self.draw_steps) do
+        self:draw_shader(v.shader, v.shadow_height, v.send, v.no_tilt, v.other_obj, v.ms, v.mr, v.mx, v.my, not not v.send)
+    end
+else
+    self:draw_self(overlay)
+end
+'''
+position = 'before'
+match_indent = true
+payload = '''
+if self and self.config.tag and self.config.tag.ability and self.config.tag.ability.birthright_planet and self.atlas.name ~= "smallpox_ruby_planets" then
+    local t
+    for i, v in pairs(SPOX.planet_tags) do
+        if v.hand == self.config.tag.ability.birthright_planet then
+            t = v
+        end
+    end
+    if t then
+	    self.atlas = G.ASSET_ATLAS["smallpox_ruby_planets"]
+        self:set_sprite_pos(t.pos or {x=0,y=0})
+        --self:reset()
+    end
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'functions/common_events.lua'
+pattern = '''
+elseif _c.set == 'Tag' then
+'''
+position = 'after'
+match_indent = true
+payload = '''
+if card and card.ability and card.ability.negative then
+	info_queue[#info_queue+1] = {set = "Edition", key = "e_negative_tag", config = {extra = 1}}
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''
+if AUT.card_type ~= 'Locked' and AUT.card_type ~= 'Undiscovered' then
+'''
+position = 'before'
+match_indent = true
+payload = '''
+if AUT.card_type == "Tag" then
+    local card = card and card.config.tag
+    if card and card.ability and card.ability.negative then
+        badges[#badges + 1] = create_badge(localize("negative", "labels"), get_badge_colour("negative"))
+    end
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'functions/button_callbacks.lua'
+pattern = '''
+G.FUNCS.cash_out = function(e)
+'''
+position = 'after'
+match_indent = true
+payload = '''
+local s = G.GAME.round_resets.blind_states.Boss
+'''
+
+
+[[patches]]
+[patches.pattern]
+target = 'functions/button_callbacks.lua'
+pattern = '''
+G.GAME.current_round.discards_left = math.max(0, G.GAME.round_resets.discards + G.GAME.round_bonus.discards)
+G.GAME.current_round.hands_left = (math.max(1, G.GAME.round_resets.hands + G.GAME.round_bonus.next_hands))
+'''
+position = 'at'
+match_indent = true
+payload = '''
+if SPOX.get_selected_deck() == "b_green" and s ~= 'Defeated' and next(SMODS.find_card("j_smallpox_birthright")) then
+    G.GAME.current_round.discards_left = G.GAME.current_round.discards_left + G.GAME.round_resets.discards + G.GAME.round_bonus.discards
+    G.GAME.current_round.hands_left = G.GAME.current_round.hands_left + G.GAME.round_resets.hands + G.GAME.round_bonus.next_hands
+else
+    G.GAME.current_round.discards_left = math.max(0, G.GAME.round_resets.discards + G.GAME.round_bonus.discards)
+    G.GAME.current_round.hands_left = (math.max(1, G.GAME.round_resets.hands + G.GAME.round_bonus.next_hands))
+end
+'''
+
+
+[[patches]]
+[patches.pattern]
+target = 'functions/state_events.lua'
+pattern = '''
+G.GAME.current_round.discards_left = math.max(0, G.GAME.round_resets.discards + G.GAME.round_bonus.discards)
+G.GAME.current_round.hands_left = (math.max(1, G.GAME.round_resets.hands + G.GAME.round_bonus.next_hands))
+'''
+position = 'at'
+match_indent = true
+payload = '''
+if SPOX.get_selected_deck() == "b_green" and next(SMODS.find_card("j_smallpox_birthright")) then
+
+else
+    G.GAME.current_round.discards_left = math.max(0, G.GAME.round_resets.discards + G.GAME.round_bonus.discards)
+    G.GAME.current_round.hands_left = (math.max(1, G.GAME.round_resets.hands + G.GAME.round_bonus.next_hands))
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'functions/state_events.lua'
+pattern = "local nu_chip, nu_mult = G.GAME.selected_back:trigger_effect{context = 'final_scoring_step'*"
+position = 'before'
+match_indent = true
+payload = '''
+if G.planets then
+    for i = 1, #G.planets do
+        G.planets[i]:apply_to_run({type = 'after_hand'})
+        delay(0.5)
+    end
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'functions/misc_functions.lua'
+pattern = '''
+  G.culled_table =  recursive_table_cull{
+    cardAreas = cardAreas,
+    tags = tags,
+    GAME = G.GAME,
+    STATE = G.STATE,
+    ACTION = G.action or nil,
+    BLIND = G.GAME.blind:save(),
+    SCORING_CALC = G.GAME.current_scoring_calculation:save(),
+    BACK = G.GAME.selected_back:save(),
+    VERSION = G.VERSION
+  }
+'''
+position = "at"
+payload = '''
+  local planets = {}
+  for k, v in ipairs(G.planets or {}) do
+    if (type(v) == "table") and v.is and v:is(Tag) then 
+      local tagSer = v:save()
+      if tagSer then planets[k] = tagSer end
+    end
+  end
+  G.culled_table =  recursive_table_cull{
+    cardAreas = cardAreas,
+    tags = tags,
+    planets = planets,
+    GAME = G.GAME,
+    STATE = G.STATE,
+    ACTION = G.action or nil,
+    BLIND = G.GAME.blind:save(),
+    SCORING_CALC = G.GAME.current_scoring_calculation:save(),
+    BACK = G.GAME.selected_back:save(),
+    VERSION = G.VERSION
+  }
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''check_and_set_high_score('most_money', G.GAME.dollars)'''
+position = 'before'
+match_indent = true
+payload = '''
+if saveTable then 
+    self.planets = {}
+    local planets = {}
+    self.HUD_planets = {}
+    local planets = saveTable.planets or {}
+    for k, v in pairs(planets) do
+        local _tag = Tag("tag_orbital")
+        _tag:load(v)
+        add_planet(nil, _tag)
+    end
+end
+'''
+
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''
+G.shop_jokers = CardArea(
+      G.hand.T.x+0,
+      G.hand.T.y+G.ROOM.T.y + 9,
+      math.min(G.GAME.shop.joker_max*1.02*G.CARD_W,4.08*G.CARD_W),
+      1.05*G.CARD_H, 
+      {card_limit = G.GAME.shop.joker_max, type = 'shop', highlight_limit = 1, negative_info = true})
+'''
+position = 'at'
+match_indent = true
+payload = '''
+if SPOX.get_selected_deck() == "b_ghost" and next(SMODS.find_card("j_smallpox_birthright")) then
+    G.shop_jokers = CardArea(
+      G.hand.T.x+0,
+      G.hand.T.y+G.ROOM.T.y + 9,
+      math.min(G.GAME.shop.joker_max*1.02*G.CARD_W,4.08*G.CARD_W) * 0.75,
+      1.05*G.CARD_H, 
+      {card_limit = G.GAME.shop.joker_max, type = 'shop', highlight_limit = 1, negative_info = true})
+    G.shop_spectral = CardArea(
+      G.hand.T.x+0,
+      G.hand.T.y+G.ROOM.T.y + 9,
+      math.min(G.GAME.shop.joker_max*1.02*G.CARD_W,4.08*G.CARD_W) * 0.25,
+      1.05*G.CARD_H, 
+      {card_limit = G.GAME.shop.joker_max, type = 'shop', highlight_limit = 1, negative_info = true})
+else
+    G.shop_jokers = CardArea(
+      G.hand.T.x+0,
+      G.hand.T.y+G.ROOM.T.y + 9,
+      math.min(G.GAME.shop.joker_max*1.02*G.CARD_W,4.08*G.CARD_W),
+      1.05*G.CARD_H, 
+      {card_limit = G.GAME.shop.joker_max, type = 'shop', highlight_limit = 1, negative_info = true})
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''
+{n=G.UIT.C, config={align = "cm", padding = 0.2, r=0.2, colour = G.C.L_BLACK, emboss = 0.05, minw = 8.2}, nodes={
+    {n=G.UIT.O, config={object = G.shop_jokers}},
+}},
+'''
+position = 'at'
+match_indent = true
+payload = '''
+{n=G.UIT.C, config={align = "cm", padding = 0.2, r=0.2, colour = G.C.L_BLACK, emboss = 0.05, minw = (SPOX.get_selected_deck() == "b_ghost" and next(SMODS.find_card("j_smallpox_birthright")) and 8.2*0.75 or 8.2)}, nodes={
+    {n=G.UIT.O, config={object = G.shop_jokers}},
+}},
+SPOX.get_selected_deck() == "b_ghost" and next(SMODS.find_card("j_smallpox_birthright")) and {n=G.UIT.C, config={align = "cm", padding = 0.2, r=0.2, colour = G.C.L_BLACK, emboss = 0.05, minw = (8.2*0.25)}, nodes={
+    {n=G.UIT.O, config={object = G.shop_spectral}},
+}} or nil,
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''
+if card.area == G.shop_jokers and G.shop_jokers then --Add a buy button
+'''
+position = 'at'
+match_indent = true
+payload = '''
+if (card.area == G.shop_jokers and G.shop_jokers) or (card.area == G.shop_spectral and G.shop_spectral) then --Add a buy button
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'functions/button_callbacks.lua'
+pattern = '''
+for i = #G.shop_jokers.cards,1, -1 do
+    local c = G.shop_jokers:remove_card(G.shop_jokers.cards[i])
+    c:remove()
+    c = nil
+end
+'''
+position = 'after'
+match_indent = true
+payload = '''
+if G.shop_spectral then
+    for i = #G.shop_spectral.cards,1, -1 do
+        local c = G.shop_spectral:remove_card(G.shop_spectral.cards[i])
+        c:remove()
+        c = nil
+    end
+    local new_shop_card = SMODS.create_card{set = "Spectral"}
+    new_shop_card.cost = 5
+    G.shop_spectral:emplace(new_shop_card)
+    new_shop_card:juice_up()
+    create_shop_card_ui(new_shop_card)
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''
+if G.load_shop_jokers then 
+'''
+position = 'before'
+match_indent = true
+payload = '''
+if G.shop_spectral then
+    if G.load_shop_spectral then 
+        nosave_shop = true
+        G.shop_spectral:load(G.load_shop_spectral)
+        for k, v in ipairs(G.shop_spectral.cards) do
+            create_shop_card_ui(v)
+            if v.ability.consumeable then v:start_materialize() end
+        end
+        G.load_shop_spectral = nil
+    else
+        local new_shop_card = SMODS.create_card{set = "Spectral"}
+        new_shop_card.cost = 5
+        G.shop_spectral:emplace(new_shop_card)
+        new_shop_card:juice_up()
+        create_shop_card_ui(new_shop_card)
+    end
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'back.lua'
+pattern = '''
+if self.name == 'Plasma Deck' and args.context == 'final_scoring_step' then
+'''
+position = 'at'
+match_indent = true
+payload = '''
+if self.name == 'Plasma Deck' and args.context == 'final_scoring_step' and not (SPOX.get_selected_deck() == "b_plasma" and next(SMODS.find_card("j_smallpox_birthright"))) then
+'''
+
+# Sprite in description
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = '''
+if args.type == 'name' then
+    final_line[#final_line+1] = {n=G.UIT.C, config={align = "m", colour = part.control.B and args.vars.colours[tonumber(part.control.B)] or part.control.X and loc_colour(part.control.X) or nil, r = 0.05, padding = 0.03, res = 0.15}, nodes={}}
+'''
+position = "at"
+payload = '''
+    if part.control.IMG then
+        local sprite_mod = (part.control.s and tonumber(part.control.s) or 1) * desc_scale
+        local atlas = SMODS.get_atlas(part.control.IMG)
+        local w_mod = atlas.px / atlas.py
+        final_line[#final_line + 1] = {
+            n = G.UIT.O,
+            config = {
+                object = SMODS.create_sprite(0, 0, sprite_mod * w_mod, sprite_mod, atlas, {x = 0, y = 0})
+            }
+        }
+    elseif args.type == 'name' then
+        final_line[#final_line+1] = {n=G.UIT.C, config={align = "m", colour = part.control.B and args.vars.colours[tonumber(part.control.B)] or part.control.X and loc_colour(part.control.X) or nil, r = 0.05, padding = 0.03, res = 0.15}, nodes={}}
+'''
+match_indent = true
