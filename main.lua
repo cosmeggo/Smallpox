@@ -26,9 +26,14 @@ SMODS.Atlas({
 })
 
 -- ASSERTS
+assert(SMODS.load_file("./src/pre.lua"))() -- PRELOADING FUNCTIONS
+assert(SMODS.load_file("./src/ui.lua"))() -- UI
+assert(SMODS.load_file("./src/backs.lua"))() -- DECKS
+assert(SMODS.load_file("./src/pools.lua"))() -- JOKER POOLS
+assert(SMODS.load_file("./src/sounds.lua"))() -- SOUNDS
+assert(SMODS.load_file("./src/config_menu.lua"))() -- CONFIG MENU
+--assert(SMODS.load_file("./src/atlasses.lua"))() -- ATLASSES
 
-assert(SMODS.load_file("./src/backs.lua"))()
-assert(SMODS.load_file("./src/pools.lua"))()
 assert(SMODS.load_file("./src/jokers/example.lua"))() -- The example joker
 
 -- Unsure what this does (apparently it's Talisman stuff)
