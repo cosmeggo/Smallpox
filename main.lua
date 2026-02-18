@@ -43,6 +43,7 @@ assert(SMODS.load_file("./src/config_menu.lua"))() -- CONFIG MENU
 
 
 ---COMMON
+assert(SMODS.load_file("./src/jokers/agency.lua"))() -- Agency, The by Myst, a: Inky
 assert(SMODS.load_file("./src/jokers/ampup.lua"))() -- Amp Up by M0x3s
 assert(SMODS.load_file("./src/jokers/bliss.lua"))() -- Bliss by LasagnaFelidae
 assert(SMODS.load_file("./src/jokers/lexi_fire_alarm.lua"))() -- Fire Alarm by Lexi
