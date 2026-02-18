@@ -1,4 +1,3 @@
-
 return {
     descriptions = {
         Back = {
@@ -261,7 +260,6 @@ return {
                 name = {
                   "THE COIN", 
                   "{s:0.5}created by {C:legendary,s:0.5}Lyre{}{}",
-                  "{s:0.5}art by {C:legendary,s:0.5}Lyre{}{}"
                 },
                 text = {
                     "{C:attention}Flips{} a coin when you need it most."
@@ -1047,55 +1045,55 @@ return {
                     "When this {C:attention}Joker{}",
                     "triggers, earn {C:gold}$1"
             },
-      },
-      tooltips = {
-        tt_smallpox_potw_table = {
-          name = "Rarity xMults",
-          text = {
-            '{C:common}Common{}: {X:mult,C:white}X#1#{}',
-            '{C:uncommon}Uncommon{}: {X:mult,C:white}X#2#{}',
-            '{C:rare}Rare{}: {X:mult,C:white}X#3#{}',
-            '{C:legendary}Legendary{}: {X:mult,C:white}X#4#{}',
-          },
-        },
 		},
-  },
-  misc = {
-    dictionary = {
-      mintypox_name = "mys. minty",
-      k_steel = "Steel",
-      k_switch_ex = "Switch!",
-      k_last_change = "Last Change",
-      k_sell_all = "Sell All",
-      k_buy = "Buy",
-      k_currently_invested = "Currently Invested",
-      k_cycle = "Cycle",
-      k_cycle_edition = "Cycle Edition",
-      k_cycle_rank = "Cycle Rank",
-      k_cycle_seal = "Cycle Seal",
-      k_cycle_suit = "Cycle Suit",
-      k_enhancement = "Enhancement",
-      k_buy_card = "Buy Card",
-      k_smallpox_rhythm_miss = "Missed." ,
-      spox_flash_warn = 
-            "Warning!\n\nThis mod may contain flashing images which\nmay not be suitable for individuals with\nphotosensitive epilepsy.\n\nYou can disable flashing images in the Mod Menu\nby selecting [Config] and clicking [Photosensitive Mode]"
-      smallpox_sockscale1 = "Hot Topic delivery for ",
-      smallpox_sockscale2 = "Slopazon delivery for ",
-      smallpox_sockscale3 = "This is a gift. I hope you like it, ",
-      k_smallpox_triscendence = "!!! TRISCENDENCE !!!",
-      k_smallpox_select_tri = "Select an additional Triscendence effect:",
-      k_smallpox_tri_1 = "All Hands",
-      k_smallpox_tri_2 = "Circle Back",
-      k_smallpox_tri_3 = "Employee of the Moment",
-      k_smallpox_tri_1_desc = "Counts this roll as 3^3 3s rolled",
-      k_smallpox_tri_2_desc = "Replenish 3 hands and discards",
-      k_smallpox_tri_3_desc = "Permanently increase Mult by 3",
-    },
-    labels = {
-            smallpox_fable_sticker = "Treasured",
-    },
+		tooltips = {
+			tt_smallpox_potw_table = {
+				name = "Rarity xMults",
+				text = {
+					'{C:common}Common{}: {X:mult,C:white}X#1#{}',
+					'{C:uncommon}Uncommon{}: {X:mult,C:white}X#2#{}',
+					'{C:rare}Rare{}: {X:mult,C:white}X#3#{}',
+					'{C:legendary}Legendary{}: {X:mult,C:white}X#4#{}',
+					},
+				},
+			},
+		},
+	},
+	misc = {
+		dictionary = {
+			mintypox_name = "mys. minty",
+			k_steel = "Steel",
+			k_switch_ex = "Switch!",
+			k_last_change = "Last Change",
+			k_sell_all = "Sell All",
+			k_buy = "Buy",
+			k_currently_invested = "Currently Invested",
+			k_cycle = "Cycle",
+			k_cycle_edition = "Cycle Edition",
+			k_cycle_rank = "Cycle Rank",
+			k_cycle_seal = "Cycle Seal",
+			k_cycle_suit = "Cycle Suit",
+			k_enhancement = "Enhancement",
+			k_buy_card = "Buy Card",
+			k_smallpox_rhythm_miss = "Missed." ,
+			spox_flash_warn = "Warning!\n\nThis mod may contain flashing images which\nmay not be suitable for individuals with\nphotosensitive epilepsy.\n\nYou can disable flashing images in the Mod Menu\nby selecting [Config] and clicking [Photosensitive Mode]",
+			smallpox_sockscale1 = "Hot Topic delivery for ",
+			smallpox_sockscale2 = "Slopazon delivery for ",
+			smallpox_sockscale3 = "This is a gift. I hope you like it, ",
+			k_smallpox_triscendence = "!!! TRISCENDENCE !!!",
+			k_smallpox_select_tri = "Select an additional Triscendence effect:",
+			k_smallpox_tri_1 = "All Hands",
+			k_smallpox_tri_2 = "Circle Back",
+			k_smallpox_tri_3 = "Employee of the Moment",
+			k_smallpox_tri_1_desc = "Counts this roll as 3^3 3s rolled",
+			k_smallpox_tri_2_desc = "Replenish 3 hands and discards",
+			k_smallpox_tri_3_desc = "Permanently increase Mult by 3",
+		},
+		labels = {
+			smallpox_fable_sticker = "Treasured",
+		},
 
-  },        
+	},        
 }
 
 
