@@ -19,6 +19,16 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
+	key = "Disease",
+	default = "j_joker",
+	cards = {},
+	inject = function(self)
+		SMODS.ObjectType.inject(self)
+		self:inject_card(G.P_CENTERS.j_dna)
+	end,
+})
+
+SMODS.ObjectType({
 	key = "Landscape",
 	default = "j_joker",
 	cards = {},
@@ -82,6 +92,44 @@ SMODS.ObjectType({
 		self:inject_card(G.P_CENTERS.j_yorick)
 	end,
 })
+
+SMODS.ObjectType({
+	key = "Metallic",
+	default = "j_joker",
+	cards = {},
+	inject = function(self)
+		SMODS.ObjectType.inject(self)
+		self:inject_card (G.P_CENTERS.j_credit_card)
+		self:inject_card(G.P_CENTERS.j_ceremonial) 
+		self:inject_card(G.P_CENTERS.j_steel_joker)
+		self:inject_card(G.P_CENTERS.j_ride_the_bus) 
+		self:inject_card(G.P_CENTERS.j_space)
+		self:inject_card(G.P_CENTERS.j_hologram)
+		self:inject_card(G.P_CENTERS.j_obelisk)
+		self:inject_card(G.P_CENTERS.j_midas_mask) 
+		self:inject_card(G.P_CENTERS.j_gift)
+		self:inject_card(G.P_CENTERS.j_walkie_talkie) 
+		self:inject_card(G.P_CENTERS.j_ticket) 
+		self:inject_card(G.P_CENTERS.j_blueprint)
+		self:inject_card (G.P_CENTERS.j_hit_the_road) 
+		self:inject_card (G.P_CENTERS.j_satellite) 
+		self:inject_card(G.P_CENTERS.j_drivers_license)
+	end,
+})
+
+
+SMODS.ObjectType({
+	key = "Math",
+	default = "j_joker",
+	cards = {},
+	inject = function(self)
+		SMODS.ObjectType.inject(self)
+		self:inject_card(G.P_CENTERS.j_fibonacci)
+		self:inject_card(G.P_CENTERS.j_oops)
+	end,
+})
+
+
 
 SMODS.ObjectType({
 	key = "Smallpox",

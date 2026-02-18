@@ -12,7 +12,7 @@ SMODS.Joker {
 	pos = { x = 0, y = 0 },
 	cost = 5,
 	config = { extra = { chip_mod = 12, chips = 0, frames = 8, fps = 8 } },
-	pools = {["Smallpox"] = true},
+	pools = {["Smallpox"] = true, ["Metallic"] = true},
 	pronouns = "it_its", 
 	loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.chip_mod, card.ability.extra.chips, colours = { HEX('9d39c4') } }}
