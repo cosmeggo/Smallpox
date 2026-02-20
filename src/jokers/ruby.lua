@@ -23,7 +23,7 @@ function SPOX.get_selected_deck()
         return
     end
     local ret = G.GAME.selected_back and G.GAME.selected_back.effect and G.GAME.selected_back.effect and G.GAME.selected_back.effect.center.key
-	if ret == "b_challenge" then ret = "b_erratic" end --lol
+	if ret == "b_challenge" or string.match(ret, ".*_.*_.*") then ret = "b_erratic" end --lol
 	return ret
 end
 
