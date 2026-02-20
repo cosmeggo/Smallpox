@@ -4,6 +4,12 @@ SPOX.optional_features = {
 	retrigger_joker = true,
 	}
 
+local gsr = Game.start_run
+function Game:start_run(args, ...)
+  local ret = gsr(self, args, ...)
+  G.jokers.config.highlighted_limit = 1e100
+  return ret
+end
 -- STANDARD ATLASES
 
 SMODS.Atlas({
