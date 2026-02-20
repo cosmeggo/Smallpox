@@ -1107,7 +1107,9 @@ return {
 			k_smallpox_tri_2_desc = "Replenish 3 hands and discards",
 			k_smallpox_tri_3_desc = "Permanently increase Mult by 3",
             spox_credits_tab_name = "Credits",
-            spox_credits_tab = "test\n\ntest\n\ntest"
+            spox_credits_tab_1 = "Mysthaps\nM0xes\nLasagnaFelidae\nLexi\nEdward Robinson\nPokeRen\nGhostSalt\nNxkoo\nJewel\nCloudzXIII\nAstro\nAbuffZucchini\nSLDTyp0\nLilyFelli",
+            Spox_Discord = "Join The Smallpox Discord!",
+            Spox_Description = "Smallpox is a collaborative mod where each Joker is made by a different person!"
 		},
 		labels = {
 			smallpox_fable_sticker = "Treasured",

@@ -44,6 +44,24 @@ SMODS.current_mod.config_tab = function()
     }
 end
 
+local function wrapText(text, maxChars)
+    local wrappedText = ""
+    local currentLineLength = 0
+
+    for word in text:gmatch("%S+") do
+        if currentLineLength + #word <= maxChars then
+            wrappedText = wrappedText .. word .. ' '
+            currentLineLength = currentLineLength + #word + 1
+        else
+            wrappedText = wrappedText .. '\n' .. word .. ' '
+            currentLineLength = #word + 1
+        end
+    end
+
+    return wrappedText
+end
+
+
 SMODS.current_mod.extra_tabs = function()
 	return {
 		{
@@ -74,4 +92,66 @@ SMODS.current_mod.extra_tabs = function()
 			end
 		}
 	}
+end
+
+
+
+SMODS.current_mod.custom_ui = function(mod_nodes)
+    mod_nodes = EMPTY(mod_nodes)
+    local SpoxDescription = localize("Spox_Description") --shut up about my variable names i dont care
+    local SPOXwrappedDescription = wrapText(SpoxDescription, 30)  --rewrap the description cuz we manually doing this
+    local node1 =  {
+         n = G.UIT.C,
+        config = {w = 8, h = 6, align = "tm", padding = 0.2},
+        nodes = {
+            {
+                n = G.UIT.R,
+                config = { align = "cm", minh = 1 },
+                nodes = {
+                    {
+                        n = G.UIT.T,
+                        config = { text = "Smallpox", colour = G.C.DARK_EDITION, scale = 1 }
+                    }
+                }
+            },
+            {
+                n = G.UIT.R,
+                config = {
+                    padding = 0.2,
+                    align = "cm"
+                },
+                nodes = {
+                    {
+                        n = G.UIT.T,
+                        config = {
+                            text = SPOXwrappedDescription,
+                            shadow = true,
+                            scale = 0.75 * 0.5,
+                            colour = G.C.UI.TEXT_LIGHT
+                        }
+                    }
+                }
+            },
+            {
+                n = G.UIT.R,
+                config = { minh = 2 }, 
+                nodes = {}
+            },
+            {
+                n = G.UIT.R,
+                config = {align = "cm"},
+                nodes = {
+                  UIBox_button({
+                    colour = HEX('5865F2'), minw = 3.5, minh = 1, padding = 0.1, emboss = 0.2, button = "go_to_spox_discord", label = {localize("Spox_Discord")}
+                  })
+                }
+            },
+        }
+    }
+    table.insert(mod_nodes, node1)
+end
+
+
+G.FUNCS.go_to_spox_discord = function(e)
+    love.system.openURL( "https://discord.gg/hGwkjwUV9V" )  --snagged this stuff from aikoyori's
 end

@@ -22,11 +22,6 @@ SMODS.Joker {
         extra = { 
             scale = 0.1,
             xmult = 1.5,
-            populationFactor = 450,
-            steps = 0,
-            -- change the next two for rebalancing
-            popFactorMin = 250,
-            popFactorMax = 550
         },
     },
     pronouns = "any_all", -- see comment at top
@@ -36,38 +31,14 @@ SMODS.Joker {
     end,
     
     calculate = function(self, card, context)
-        local cae = card.ability.extra
-        local ret = {}
-        cae.steps = cae.steps + 1
-        if not context.repetition then
-            if cae.steps > cae.populationFactor then
-                cae.xmult = cae.xmult + cae.scale
-                ret.extra = {}
-                ret.extra.message = localize("smallpox_sockscale"..pseudorandom("word",1,3))..G.PROFILES[G.SETTINGS.profile].name
-                ret.extra.message_card = card
-                cae.steps, cae.populationFactor = 0, pseudorandom("populationFactor",cae.popFactorMin,cae.popFactorMax)
-                print(cae.populationFactor)
-            end
+        if context.joker_main == true then
+            local socks = pseudorandom("socks"..G.GAME.round..G.GAME.pseudorandom.seed, 0, 4)
+              if socks == 0 then
+                  card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.scale
+              end
+            return {
+            xmult = card.ability.extra.xmult
+            }
         end
-
-        if context.joker_main then
-            ret.xmult = cae.xmult
-        end
-
-        return ret
-        --[[ naive implementation, causes stack overflow
-        for event in pairs(context) do
-            if not cae.chance[event] then
-                cae.chance[event] = {}
-                cae.chance[event].numer = pseudorandom("numerator",1,19)
-                cae.chance[event].denom = pseudorandom("denominator",cae.chance[event].numer+1,20)
-            end
-            if SMODS.pseudorandom_probability(self,"scale?",cae.chance[event].numer,cae.chance[event].denom,"smallpox_longsocks",true) then
-                cae.xmult = cae.xmult + cae.scale
-                ret.extra = {}
-                ret.extra.message = localize("smallpox_sockscale"..pseudorandom("word",1,3))..G.PROFILES[G.SETTINGS.profile].name
-            end
-        end
-        ]]
-    end
+    end,
 }

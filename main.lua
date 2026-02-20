@@ -38,6 +38,7 @@ assert(SMODS.load_file("./src/backs.lua"))() -- DECKS
 assert(SMODS.load_file("./src/pools.lua"))() -- JOKER POOLS
 assert(SMODS.load_file("./src/sounds.lua"))() -- SOUNDS
 assert(SMODS.load_file("./src/config_menu.lua"))() -- CONFIG MENU
+assert(SMODS.load_file("./src/pack.lua"))() -- CONFIG MENU
 --assert(SMODS.load_file("./src/atlasses.lua"))() -- ATLASSES
 
 
@@ -112,6 +113,8 @@ end
 -- Main Menu Colours (Credit to Cryptid and JoyousSpring)
 local game_main_menu_ref = Game.main_menu
 function Game:main_menu(change_context)
+    local desc = localize("Spox_Description")
+    print(type(desc))
     local ret = game_main_menu_ref(self, change_context)
 
         local colours = { c1 = HEX("3F528C"), c2 = HEX("89ACEB") }
@@ -132,6 +135,7 @@ function Game:main_menu(change_context)
 end
 
 if SPOX_CONFIG.SPOX_Startup_Message then
+    
     local mm = Game.main_menu
     function Game:main_menu(change_context, ...)
         mm(self, change_context, ...)
