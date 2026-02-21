@@ -24,7 +24,7 @@ SMODS.Joker {
         return {vars = {a, b, ab, c, card.ability.extra.edition}}
     end,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and context.other_card:is_face() and SMODS.pseudorandom_probability(card, 'smallpox_therian', 1, card.ability.extra.chance) and not context.blueprint then
+        if context.individual and context.cardarea == G.play and context.other_card:is_face() and SMODS.pseudorandom_probability(card, 'smallpox_therian', a, b) and not context.blueprint then
             local scored_card = context.other_card
             G.E_MANAGER:add_event(Event({
                 func = function()                
@@ -35,7 +35,7 @@ SMODS.Joker {
             SMODS.calculate_effect({ message = "Run wild", colour = G.C.BLUE},
             context.blueprint_card or card)
         end
-        if context.individual and context.cardarea == G.play and context.other_card:is_face() and SMODS.pseudorandom_probability(card, 'smallpox_therian', 1, card.ability.extra.chance2) and not context.blueprint then
+        if context.individual and context.cardarea == G.play and context.other_card:is_face() and SMODS.pseudorandom_probability(card, 'smallpox_therian', ab , c) and not context.blueprint then
             card.getting_sliced = true
 			if #G.consumeables.cards < G.consumeables.config.card_limit then
 				SMODS.add_card({ set = 'Spectral', key = 'c_cryptid'})
