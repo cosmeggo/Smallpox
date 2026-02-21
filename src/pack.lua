@@ -14,8 +14,6 @@ SMODS.Booster {
     key = "SPOXPack1",
     loc_txt= {
         name = 'SPOX Booster Pack',
-        text = { "Pick {C:attention}#1#{} card out",
-                "{C:attention}#2#{} of SPOX's jokers!", },
         group_name = {"Pick a card,"},
     },
     weight = 0.6,

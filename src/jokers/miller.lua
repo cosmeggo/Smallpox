@@ -24,7 +24,7 @@ SMODS.Joker{
     discovered = true,
     config = { extra = { percentage = 0.25}, },
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.percentage * 100} }
+        return { vars = { card.ability.extra.percentage * 100, colours = { HEX("ff07e6") } }}
     end,
     calculate = function(self, card, context)
         if context.setting_blind and G.GAME.blind.in_blind then
@@ -33,7 +33,7 @@ SMODS.Joker{
                 end
                 return {
                     message = "Drained", colour = G.C.RED,
-                    
+                    card:juice_up(0.6, 0.6),
                     func = function()
                         G.GAME.blind.chips = G.GAME.blind.chips * (1 - card.ability.extra.percentage)
                         G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)

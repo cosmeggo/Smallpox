@@ -529,13 +529,19 @@ return {
             j_smallpox_miller = {
                 name = {
                     "VOIDWALKER",
-                    "{s:0.5}created by Abel",
+                    "{s:0.5}created by {V:1}AbelSketch{}",
                 },
-                text = {
+                text = {{
                     "Reduce blind",
-                    "requirements by", 
-                    "{C:attention}#1#%{}",
-            	},
+                    "requirements", 
+                    "by {C:attention}#1#%{}",
+                },
+                                              {
+                        "{s:0.9,C:inactive}One day... You will know",
+                        "{s:0.9,C:inactive}the Joy of Creation.",
+                        "{s:0.9,C:inactive}— Henry Miller"
+                    }
+                }
             },
 		
             j_smallpox_examplejoker = {
@@ -995,6 +1001,23 @@ return {
                 },
             },
             
+        },
+        Packs = {
+            p_smallpox_SPOXPack1 = {
+                name = "Smallpox Pack",
+                text = { "Pick {C:attention}#1#{} card out",
+                "{C:attention}#2#{} {C:dark_edition}Smallpox{} jokers!", }
+            },
+            p_smallpox_SPOXPack2 = {
+                name = "Smallpox Pack",
+                text = { "Pick {C:attention}#1#{} card out",
+                "{C:attention}#2#{} {C:dark_edition}Smallpox{} jokers!", }
+            },
+            p_smallpox_SPOXPack3 = {
+                name = "Jumbo Smallpox Pack",
+                text = { "Pick {C:attention}#1#{} card out",
+                "{C:attention}#2#{} {C:dark_edition}Smallpox{} jokers!", }
+            }
         },
         --not actually an edition, used on tags
         Edition = {
