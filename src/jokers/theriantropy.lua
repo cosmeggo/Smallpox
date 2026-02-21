@@ -37,7 +37,9 @@ SMODS.Joker {
         end
         if context.individual and context.cardarea == G.play and context.other_card:is_face() and SMODS.pseudorandom_probability(card, 'smallpox_therian', 1, card.ability.extra.chance2) and not context.blueprint then
             card.getting_sliced = true
-            SMODS.add_card({ set = 'Spectral', key = 'c_cryptid'})
+			if #G.consumeables.cards < G.consumeables.config.card_limit then
+				SMODS.add_card({ set = 'Spectral', key = 'c_cryptid'})
+			end
             G.E_MANAGER:add_event(Event({
                 func = function()
                     card:start_dissolve({G.C.RED}, nil, 1.6)
