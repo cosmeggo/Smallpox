@@ -251,7 +251,6 @@ return {
                     {
                         "When hand starts, roll {C:attention}6 {C:red}D4s",
                         "{C:mult}+#1#{} Mult for every {C:red}3{} rolled",
-						"{s:0.8,C:inactive}(Currently {s:0.8,C:mult}+#5# {s:0.8,C:inactive}Mult, for {s:0.8,C:red}#4# {s:0.8,C:inactive}threes){}{}{}{}{}",
                     },
                     {
                         "If exactly {C:attention}3 {C:red}3s{} are rolled, pick one:",
@@ -1141,6 +1140,7 @@ return {
 
 	},        
 }
+
 
 
 
