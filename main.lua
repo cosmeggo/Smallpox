@@ -169,6 +169,14 @@ function Game:main_menu(ctx)
                 end
             }
         )
+           for i,v in ipairs(G.title_top.cards) do
+            if v.config.center.key == "c_base" then
+                if v:get_id() == 14 and v:is_suit("Spades") then  --thanks mys minty for this
+                    v:remove()
+                    break
+                end
+            end
+        end
     end
 end
 

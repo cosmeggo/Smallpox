@@ -28,7 +28,7 @@ SMODS.Joker{
     end,
     calculate = function(self, card, context)
         if context.setting_blind and G.GAME.blind.in_blind then
-                if SPOX_CONFIG.SPOX_Jumpscares == falses then
+                if SPOX_CONFIG.SPOX_Jumpscares == false then
                     return{play_sound("smallpox_miller_drain")}
                 end
                 return {
