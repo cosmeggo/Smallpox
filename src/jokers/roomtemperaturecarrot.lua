@@ -35,7 +35,7 @@ SMODS.Joker {
             }
         end
         if context.money_altered and context.amount > 0 and not converting then
-            card.ability.extra.carrocoins = card.ability.extra.carrocoins + (context.amount * card.ability.extra.carrocoins_mod)
+            card.ability.extra.carrocoins = math.max(0,card.ability.extra.carrocoins + (context.amount * card.ability.extra.carrocoins_mod))
             return {
                 message = "+" .. context.amount * card.ability.extra.carrocoins_mod .. " Carrocoins"
             }
@@ -307,7 +307,7 @@ end
 
 G.FUNCS.upgrade = function(e)
     upgrading = true
-    e.config.ref_table.ability.extra.carrocoins = e.config.ref_table.ability.extra.carrocoins - e.config.ref_table.ability.extra.carrocoins_upgrade_cost
+    e.config.ref_table.ability.extra.carrocoins = math.max(0,e.config.ref_table.ability.extra.carrocoins - e.config.ref_table.ability.extra.carrocoins_upgrade_cost)
     e.config.ref_table.ability.extra.xchips_xmult = e.config.ref_table.ability.extra.xchips_xmult + e.config.ref_table.ability.extra.xchips_xmult_mod
     upgrading = false
     card_eval_status_text(G.jokers.highlighted[1], "extra", nil, nil, nil, { message = "Upgraded!" }
@@ -326,7 +326,7 @@ end
 
 G.FUNCS.convert = function(e)
     converting = true
-    e.config.ref_table.ability.extra.carrocoins = e.config.ref_table.ability.extra.carrocoins - e.config.ref_table.ability.extra.carrocoins_conversion_rate
+    e.config.ref_table.ability.extra.carrocoins = math.max(0,e.config.ref_table.ability.extra.carrocoins - e.config.ref_table.ability.extra.carrocoins_conversion_rate)
     ease_dollars(1)
     converting = false
 end
