@@ -79,25 +79,34 @@ SMODS.Joker {
         if context.smallpox_ren_dragging and context.card_dragging == card and #card.ability.extra.treasures > 0 then
             local closest_index = nil
             local closest_dist = nil
+			
             for i, v in ipairs(card.ability.extra.treasures) do
                 if (not closest_dist) or math.sqrt(((v.x - card.CT.x) ^ 2) + ((v.y - card.CT.y) ^ 2)) < closest_dist then
                     closest_index = i
                     closest_dist = math.sqrt(((v.x - card.CT.x) ^ 2) + ((v.y - card.CT.y) ^ 2))
                 end
             end
-            
+
             local collection_range = 0.75
             local detection_range = 5
 
             local max_juice_strength = 0.75
             local juice_mult = max_juice_strength/detection_range
 
+			if closest_dist < detection_range then
+				card.ability.extra.sound_ticks = card.ability.extra.sound_ticks + 0.1
 
-            card.ability.extra.sound_ticks = card.ability.extra.sound_ticks + 0.1
-                if card.ability.extra.sound_ticks > closest_dist then
-                    card.ability.extra.sound_ticks = 0
-                    play_sound("multhit1", (closest_dist<=collection_range and 1.5) or 1, (detection_range-closest_dist)/detection_range)
-                end
+				local interval = math.max(0.25, closest_dist) -- cap speed to avoid glitch
+
+				if card.ability.extra.sound_ticks > interval then
+					card.ability.extra.sound_ticks = 0
+					play_sound("multhit1", 1.5, math.max(0,math.min(1, (detection_range - closest_dist) / detection_range)))--wrap the volume between 0 and 1
+				end
+			else
+				-- reset ticks when out of range, to avoid glitch
+				card.ability.extra.sound_ticks = 0
+			end
+
 
             if not card.juice and closest_dist < detection_range then
                 card:juice_up(math.max(0,detection_range-closest_dist)*juice_mult,math.max(0,detection_range-closest_dist)*juice_mult)
@@ -113,10 +122,12 @@ SMODS.Joker {
                     if treasure.money then
                         ease_dollars(treasure.money)
                     end
-                    if treasure.card then
+                    if treasure.card and #G.jokers.cards < G.jokers.config.card_limit then --if space
                         SMODS.add_card({key = treasure.card})
                         --create card
-                    end
+                    elseif treasure.card then --if not grant joker value
+						ease_dollars(math.floor(((10 - treasure.weight)/2)*0.8)) --reverse of weight calc, x0.8
+					end
 
                     table.remove(card.ability.extra.treasures,closest_index)
                     card.children.center:set_sprite_pos({x=0,y=0})
@@ -133,7 +144,7 @@ SMODS.Joker {
             if center and center.key then
                 table.insert(card.ability.extra.loot_pool, {
                     card = center.key,
-                    weight = math.max(1, (center.cost * -25) + 250)
+                    weight = math.max(1, (center.cost * -2) + 10)
                 })
             end
         end
