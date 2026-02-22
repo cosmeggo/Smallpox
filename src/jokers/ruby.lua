@@ -42,6 +42,12 @@ SMODS.Joker {
         zodiac_set = nil
     },
     blueprint_compat = true,
+    smallpox_credits = {
+		{
+			text = "By: Ruby",
+            color = G.C.RED,
+		},
+	},
     loc_vars = function(self, q, card)
         local key = SPOX.get_selected_deck() and SPOX.get_selected_deck():sub(3, 999) or nil
         local vars = {}

@@ -44,5 +44,12 @@ SMODS.Joker{
         if context.end_of_round and context.game_over and not SPOX_CONFIG.SPOX_Jumpscares then
         return {play_sound("smallpox_miller_laugh")}
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: AbelSketch",
+            color = HEX("ff07e6"),
+            size = 1.5
+		},
+	},
 }

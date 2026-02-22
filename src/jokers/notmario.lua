@@ -114,6 +114,12 @@ SMODS.Joker {
             SMODS.change_discard_limit(-2)
         end
     end,
+    smallpox_credits = {
+		{
+			text = "By: notmario",
+            color = HEX("ff6868")
+		},
+	},
 }
 
 SMODS.Sticker {

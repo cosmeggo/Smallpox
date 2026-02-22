@@ -273,5 +273,14 @@ SMODS.Joker {
                 }
             end
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: Nxkoo",
+                "Art: Typ0"
+            },
+            color = G.C.SUITS.Hearts,
+		},
+	},
 }

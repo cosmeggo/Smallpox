@@ -51,5 +51,11 @@ SMODS.Joker {
                 end
             }
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: LFMoth",
+            color = G.C.BLUE
+		},
+	},
 }

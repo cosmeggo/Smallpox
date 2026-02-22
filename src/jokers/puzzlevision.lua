@@ -41,5 +41,11 @@ SMODS.Joker {
   end,
     calc_dollar_bonus = function(self, card)
         return card.ability.extra.dollars * ( #G.jokers.cards )
-    end
+    end,
+    smallpox_credits = {
+    	{
+    		text = "By: FireIce421",
+            color = G.C.BLUE
+    	},
+    },
 }

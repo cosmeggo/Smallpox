@@ -89,6 +89,15 @@ SMODS.Joker{
                 play_sound('generic1', 0.9 + math.random()*0.1, 0.8)
             end
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: Tatsu",
+                "Code: SLDTyp0"
+            },
+            color = HEX('E51068'),
+		},
+	},
 
 }

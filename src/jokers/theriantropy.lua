@@ -50,5 +50,11 @@ SMODS.Joker {
             context.blueprint_card or card)
             return true            
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: Jewel"
+		},
+        color = HEX("000000"), --Please make this smallpox_pink
+	},
 }

@@ -205,5 +205,11 @@ SMODS.Joker {
 				MDJ_key = key
 			}
 		end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: soulware",
+			color = G.C.GREEN
+		},
+	},
 }

@@ -49,4 +49,10 @@ SMODS.Joker({
             })
         end
 	end,
+	smallpox_credits = {
+		{
+			text = "By: ThunderEdge",
+			color = gradient
+		},
+	},
 })

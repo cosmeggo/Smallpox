@@ -156,4 +156,10 @@ SMODS.Joker {
             table.insert(card.ability.extra.treasures, loot)
         end
     end,
+    smallpox_credits = {
+    	{
+    		text = "By: PokéRen",
+            color = G.C.BLUE
+    	},
+    },
 }

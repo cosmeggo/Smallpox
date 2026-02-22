@@ -80,6 +80,8 @@ SMODS.Joker {
 
         local _,mod = pseudorandom_element(count, "smallpox_vaccine_mod_selection")
         card.ability.extra.modid = mod
+
+        self.smallpox_credits[1].text = "By: " .. localize("mintypox_name")
     end,
     calculate = function(self, card, context)
         if context.other_joker and context.other_joker.debuff then
@@ -98,7 +100,13 @@ SMODS.Joker {
             end
             if triggered then return nil, true end
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "Done in set_ability due to localization",
+            color = HEX("CA7CA7"),
+		},
+	},
 }
 
 

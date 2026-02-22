@@ -51,4 +51,10 @@ SMODS.Joker({
 			}
 		end
 	end,
+    smallpox_credits = {
+		{
+			text = "By: Lexi"
+		},
+	},
+	
 })

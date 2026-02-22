@@ -118,5 +118,10 @@ SMODS.Joker {
 			end		
     end
     end,
-    
+	smallpox_credits = {
+		{
+			text = "By: Lyre",
+			color = G.C.RARITY[4]
+		},
+	},
 }

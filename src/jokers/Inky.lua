@@ -26,5 +26,14 @@ SMODS.Joker {
         card:start_materialize()
         G.jokers:emplace(card)
         play_sound('generic1', 0.9 + math.random()*0.1, 0.8)
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: Inky",
+                "Code: SLDTyp0"
+            },
+			color = G.C.GREEN
+		},
+	},
 }

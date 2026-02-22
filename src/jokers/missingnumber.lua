@@ -83,6 +83,15 @@ SMODS.Joker {
                 xchips = card.ability.extra.mult
             }
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: missingnumber",
+                "Code: SLDTyp0"
+            },
+            color = HEX("000000"),
+		},
+	},
 
 }

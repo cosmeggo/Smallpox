@@ -53,7 +53,16 @@ SMODS.Joker {
                 chips = card.ability.extra.chips
             }
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: MetaNite64",
+                "Art: Plasma"
+            },
+            color = HEX('000000')
+		},
+	},
 }
 
 

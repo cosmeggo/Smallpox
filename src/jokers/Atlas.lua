@@ -88,5 +88,11 @@ SMODS.Joker {
 				}
 			end
 		end
-	end
+	end,
+	smallpox_credits = {
+		{
+			text = "By: ABuffZucchini",
+			color = G.C.BLUE
+		},
+	},
 }

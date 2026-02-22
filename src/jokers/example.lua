@@ -52,5 +52,12 @@ SMODS.Joker {
                 colour = HEX('a4eaf4')
             }
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "<3",
+			color = HEX('e84fbf'),
+            size = 2
+		},
+	},
 }

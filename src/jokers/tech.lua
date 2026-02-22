@@ -97,4 +97,14 @@ SMODS.Joker {
 			card.ability.extra.retriggers = 0
 		end
     end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: Tech",
+                "Code: LasagnaFelidae",
+				"Art: Plasma"
+            },
+            color = HEX("000000"),
+		},
+	},
 }

@@ -40,7 +40,13 @@ SMODS.Joker {
                 message = "+" .. context.amount * card.ability.extra.carrocoins_mod .. " Carrocoins"
             }
         end
-    end
+    end,
+    smallpox_credits = {
+    	{
+    		text = "By: RainStar",
+            color = G.C.GOLD
+    	},
+    },
 }
 
 -- buttons

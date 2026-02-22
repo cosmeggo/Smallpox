@@ -67,7 +67,12 @@ SMODS.Joker {
                 return {message = "use active!", colour = G.C.RED} 
             end 
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: Breuuh"
+		},
+	},
 }
 
 

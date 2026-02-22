@@ -38,4 +38,14 @@ SMODS.Joker {
             }
         end
     end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: Sillyz",
+                "Art: Plasma &",
+                "LasagnaFelidae"
+            },
+            color = G.C.PURPLE,
+		},
+	},
 }

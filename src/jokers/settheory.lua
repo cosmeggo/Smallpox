@@ -35,5 +35,11 @@ SMODS.Joker{
                 end
             end
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: IamArta",
+            color = G.C.DARK_EDITION,
+		},
+	},
 }

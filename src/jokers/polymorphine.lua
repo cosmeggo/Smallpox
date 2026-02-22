@@ -28,5 +28,14 @@ SMODS.Joker {
                 SMODS.add_card{ set = "Consumeables"}
             end
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: NinjaBanana",
+                "Art: LasagnaFelidae"
+            },
+            color = G.C.BLUE
+		},
+	},
 }

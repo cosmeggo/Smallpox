@@ -31,5 +31,12 @@ SMODS.Joker {
             card.ability.extra.current_mult = card.ability.extra.current_mult + card.ability.extra.added_mult
             return { message = localize("k_upgrade_ex") }
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: GhostSalt",
+            text_color = G.C.BLACK,
+			color = G.C.WHITE
+		},
+	},
 }

@@ -77,7 +77,14 @@ SMODS.Joker {
                 x_mult = card.ability.extra.x_mult
             }
         end
-    end
+    end,
+
+    smallpox_credits = {
+		{
+			text = "By: cloudzXIII",
+			color = G.C.GOLD
+		},
+	},
 }
 
 local setcost = Card.set_cost

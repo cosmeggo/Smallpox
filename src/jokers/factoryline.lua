@@ -66,7 +66,13 @@ SMODS.Joker {
                 end
             end
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: Lily Felli",
+			color = G.ARGS.LOC_COLOURS.lily_pink
+		},
+	},
 }
 
 --[[

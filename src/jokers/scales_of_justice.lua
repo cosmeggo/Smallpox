@@ -53,5 +53,14 @@ SMODS.Joker {
                 }
             end
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: Revo",
+                "Art: Plasma"
+            },
+            color = G.C.PURPLE
+		},
+	},
 }

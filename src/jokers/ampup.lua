@@ -64,5 +64,11 @@ SMODS.Joker {
 		end
 
         return nil
-	end
+	end,
+	smallpox_credits = {
+		{
+			text = "By: M0xes",
+			color = HEX('9d39c4')
+		},
+	},
 }

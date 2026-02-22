@@ -86,5 +86,14 @@ SMODS.Joker {
         if context.after then
             card.ability.extra.threes = 0
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: Mysthaps",
+                "Art: Inky",
+            },
+			color = G.C.RED
+		},
+	},
 }

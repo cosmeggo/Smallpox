@@ -77,6 +77,15 @@ SMODS.Joker {
                 Xmult = card.ability.extra.mult
             }
         end
-    end 
+    end,
+    smallpox_credits = {
+		{
+			text = {
+                "By: TigerTHawk",
+                "Code: SLDTyp0",
+            },
+            color = HEX("000000"),
+		},
+	},
 }
 

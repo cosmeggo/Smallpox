@@ -57,5 +57,14 @@ SMODS.Joker {
                 chips = card.ability.extra.s_chips * card.ability.extra.s_count
             }
         end
-    end
+    end,
+	smallpox_credits = {
+		{
+			text = {
+				"By: Astro",
+				"Code: LasagnaFelidae"
+			},
+			color = G.C.BLUE
+		},
+	},
 }

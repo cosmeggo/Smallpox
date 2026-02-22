@@ -181,6 +181,12 @@ SMODS.Joker {
                 end
             end
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: SLDTyp0",
+            color = HEX("000000"),
+		},
+	},
     
 }

@@ -82,5 +82,11 @@ SMODS.Joker {
                 repetitions = 3
             }
         end
-    end
+    end,
+	smallpox_credits = {
+		{
+			text = "By: isotypical",
+			color = G.C.BLUE
+		},
+	},
 }

@@ -64,5 +64,11 @@ SMODS.Joker {
 				})
             end
         end
-    end
+    end,
+	smallpox_credits = {
+		{
+			text = "By: FirstTry",
+			color = G.C.SECONDARY_SET.Spectral
+		},
+	},
 }

@@ -63,7 +63,13 @@ SMODS.Joker {
                 xmult = card.ability.extra.xmult
             }
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: Plasma",
+            color = G.C.BLUE,
+		},
+	},
 }
 
 

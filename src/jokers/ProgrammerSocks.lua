@@ -58,5 +58,11 @@ SMODS.Joker {
         if ret then 
             SMODS.calculate_effect(ret, card)
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: ProdByProto",
+            color = G.C.RARITY[4]
+		},
+	},
 }

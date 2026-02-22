@@ -33,7 +33,13 @@ SMODS.Joker {
             G.GAME.SPOX_OROINIT = card.ability.extra.mult + card.ability.extra.mult_gain
             print(G.GAME.SPOX_OROINIT)
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: candycanearter",
+            color = G.C.BLUE
+		},
+	},
 }
 
 local ccfs = create_card_for_shop

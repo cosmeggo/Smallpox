@@ -55,4 +55,13 @@ SMODS.Joker {
 		end
     end,
     blueprint_compat = true,
+	smallpox_credits = {
+		{
+			text = {
+				"By: Edward Robinson",
+				"Code: LasagnaFelidae"
+			},
+			color = HEX('91583D')
+		},
+	},
 }

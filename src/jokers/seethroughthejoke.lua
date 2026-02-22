@@ -31,7 +31,13 @@ SMODS.Joker {
         G.hand:change_size(-card.ability.extra.h_size)
         SMODS.change_play_limit(4)
         SMODS.change_discard_limit(4)
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: flynnsaneFellow",
+            color = G.C.SECONDARY_SET.Tarot,
+		},
+	},
 }
 
 

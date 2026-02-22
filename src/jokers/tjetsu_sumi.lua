@@ -104,5 +104,11 @@ calculate = function(self, card, context)
         end
     end
 end,
+    smallpox_credits = {
+		{
+			text = "By: Tje.Tsu",
+            color = G.C.SECONDARY_SET.Tarot
+		},
+	},
 }
 

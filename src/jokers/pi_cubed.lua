@@ -50,7 +50,13 @@ SMODS.Joker {
         if context.game_over and not context.blueprint then
             SpikedBall.show_game = false
         end
-    end
+    end,
+    smallpox_credits = {
+		{
+			text = "By: pi_cubed",
+            color = HEX("E14159")
+		},
+	},
 }
 
 love.graphics.setDefaultFilter('nearest', 'nearest') -- stops blurry graphics
