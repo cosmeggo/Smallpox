@@ -75,7 +75,32 @@ SMODS.Joker {
 	},
 }
 
+function SPOX.chips_container(args)
+    args.type = 'chips'
+    args.text = 'chip_text'
+    args.align = 'cr'
+    args.scale = args.scale*0.4
+    return
+    {n=G.UIT.C, config={align = 'cm', id = 'hand_chips_container'}, nodes = {
+        SMODS.GUI.score_container(args)
+    }}
+end
 
+function SPOX.operator(args)
+    return
+    {n=G.UIT.C, config={align = args.align or "cm", id = 'hand_operator_container'}, nodes={
+        {n=G.UIT.T, config={text = args.text or "X", lang = G.LANGUAGES['en-us'], scale = (args.scale or  1), colour = args.color or G.C.UI_MULT, shadow = true}},
+    }}
+end
+
+function SPOX.mult_container(args)
+    args.type = 'mult'
+    args.scale = args.scale*0.4
+    return
+    {n=G.UIT.C, config={align = 'cm', id = 'hand_mult_container'}, nodes = {
+        SMODS.GUI.score_container(args)
+    }}
+end
 
 SMODS.Scoring_Calculation {
     key = "breuhh_mul",
@@ -172,8 +197,15 @@ SMODS.Scoring_Calculation {
     func = function(self,chips,mult,flames)
         return chips^math.log((mult > 0 and mult or 1), 8)
     end,
-    text = "^",
-    colour = G.C.GREEN
+    replace_ui = function(self) 
+        local multbox = SPOX.mult_container({scale=0.5, w=2*0.5, h=0.5})
+        multbox.config.align = "tl"
+        return {n=G.UIT.R, config={align = "cm", minh = 1, padding = 0.1}, nodes={
+                SMODS.GUI.chips_container(1),
+                SPOX.operator({align="tm", text="log8", scale=0.5, color = G.C.GREEN}),
+                multbox
+            }}
+    end,
 }
 
 SMODS.Scoring_Calculation {
@@ -182,7 +214,16 @@ SMODS.Scoring_Calculation {
         local n = math.log(chips*mult, 4)
         return math.sqrt(2*math.pi*n)*(n/2.718281828)^n
     end,
-    text = "!",
+    replace_ui = function(self) 
+        local scale = 0.6
+        return {n=G.UIT.R, config={align = "cm", minh = 1, padding = 0.1}, nodes={
+                SPOX.operator({text="log2(", scale=scale, color = G.C.PURPLE}),
+                SPOX.chips_container({scale=scale, w=2*scale, h=scale}),
+                SPOX.operator({text="X", scale=scale, color = G.C.PURPLE}),
+                SPOX.mult_container({scale=scale, w=2*scale, h=scale}),
+                SPOX.operator({text=")!", scale=scale, color = G.C.PURPLE}),
+            }}
+    end,
     colour = G.C.PURPLE
 }
 
@@ -200,7 +241,14 @@ SMODS.Scoring_Calculation {
     func = function(self,chips,mult,flames)
         return chips*2^math.ceil(math.log(mult,2))
     end,
-    text = "<<",
+    replace_ui = function(self) 
+        local scale = 0.7
+        return {n=G.UIT.R, config={align = "cm", minh = 1, padding = 0.1}, nodes={
+                SPOX.chips_container({scale=scale, w=2*scale, h=scale}),
+                SPOX.operator({text="<< log2", scale=0.5, color = G.C.RED}),
+                SPOX.mult_container({scale=scale, w=2*scale, h=scale}),
+            }}
+    end,
     colour = G.C.RED
 }
 
@@ -209,7 +257,14 @@ SMODS.Scoring_Calculation {
     func = function(self,chips,mult,flames)
         return chips*10^math.log(mult,3)
     end,
-    text = "e",
+    replace_ui = function(self) 
+        local scale = 0.7
+        return {n=G.UIT.R, config={align = "cm", minh = 1, padding = 0.1}, nodes={
+                SPOX.chips_container({scale=scale, w=2*scale, h=scale}),
+                SPOX.operator({text="e log3", scale=0.5, color = G.C.GREEN}),
+                SPOX.mult_container({scale=scale, w=2*scale, h=scale}),
+            }}
+    end,
     colour = G.C.GREEN
 }
 
