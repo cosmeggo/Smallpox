@@ -6,6 +6,17 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
+loc_colour()
+G.ARGS.LOC_COLOURS.rainbow_badge = SMODS.Gradient {
+	key = "rainbow_badge",
+	update = function(self, dt)
+        local rgb = SPOX.hsl2rgb(math.fmod((G.TIMERS.REAL) * 50, 360), 1, 0.75, 1)
+		for i, color in ipairs(rgb) do
+			self[i] = color
+		end
+	end
+}
+
 SMODS.Joker {
     key = "poxofthewild",
     blueprint_compat = true,
@@ -104,7 +115,7 @@ SMODS.Joker {
                 "Code: LasagnaFelidae",
 				"Art: Plasma"
             },
-            color = HEX("000000"),
+            color = G.ARGS.LOC_COLOURS.rainbow_badge,
 		},
 	},
 }
