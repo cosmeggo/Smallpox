@@ -154,13 +154,16 @@ G.FUNCS.smallpox_breuhh_click = function(e)
             return true
         end
     }))
+    for _, copy in ipairs(SMODS.find_card("j_smallpox_functions")) do
+        copy.ability.current_operator = operator
+    end
     card.ability.been_used = true
     card_eval_status_text(card, 'extra', nil, nil, nil, {message = operator.name.."!", colour = operator.colour})
 end
 
 G.FUNCS.smallpox_breuhh_func = function(e)
   local card = e.config.ref_table
-  local can_use = not card.ability.been_used
+  local can_use = not card.ability.been_used and not card.debuff
 
   e.config.button = can_use and 'smallpox_breuhh_click' or nil
   e.config.colour = can_use and G.C.MULT or G.C.UI.BACKGROUND_INACTIVE

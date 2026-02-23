@@ -32,7 +32,7 @@ SMODS.Joker {
             {key = "hye", name = "hyper-e", colour = G.C.GREEN},
             {key = "ran", name = "random", colour = G.C.FILTER}
         },
-        current_operator = {name = "none", colour = G.C.UI.TEXT_INACTIVE},
+        current_operator = {key = "none", name = "none", colour = G.C.UI.TEXT_INACTIVE},
         been_used = false
     },
     pools = {["Smallpox"] = true, ["Math"] = true},
@@ -43,22 +43,62 @@ SMODS.Joker {
             vars = {card.ability.current_operator.name, colours = {card.ability.current_operator.colour}}
         }
     end,
-    
+    add_to_deck = function(self, card, from_debuff)
+        for _, functions in ipairs(SMODS.find_card("j_smallpox_functions")) do
+            if not functions.debuff and functions ~= card then
+                card.ability.current_operator = functions.ability.current_operator
+                break
+            end
+        end
+        
+        local operator = card.ability.current_operator
+        if operator.key == "none" then
+            return nil
+        end
+        G.E_MANAGER:add_event(Event({
+            trigger = "after",
+            func = function()
+                SMODS.set_scoring_calculation("smallpox_breuhh_"..operator.key)
+                return true
+            end
+         }))
+    end,
+    remove_from_deck = function(self, card, from_debuff)
+        for _, functions in ipairs(SMODS.find_card("j_smallpox_functions")) do
+            if not functions.debuff and functions ~= card then
+                return nil
+            end
+        end
+        G.E_MANAGER:add_event(Event({
+            trigger = "after",
+            func = function()
+                SMODS.set_scoring_calculation("multiply")
+                return true
+            end
+        }))
+        
+    end,
     calculate = function(self, card, context)
         if context.after and not context.blueprint then
-            card.ability.current_operator = card.ability.operators[math.ceil((pseudorandom("function")*#card.ability.operators + 1) % #card.ability.operators)]
-            local operator = card.ability.current_operator
-            G.E_MANAGER:add_event(Event({
-                trigger = "after",
-                func = function()
-                    SMODS.set_scoring_calculation("smallpox_breuhh_"..operator.key)
-                    return true
-                end
-            }))
-            return {
-                message = operator.name.."!",
-                colour = operator.colour
-            }
+            local operator = nil
+            local first_function = SMODS.find_card("j_smallpox_functions")[1]
+            if first_function == card then
+                card.ability.current_operator = card.ability.operators[math.ceil((pseudorandom("function")*#card.ability.operators + 1) % #card.ability.operators)]
+                operator = card.ability.current_operator
+                G.E_MANAGER:add_event(Event({
+                    trigger = "after",
+                    func = function()
+                        SMODS.set_scoring_calculation("smallpox_breuhh_"..operator.key)
+                        return true
+                    end
+                }))
+                return {
+                    message = operator.name.."!",
+                    colour = operator.colour
+                }
+            else
+                card.ability.current_operator = first_function.ability.current_operator
+            end
         end
 
         if context.setting_blind then 
