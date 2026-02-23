@@ -34,6 +34,7 @@ SMODS.Joker {
                         G.jokers.cards[i]
                 end
             end
+        local joker_to_destroy = pseudorandom_element(destructable_jokers, 'smallpox_smallpox')
         if joker_to_destroy then
             joker_to_destroy.getting_sliced = true
                 return {
