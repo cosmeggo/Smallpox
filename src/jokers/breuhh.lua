@@ -15,24 +15,24 @@ SMODS.Joker {
     discovered = true,
     config = {
         operators = {
-            {key = "mul", name = "multiplication", colour = G.C.RED},
-            {key = "add", name = "addition", colour = G.C.BLUE},
-            {key = "div", name = "division", colour = G.C.PURPLE},
-            {key = "sub", name = "subtraction", colour = G.C.FILTER},
-            {key = "mod", name = "modulo", colour = G.C.GREEN},
-            {key = "avg", name = "average", colour = G.C.GREEN},
-            {key = "con", name = "concatenation", colour = G.C.BLUE},
-            {key = "min", name = "minimum", colour = G.C.FILTER},
-            {key = "max", name = "maximum", colour = G.C.FILTER},
-            {key = "com", name = "complement", colour = G.C.RED},
-            {key = "pow", name = "exponentiation", colour = G.C.GREEN},
-            {key = "fac", name = "factorial", colour = G.C.PURPLE},
-            {key = "bal", name = "balance", colour = G.C.BLUE},
-            {key = "lsh", name = "leftshift", colour = G.C.RED},
-            {key = "hye", name = "hyper-e", colour = G.C.GREEN},
-            {key = "ran", name = "random", colour = G.C.FILTER}
+            {key = "mul", colour = G.C.RED},
+            {key = "add", colour = G.C.BLUE},
+            {key = "div", colour = G.C.PURPLE},
+            {key = "sub", colour = G.C.FILTER},
+            {key = "mod", colour = G.C.GREEN},
+            {key = "avg", colour = G.C.GREEN},
+            {key = "con", colour = G.C.BLUE},
+            {key = "min", colour = G.C.FILTER},
+            {key = "max", colour = G.C.FILTER},
+            {key = "com", colour = G.C.RED},
+            {key = "pow", colour = G.C.GREEN},
+            {key = "fac", colour = G.C.PURPLE},
+            {key = "bal", colour = G.C.BLUE},
+            {key = "lsh", colour = G.C.RED},
+            {key = "hye", colour = G.C.GREEN},
+            {key = "ran", colour = G.C.FILTER}
         },
-        current_operator = {key = "none", name = "none", colour = G.C.UI.TEXT_INACTIVE},
+        current_operator = {key = "non", colour = G.C.UI.TEXT_INACTIVE},
         been_used = false
     },
     pools = {["Smallpox"] = true, ["Math"] = true},
@@ -40,7 +40,7 @@ SMODS.Joker {
 
     loc_vars = function(self,ifq,card)
         return {
-            vars = {card.ability.current_operator.name, colours = {card.ability.current_operator.colour}}
+            vars = {localize("k_smallpox_"..card.ability.current_operator.key), colours = {card.ability.current_operator.colour}}
         }
     end,
     add_to_deck = function(self, card, from_debuff)
@@ -52,7 +52,7 @@ SMODS.Joker {
         end
         
         local operator = card.ability.current_operator
-        if operator.key == "none" then
+        if operator.key == "non" then
             return nil
         end
         G.E_MANAGER:add_event(Event({
@@ -93,7 +93,7 @@ SMODS.Joker {
                     end
                 }))
                 return {
-                    message = operator.name.."!",
+                    message = localize("k_smallpox_"..card.ability.current_operator.key).."!",
                     colour = operator.colour
                 }
             else
@@ -104,7 +104,7 @@ SMODS.Joker {
         if context.setting_blind then 
             if card.ability.been_used then 
                 card.ability.been_used = false 
-                return {message = "use active!", colour = G.C.RED} 
+                return {message = localize("k_smallpox_breuhhh_useactive").."!", colour = G.C.RED} 
             end 
         end
     end,

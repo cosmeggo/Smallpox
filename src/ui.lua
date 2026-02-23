@@ -116,7 +116,7 @@ local function button_ui(card)
                 {
                   n = G.UIT.T,
                   config = {
-                    text = "USE",
+                    text = localize("k_smallpox_breuhhh_use"),
                     colour = G.C.UI.TEXT_LIGHT, -- color of the button text
                     scale = 0.4,
                   }
