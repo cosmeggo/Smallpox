@@ -16,30 +16,29 @@ SMODS.Joker {
     blueprint_compat = true, -- set to false if you dont want blueprint to copy
     discovered = true,
     unlocked = true,
-    config = { extra = { mult = 1, increase = 0.1 }, },
+    config = { extra = { xmult = 0, increase = 0.1 }, },
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult } }
+        return { vars = { 1 + card.ability.extra.xmult } }
     end,
     
     calculate = function(self, card, context)
         if context.hand_drawn then  
-            card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.increase
+            card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.increase
             return {
                 message = "Upgraded!",
                 colour = G.C.FILTER
             }
         end
-        if context.ante_end then
-            card.ability.extra.mult = card.ability.extra.mult / 2
+        if context.ante_end and context.ante_change then
+            card.ability.extra.xmult = card.ability.extra.xmult / 2
             return {
-                xmult = card.ability.extra.mult,
                 message = "Crumpled Page!",
                 colour = G.C.FILTER
              }
         end
         if context.joker_main then
             return {
-                mult = card.ability.extra.mult
+                xmult = 1 + card.ability.extra.xmult
             }
         end
     end,
