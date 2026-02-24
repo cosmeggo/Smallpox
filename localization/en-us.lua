@@ -484,14 +484,13 @@ return {
                     "VOIDWALKER",
                 },
                 text = {{
-                    "Reduce blind",
-                    "requirements", 
+                    "When a {C:attention}Blind{} is selected,",
+                    "reduce Blind requirements", 
                     "by {C:attention}#1#%{}",
                 },
                                               {
-                        "{s:0.9,C:inactive}One day... You will know",
-                        "{s:0.9,C:inactive}the Joy of Creation.",
-                        "{s:0.9,C:inactive}— Henry Miller"
+                        "{s:0.9,C:inactive}\"One day... You will know",
+                        "{s:0.9,C:inactive}the Joy of Creation.\"",
                     }
                 }
             },
