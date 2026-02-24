@@ -176,8 +176,8 @@ return {
                 text = {
                     "{X:mult,C:white}X#1#{} Mult if the {C:attention}sum{} of",
                     "the scored cards' ranks is {C:attention}even{}",
-                    "Gives an {C:green}extra{} {X:mult,C:white}X#2#{} Mult if there",
-                    "are {C:attention}equal{} amounts of jokers",
+                    "Gains an {C:green}extra{} {X:mult,C:white}X#2#{} Mult if there",
+                    "are {C:attention}equal{} amounts of Jokers",
                     "to this card's left and right.",
                 }
             },
