@@ -1,4 +1,4 @@
--- Smallpox Atlas
+-- Smallpox Atlases
 SMODS.Atlas({
     key = "smallpox", 
     path = "jokers/Smallpox.png", 
@@ -6,6 +6,11 @@ SMODS.Atlas({
     py = 95,
     atlas_table = "ASSET_ATLAS"
 })
+
+SMODS.Sound {
+    key = "cronch",
+    path = "cronch.ogg"
+}
 
 -- Smallpox
 SMODS.Joker {
@@ -15,13 +20,13 @@ SMODS.Joker {
     blueprint_compat = true,
     cost = 2,
     discovered = false,
-    config = { extra = { xmult = 1.5, odds = 4 }, },
+    config = { extra = { xmult = 1, odds = 4, xmult_gain = 0.5 }, },
     pools = {["Smallpox"] = true},
     atlas = 'smallpox',
 
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'smallpox_smallpox')
-        return { vars = { colours = { HEX('2d50ba') }, card.ability.extra.xmult, numerator, denominator } }
+        return { vars = { colours = { HEX('2d50ba') }, card.ability.extra.xmult, numerator, denominator, card.ability.extra.xmult_gain } }
     end,
 
     calculate = function(self, card, context)
@@ -37,7 +42,9 @@ SMODS.Joker {
         local joker_to_destroy = pseudorandom_element(destructable_jokers, 'smallpox_smallpox')
         if joker_to_destroy then
             joker_to_destroy.getting_sliced = true
+                card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain -- Gain xMult
                 return {
+                    sound = "smallpox_cronch",
                     message = "Infected!",
                     colour = G.C.PURPLE
                 },
