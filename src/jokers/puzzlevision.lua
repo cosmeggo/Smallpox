@@ -19,24 +19,20 @@ SMODS.Joker {
     atlas = 'PuzzleVision',
     pools = {["Smallpox"] = true, ["Metallic"] = true},
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.x_mult, card.ability.extra.mult, (G.jokers and #G.jokers.cards or 0) } }
+        return { vars = { 1 + math.floor(G.GAME.round_resets.ante / 2), G.GAME.round, (G.jokers and math.floor(#G.jokers.cards / 2) or 0) } }
     end,
     
     calculate = function(self, card, context)
         if context.joker_main then
             return {
-                mult = card.ability.extra.mult,
-                x_mult = card.ability.extra.x_mult
+                mult = G.GAME.round,
+                x_mult = 1 + math.floor(G.GAME.round_resets.ante / 2)
             }
-        end
-        if context.setting_blind then
-             card.ability.extra.x_mult = G.GAME.round_resets.ante
-             card.ability.extra.mult = G.GAME.round
         end
     end,
     calc_dollar_bonus = function(self, card)
         if G.jokers and #G.jokers.cards then
-            return #G.jokers.cards
+            return math.floor(#G.jokers.cards / 2)
         end
     end,
     smallpox_credits = {

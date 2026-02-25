@@ -94,10 +94,10 @@ return {
                 text = {
                     {
                     "When Blind is selected,",
-                    "Gain {C:mult}Mult{} based on the run's {C:attention}Round{}",
-                    "Gain {X:mult,C:white}XMult{} based on the run's {C:attention}Ante{}",
-                    "Gain {C:money}Money{} based on the amount of owned {C:attention}Jokers{}",
-                    "{C:inactive}Currently {C:mult}+#2# Mult{C:inactive}, {X:mult,C:white}X#1#{C:inactive} XMult, and {C:money}#3#${}",
+                    "Gives {C:mult}Mult{} for every {C:attention}Round{}",
+                    "Gives {X:mult,C:white}XMult{} for every 2 {C:attention}Antes{}",
+                    "Gives {C:money}Money{} for every 2 {C:attention}Jokers{} owned",
+                    "{C:inactive}Currently {C:mult}+#2#{C:inactive} Mult, {X:mult,C:white}X#1#{C:inactive} Mult, and {C:money}$#3#{}",
                     },
 					          {
                         "{s:0.9,C:inactive}It's TV Time; with your friend, Mr. Puzzles!",
