@@ -56,10 +56,10 @@ SMODS.Joker {
                  end,
             G.E_MANAGER:add_event(Event({ -- Newly Infected Card
                 func = function()
-                    SMODS.add_card {
-                    key = 'j_smallpox_smallpox',
-                    }
-                    G.GAME.joker_buffer = 0
+                    copied_joker = copy_card(joker_to_destroy, nil, nil, nil, nil)
+                    copied_joker:set_ability(card.config.center.key)
+                    copied_joker:add_to_deck()
+                    G.jokers:emplace(copied_joker)
                     return true
                 end,
             })) -- End Dissolve
