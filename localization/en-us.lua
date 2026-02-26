@@ -187,8 +187,8 @@ return {
                       "Kasane Teto",
                       },
                 text = {
-                    "Gain {X:mult,C:white}X#1#{} Mult for every",
-                    "{C:attention}Ace{} of {C:hearts}Hearts{} destroyed",
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "for every {C:hearts}Heart{} destroyed",
                     "{C:inactive}(Currently{} {X:mult,C:white}X#2#{} {C:inactive}Mult)",
                 },
             },

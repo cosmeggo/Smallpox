@@ -16,20 +16,29 @@ SMODS.Joker {
     discovered = false,
     atlas = 'sillyzteto',
     pools = {["Smallpox"] = true, ["Metallic"] = true},
-    config = { extra = { xmult = 1, xmult_gain = 0.5 } },
+    config = { extra = { xmult = 0, xmult_gain = 0.5 } },
 
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.xmult_gain, card.ability.extra.xmult } }
+        return { vars = { card.ability.extra.xmult_gain, 1 + card.ability.extra.xmult } }
     end,
 
     calculate = function(self, card, context)
-        if context.destroy_card then
-            if context.cardarea == G.play and context.destroy_card:is_suit("Hearts") and context.destroy_card:get_id() == 14 then
-                card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
-                return { 
-                    remove = true,
-                    message = localize('k_upgrade_ex')
-                }
+        if context.remove_playing_cards and not context.blueprint then
+            local hearts = 0
+            for _, removed_card in ipairs(context.removed) do
+                if removed_card:is_suit("Hearts") then 
+                    hearts = hearts + 1 
+                end
+            end
+            if hearts then
+                SMODS.scale_card(card, {
+				    ref_table = card.ability.extra,
+    			    ref_value = "xmult",
+				    scalar_value = "xmult_gain",
+                    operation = function(ref_table, ref_value, initial, change)
+	                    ref_table[ref_value] = initial + hearts*change
+                    end,
+				})
             end
         end
         if context.joker_main then
