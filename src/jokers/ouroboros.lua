@@ -53,6 +53,9 @@ local ccfs = create_card_for_shop
 function create_card_for_shop(area)
     if G.GAME.SPOX_OROINIT then 
         local cyclic = SMODS.create_card { key = "j_smallpox_ins_oro", area = area, key_append = "spox_oro" }
+        if cyclic.config.center.key ~= "j_smallpox_ins_oro"  then
+            return cyclic
+        end
         cyclic.ability.extra.mult = G.GAME.SPOX_OROINIT
         cyclic:set_edition(G.GAME.SPOX_OROSHINY)
         G.GAME.SPOX_OROINIT = nil
