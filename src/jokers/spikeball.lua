@@ -50,6 +50,10 @@ SMODS.Joker {
         if context.game_over and not context.blueprint then
             SpikedBall.show_game = false
         end
+        if context.end_of_round and context.main_eval and not context.blueprint then
+            SpikedBall.show_game = false
+            SpikedBall.remove_all_spikedballs()
+        end 
     end,
     smallpox_credits = {
 		{
@@ -103,6 +107,12 @@ function Spike:init(size)
     self.speed = 1 + math.random() * 0.25
     self.spin_speed = (math.random() - 0.5)*20
     self.spin_state = 0
+end
+
+function SpikedBall.remove_all_spikedballs()
+    for i = #SpikedBall.spike_balls, 1, -1 do
+        table.remove(SpikedBall.spike_balls, i)
+    end
 end
 
 function SpikedBall.get_difficulty()
