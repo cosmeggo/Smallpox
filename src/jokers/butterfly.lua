@@ -34,22 +34,10 @@ SMODS.Joker{
 
 
         local joker_count = 0
-        for _, j in ipairs(G.jokers.cards) do
-            if j ~= card and not SMODS.is_eternal(j, card) then
-                joker_count = joker_count + 1
-            end
-        end
-
-        local editions = {}
-        for _, j in ipairs(G.jokers.cards) do
-            if j ~= card and not SMODS.is_eternal(j, card) then
-                editions[#editions + 1] = j.edition
-            end
-        end
-
         for i = #G.jokers.cards, 1, -1 do
             local j = G.jokers.cards[i]
             if j ~= card and not SMODS.is_eternal(j, card) then
+                joker_count = joker_count + 1
                 j:start_dissolve()
                 G.jokers:remove_card(j)
             end
@@ -82,9 +70,7 @@ SMODS.Joker{
                 }
 
                 G.jokers:emplace(new_joker)
-                if editions[i] and editions[i].negative then
-                    new_joker:set_edition(editions[i], true)
-                end
+
                 new_joker:start_materialize()
                 play_sound('generic1', 0.9 + math.random()*0.1, 0.8)
             end
