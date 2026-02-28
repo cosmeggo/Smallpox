@@ -178,8 +178,8 @@ SMODS.Joker {
                 end
             end
 
-            if s.fps < 30 then
-                money = money + (e.lowfps_money * context.full_hand_size)
+            if s.fps < 30 and context.full_hand_size then
+                money = money + (e.lowfps_money)
             end
             
             local letters = {}
