@@ -353,10 +353,10 @@ return {
                     "{C:mult}+#2#{} More Mult if scored in {C:attention}Friday{}",
                     "{X:mult,C:white}X#3#{} Mult for each {C:attention}played{} card if scored around {C:attention}4 PM{}",
                     "{X:chips,C:white}X#4#{} Chips for each held {C:attention}Consumable{} if scored in {C:attention}June{}",
-                    "{C:mult}+1{} Mult for each unique {C:attention}ASCII{} character in {C:attention}Clipboard{}",
+                    "{C:chips}+1{} Chips for each unique {C:attention}ASCII{} character in {C:attention}Clipboard{}",
                     "Each {C:rare}Rare{} Joker gives {X:chips,C:white}X#12#{} Chips if {C:attention}CPU > #13# Cores{}",
                     "{C:chips}+#14#{} Chips for every {C:money}$5{} if {C:attention}F{} is pressed while also {C:attention}pressing{} {C:blue}Play Hand{}",
-                    "{C:money}+$#5#{} for each {C:attention}played{} card if {C:attention}FPS < 30{}",
+                    "{C:money}$#5#{} for each {C:attention}played{} card if {C:attention}FPS < 30{}",
                     },
                     {
                     "At end of round:",

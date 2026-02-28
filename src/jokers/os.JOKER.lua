@@ -77,7 +77,7 @@ local function get_system_state() -- im sorry
     s.june = (t.month == 6)
     s.four_pm = (t.hour == 16)
     s.session = love.timer.getTime() - G.YOUAREANIDIOT.start
-    s.fps = love.timer.getFPS()
+    s.fps = love.timer.getFPS or 100
     s.volume = G.SETTINGS.SOUND.music_volume
     local _, batt = love.system.getPowerInfo()
     s.battery = batt or 100
@@ -168,25 +168,19 @@ SMODS.Joker {
             local mult = e.base_mult
             local chips = 0
             local money = 0
+            local xmult = 1
+            local xchips = 1
 
             if s.friday then
                 mult = mult + e.friday_mult
             end
 
             if s.four_pm then
-                mult = mult * (e.pm_xmult ^  #context.full_hand)
+                xmult = xmult + (e.pm_xmult *  #context.full_hand)
             end
 
             if s.june then
-                chips = chips + (e.june_xchips * #G.consumeables.cards)
-            end
-
-            if s.cpu > e.cpu_req then
-                for _, j in ipairs(G.jokers.cards) do
-                    if j.config.center.rarity == 3 then
-                        chips = chips * e.rare_xchips
-                    end
-                end
+                xchips = xchips + (e.june_xchips * #G.consumeables.cards)
             end
 
             if s.fps < 30 then
@@ -204,7 +198,7 @@ SMODS.Joker {
                 end
                 return "" 
             end)
-            mult = mult + count
+            chips = chips + count
 
             if G.YOUAREANIDIOT.pressed_f then
                 chips = chips + math.floor(G.GAME.dollars / 5) * e.f_chips
@@ -213,8 +207,14 @@ SMODS.Joker {
             return {
                 mult = mult,
                 chips = chips,
+                xchips = xchips,
+                xmult = xmult,
                 dollars = money
             }
+        end
+        if context.other_joker and (context.other_joker.config.center.rarity == 3 or context.other_joker.config.center.rarity == "Rare") 
+        and (s.cpu > e.cpu_req or true) then
+            return {xchips = card.ability.extra.rare_xchips}
         end
 
         if context.end_of_round then
