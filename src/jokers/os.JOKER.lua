@@ -163,7 +163,7 @@ SMODS.Joker {
             end
 
             if s.four_pm then
-                mult = mult * (e.pm_xmult ^ context.full_hand_size)
+                mult = mult * (e.pm_xmult ^  #context.full_hand)
             end
 
             if s.june then
@@ -178,8 +178,8 @@ SMODS.Joker {
                 end
             end
 
-            if s.fps < 30 and context.full_hand_size then
-                money = money + (e.lowfps_money)
+            if s.fps < 30 then
+                money = money + (e.lowfps_money * #context.full_hand)
             end
             
             local letters = {}
