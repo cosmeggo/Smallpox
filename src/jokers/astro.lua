@@ -10,6 +10,7 @@ SMODS.Joker {
     key = "smallpox_astro",
     atlas = "astro",
     pos = { x = 0 , y = 0 },
+	discovered = false
     rarity = 1,
     blueprint_compat = true,
     pools = {["Smallpox"] = true},
