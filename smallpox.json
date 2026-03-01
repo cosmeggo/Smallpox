@@ -7,7 +7,7 @@
   "description": "Smallpox is a collaborative mod where each Joker is made by a different person!",
   "prefix": "smallpox",
   "main_file": "main.lua",
-  "version": "1.0.0~GAMMA",
+  "version": "1.0.0",
   "priority": 0,
   "badge_colour": "1c3d3d",
   "badge_text_colour": "9dc6c7",
