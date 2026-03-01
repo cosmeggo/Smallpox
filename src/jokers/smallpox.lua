@@ -19,7 +19,7 @@ SMODS.Joker {
     rarity = 3,
     blueprint_compat = true,
     cost = 1,
-    discovered = true,
+    discovered = false,
     config = { extra = { xmult = 1, odds = 4, xmult_gain = 0.5 }, },
     pools = {["Smallpox"] = true},
     atlas = 'smallpox',

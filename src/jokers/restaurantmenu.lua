@@ -13,7 +13,7 @@ SMODS.Joker {
     rarity = 2,
     blueprint_compat = false,
     cost = 5,
-    discovered = true,
+    discovered = false,
     atlas = 'Inky',
     pools = {["Smallpox"] = true},
     calculate = function(self, card, context)

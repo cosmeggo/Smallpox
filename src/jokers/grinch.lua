@@ -104,7 +104,7 @@ SMODS.Joker {
     demicolon_compat = true,
     eternal_compat = false,
     cost = 4,
-    discovered = true,
+    discovered = false,
     config = { extra = { add = 16, loss = 2 }, },
     atlas = 'grinch',
     pronouns = "he_him",

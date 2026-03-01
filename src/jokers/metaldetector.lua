@@ -45,7 +45,7 @@ SMODS.Joker {
     cost = 5,
     pools = {["Smallpox"] = true, ["Metallic"] = true},
     blueprint_compat = false,
-    discovered = true,
+    discovered = false,
     unlocked = true,
     config = {
         extra = {

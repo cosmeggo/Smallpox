@@ -14,7 +14,7 @@ SMODS.Joker {
     cost = 9,
     pools = {["Smallpox"] = true}, -- see comment at the top
     blueprint_compat = true, -- set to false if you dont want blueprint to copy
-    discovered = true,
+    discovered = false,
     unlocked = true,
     config = { extra = { xmult = 0, increase = 0.1 }, },
     loc_vars = function(self, info_queue, card)

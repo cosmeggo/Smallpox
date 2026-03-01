@@ -16,7 +16,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = false,
-    discovered = true,
+    discovered = false,
     unlocked = true,
     config = { extra = { added_mult = 1, current_mult = 0 }, },
     pronouns = "it_its",

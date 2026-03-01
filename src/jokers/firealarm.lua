@@ -21,7 +21,7 @@ SMODS.Joker({
 		["Metallic"] = true
 	},
 	blueprint_compat = true,
-	discovered = true,
+	discovered = false,
 	unlocked = true,
 	config = {
 		extra = {

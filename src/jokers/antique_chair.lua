@@ -47,7 +47,7 @@ SMODS.Joker {
     cost = 5,
     atlas = 'chair',
     pos = { x = 0, y = 0 },
-	discovered = false
+	discovered = false,
     config = { extra = { x_mult = 1, Xmult_gain = 0.5 } },
     pronouns = "it_its",
 

@@ -32,7 +32,7 @@ SMODS.Joker {
     rarity = 2,
     blueprint_compat = true,
     cost = 7,
-    discovered = true,
+    discovered = false,
     config = {
         extra = {
             modid = "Vanilla",

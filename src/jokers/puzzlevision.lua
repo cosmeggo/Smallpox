@@ -14,7 +14,7 @@ SMODS.Joker {
     rarity = 3,
     blueprint_compat = true,
     cost = 7,
-    discovered = true,
+    discovered = false,
     config = { extra = { x_mult = 1, mult = 1, dollars = 1 }, },
     atlas = 'PuzzleVision',
     pools = {["Smallpox"] = true, ["Metallic"] = true},

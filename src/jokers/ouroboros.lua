@@ -15,7 +15,7 @@ SMODS.Joker {
     pools = {["Smallpox"] = true}, -- see comment at the top
     blueprint_compat = true, -- set to false if you dont want blueprint to copy
     eternal_compat = false, -- a bit antithetical to the entire design tbh
-    discovered = true,
+    discovered = false,
     unlocked = true,
     config = { extra = { mult = 1, mult_gain = 0.2 }, },
     pronouns = "any_all", -- see comment at top

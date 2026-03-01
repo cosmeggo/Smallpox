@@ -26,7 +26,7 @@ SMODS.Joker {
     cost = 7,
     pools = {["Smallpox"] = true}, 
     blueprint_compat = true, 
-    discovered = true,
+    discovered = false,
     unlocked = true,
     config = { extra = { mult = 1.5 }, },
     pronouns = "they_them", 

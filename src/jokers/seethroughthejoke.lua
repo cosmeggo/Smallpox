@@ -15,7 +15,7 @@ SMODS.Joker {
     blueprint_compat = true,
     cost = 2,
     config = { extra = { h_size = 6 } },
-    discovered = true,
+    discovered = false,
     atlas = 'eyejoker',
     pools = {["Smallpox"] = true},
     calculate = function(self, card, context)

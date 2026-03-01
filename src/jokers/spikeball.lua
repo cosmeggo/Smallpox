@@ -17,7 +17,7 @@ SMODS.Joker {
     perishable_compat = true,
     eternal_compat = true,
     cost = 6,
-    discovered = true,
+    discovered = false,
     config = { extra = { dollars = 1, difficulty = 0 }, },
     atlas = 'picubed_atlas',
     pools = { ["Smallpox"] = true, ["Metallic"] = true },

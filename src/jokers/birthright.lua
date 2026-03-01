@@ -34,7 +34,7 @@ SMODS.Joker {
     rarity = 3,
     cost = 10,
     pools = {["Smallpox"] = true},
-    discovered = true,
+    discovered = false,
     unlocked = true,
     config = {
         blue_csl = 3,

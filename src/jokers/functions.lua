@@ -12,7 +12,7 @@ SMODS.Joker {
     rarity = 3,
     blueprint_compat = false,
     cost = 11,
-    discovered = true,
+    discovered = false,
     config = {
         operators = {
             {key = "mul", colour = G.C.RED},

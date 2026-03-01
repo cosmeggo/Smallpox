@@ -13,7 +13,7 @@ SMODS.Joker {
     rarity = 2,
     blueprint_compat = true,
     cost = 6,
-    discovered = true,
+    discovered = false,
     config = { extra = { chips = 86 }, },
     atlas = 'susie',
 

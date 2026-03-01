@@ -27,7 +27,7 @@ SMODS.Joker {
     cost = 10,
     pools = {["Smallpox"] = true, ["Food"] = true},
     blueprint_compat = true,
-    discovered = true,
+    discovered = false,
     unlocked = true,
     config = { extra = { carrocoins = 0, xchips_xmult = 1, carrocoins_mod = 0.2, xchips_xmult_mod = 0.1, carrocoins_upgrade_cost = 1, carrocoins_conversion_rate = 0.5 }, },
     pronouns = "it_its",

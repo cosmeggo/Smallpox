@@ -23,7 +23,7 @@ SMODS.Joker({
 	rarity = 3,
 	blueprint_compat = true,
 	cost = 10,
-	discovered = true,
+	discovered = false,
 	config = { extra = { xmult = 1, xmult_gain = 0.25 } },
 	pools = {["Smallpox"] = true, ["Metallic"] = true},
 	atlas = "demon_core",

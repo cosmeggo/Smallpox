@@ -15,7 +15,7 @@ SMODS.Joker {
     pools = {["Smallpox"] = true},
     blueprint_compat = false,
     cost = 7,
-    discovered = true,
+    discovered = false,
     config = { extra = { mult = 5 }, },
     loc_vars = function(self, info_queue, card)
         return { }

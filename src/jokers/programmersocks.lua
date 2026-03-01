@@ -16,7 +16,7 @@ SMODS.Joker {
     cost = 6,
     pools = {["Smallpox"] = true, ["Scaling"] = true, ["Meme"] = true}, -- see comment at the top
     blueprint_compat = true, -- set to false if you dont want blueprint to copy
-    discovered = true,
+    discovered = false,
     unlocked = true,
     config = { 
         extra = { 

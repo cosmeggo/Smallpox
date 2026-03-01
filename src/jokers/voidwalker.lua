@@ -21,7 +21,7 @@ SMODS.Joker{
     rarity = 3,
     pools = {["Smallpox"] = true},
     pronouns = "he_him",
-    discovered = true,
+    discovered = false,
     config = { extra = { percentage = 0.25}, },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.percentage * 100, colours = { HEX("ff07e6") } }}

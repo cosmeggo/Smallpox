@@ -12,7 +12,7 @@ SMODS.Joker {
 	atlas = 'Amp_Up',
 	pos = { x = 0, y = 0 },
 	cost = 5,
-	discovered = false
+	discovered = false,
 	config = { extra = { chip_mod = 12, chips = 0, fps = 0 } },
 	frames = 8,
 	fps_inital = 6,
