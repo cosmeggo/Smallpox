@@ -21,6 +21,7 @@ SMODS.Joker {
     cost = 1,
     discovered = true,
     config = { extra = { xmult = 1, odds = 4, xmult_gain = 0.5 }, },
+    discovered = true,
     pools = {["Smallpox"] = true},
     atlas = 'smallpox',
 
@@ -74,7 +75,7 @@ SMODS.Joker {
     end,
     smallpox_credits = {
 		{
-			text = "By: Plasma",
+			text = {"By: Plasma", "Founder"},
             color = G.C.BLUE,
 		},
 	},

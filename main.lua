@@ -47,14 +47,16 @@ assert(SMODS.load_file("./src/config_menu.lua"))() -- CONFIG MENU
 assert(SMODS.load_file("./src/boosters.lua"))() -- BOOSTERS
 --assert(SMODS.load_file("./src/atlasses.lua"))() -- ATLASSES
 
-
-
----COMMON
+-- Chud
 assert(SMODS.load_file("./src/jokers/jokerplus.lua"))() -- The example joker our chud son
-assert(SMODS.load_file("./src/jokers/agency.lua"))() -- Agency, The by Myst, a: Inky
+--Helpers + Founder
 assert(SMODS.load_file("./src/jokers/ampup.lua"))() -- Amp Up by M0x3s
-assert(SMODS.load_file("./src/jokers/astro.lua"))() -- Astro by Astro, p: LasagnaFelidae
 assert(SMODS.load_file("./src/jokers/bliss.lua"))() -- Bliss by LasagnaFelidae
+assert(SMODS.load_file("./src/jokers/blackjack.lua"))() -- Blackjack by Typ0
+assert(SMODS.load_file("./src/jokers/smallpox.lua"))() -- Smallpox by Plasma
+---COMMON
+assert(SMODS.load_file("./src/jokers/agency.lua"))() -- Agency, The by Myst, a: Inky
+assert(SMODS.load_file("./src/jokers/astro.lua"))() -- Astro by Astro, p: LasagnaFelidae
 assert(SMODS.load_file("./src/jokers/firealarm.lua"))() -- Fire Alarm by Lexi
 assert(SMODS.load_file("./src/jokers/neverjokerforge.lua"))() -- I will never... by Edward Robinson, p: LasagnaFelidae
 assert(SMODS.load_file("./src/jokers/metaldetector.lua"))() -- Metal Detector by Ren
@@ -64,7 +66,6 @@ assert(SMODS.load_file("./src/jokers/theriantropy.lua"))() -- Theriantropy by Je
 ---UNCOMMON
 assert(SMODS.load_file("./src/jokers/antique_chair.lua"))() -- Antique Chair by cloudzXIII
 assert(SMODS.load_file("./src/jokers/Atlas.lua"))() -- Atlas by ABuffZucchini
-assert(SMODS.load_file("./src/jokers/blackjack.lua"))() -- Blackjack by Typ0
 assert(SMODS.load_file("./src/jokers/factoryline.lua"))() -- Factory Line by Lily Felli
 assert(SMODS.load_file("./src/jokers/missingposter.lua"))() -- Missing Poster by LFMoth
 assert(SMODS.load_file("./src/jokers/ProgrammerSocks.lua"))() -- Programmer Socks by Proto
@@ -91,7 +92,6 @@ assert(SMODS.load_file("./src/jokers/rocksinger.lua"))() -- Rock Singer by Tiger
 assert(SMODS.load_file("./src/jokers/roomtemperaturecarrot.lua"))() -- Room Temp. Carrot by Rainstar
 -- RARE (SMALLPOX)
 assert(SMODS.load_file("./src/jokers/fablemirror.lua"))() -- Fable of the Joke-Maker by notmario
-assert(SMODS.load_file("./src/jokers/smallpox.lua"))() -- Smallpox by Plasma
 assert(SMODS.load_file("./src/jokers/scales_of_justice.lua"))() -- Scales of Justice by Revo
 assert(SMODS.load_file("./src/jokers/seethroughthejoke.lua"))() -- See Through the Joke by Flynn
 assert(SMODS.load_file("./src/jokers/stainedglass.lua"))() -- Stained Glass Window by missingnumber

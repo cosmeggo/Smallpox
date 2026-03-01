@@ -26,6 +26,7 @@ SMODS.Joker {
     rarity = 2,
     cost = 4,
     atlas = "Typ0",
+    discovered = true,
     pos = { x = 0, y = 0 },
     pools = {["Smallpox"] = true, ["Typ0Addition"] = true},
 
@@ -185,7 +186,7 @@ SMODS.Joker {
     end,
     smallpox_credits = {
 		{
-			text = "By: SLDTyp0",
+			text = {"By: SLDTyp0", "Helper"},
             color = G.ARGS.LOC_COLOURS.typ0 ,
 		},
 	},

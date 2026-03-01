@@ -12,6 +12,7 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
     unlocked = true,
     pools = {["Smallpox"] = true, ["Scaling"] = true, ["Landscape"] = true},
+    discovered = true,
     blueprint_compat = false,
     pronouns = "it_its",
     rarity = 1,
@@ -43,7 +44,7 @@ SMODS.Joker {
     end,
 	smallpox_credits = {
 		{
-			text = "By: LasagnaFelidae",
+			text = {"By: LasagnaFelidae", "Helper"},
 			color = G.C.EDITION
 		},
 	},
