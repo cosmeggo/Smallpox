@@ -35,7 +35,7 @@ A collaborative Balatro mod where everyone adds one Joker!
 27. **Demon Core** - By __Thunderedge__
 28. **Functions** - By __Breuuh__
 29.  **Kasane Teto** - By __Sillyz__
-30. **Notebook Sketch** - By __Hunter__
+30. **Notebook Sketch** - By __ARandomHuntr__
 31. **Ouroboros** - By __candycanearter__
 32. **PK Thunder** - By __isotypical__
 33. **Chaotic Polymorphine** - By __NinjaBanana__
