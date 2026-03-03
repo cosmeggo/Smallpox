@@ -73,7 +73,6 @@ SMODS.Joker {
                 }
         end
         if context.joker_main then
-            card.ability.extra.mult = math.floor(card.ability.extra.mult + 0.5) -- round it to get rid of ugly decimals 
             return {
                 Xmult = card.ability.extra.mult
             }
