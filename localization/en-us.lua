@@ -1023,7 +1023,10 @@ return {
 			},
 		},
 	},
-	misc = {
+    misc = {
+        challenge_names = {
+            c_pandemic = "Pandemic",
+        },
 		dictionary = {
 			mintypox_name = "mys. minty",
 			k_steel = "Steel",
