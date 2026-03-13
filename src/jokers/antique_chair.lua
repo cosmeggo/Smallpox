@@ -193,29 +193,4 @@ G.FUNCS.xiii_chair_button_func = function(e)
         e.config.button = nil
     end
 end
-
-SMODS.DrawStep {
-    key = 'xiii_chair_button',
-    order = -30,
-    func = function(card, layer)
-        if card.children.xiii_chair_button then
-            card.children.xiii_chair_button:draw()
-        end
-    end
-}
-
-SMODS.draw_ignore_keys.xiii_chair_button = true
-
-local highlight_ref = Card.highlight
-function Card.highlight(self, is_highlighted)
-    if is_highlighted and self.ability.set == "Joker" and self.area == G.jokers and self.config.center.key == "j_smallpox_antique_chair" then
-        self.children.xiii_chair_button = xiii_chair_UIButton(self)
-    elseif self.children.xiii_chair_button then
-        self.children.xiii_chair_button:remove()
-        self.children.xiii_chair_button = nil
-    end
-
-    return highlight_ref(self, is_highlighted)
-end
-
 --#endregion
