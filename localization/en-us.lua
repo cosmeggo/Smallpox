@@ -544,7 +544,7 @@ return {
                 text = {
                     {
                         "Adds some {C:attention}obstacles{}",
-                        "to the screen",
+                        "to the screen during Blinds",
                         "{s:0.8,C:inactive}Difficulty increases over time{}"
                     },
                     {
@@ -1025,7 +1025,13 @@ return {
 	},
     misc = {
         challenge_names = {
-            c_pandemic = "Pandemic",
+            c_smallpox_pandemic = "Pandemic",
+            c_smallpox_bullethell = "Bullet Hell",
+        },
+        v_text = {
+            ch_c_smallpox_bullethell_collision_gameover = { "{C:red}Lose the run{} if your cursor collides with an {C:attention}obstacle{}" },
+            ch_c_smallpox_bullethell_reduced_scaling = { "{C:attention}Spiked Ball{}'s 'difficulty' scaling is {C:attention}slower{}" },
+            ch_c_smallpox_bullethell_mod_ante = { "Win in Ante {C:attention}6{}" },
         },
 		dictionary = {
 			mintypox_name = "mys. minty",

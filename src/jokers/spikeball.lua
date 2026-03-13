@@ -42,10 +42,14 @@ SMODS.Joker {
             }
         end
         if context.spikedball_reset and not context.blueprint then
-            return {
-                message = localize('k_disabled_ex'),
-                colour = G.C.RED,
-            }
+            if G.STATE == G.STATES.SELECTING_HAND and G.GAME.modifiers.smallpox_bullethell_collision_gameover then
+                end_round()
+            else -- not bullet hell challenge deck
+                return {
+                    message = localize('k_disabled_ex'),
+                    colour = G.C.RED,
+                }
+            end
         end
         if context.game_over and not context.blueprint then
             SpikedBall.show_game = false
@@ -124,6 +128,9 @@ function SpikedBall.get_difficulty()
             end
         end
     end
+    if G.GAME.modifiers.smallpox_bullethell_reduced_scaling then
+        diff = (diff)^0.5
+    end    
     SpikedBall.difficulty = diff
     return diff
 end

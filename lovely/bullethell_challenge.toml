@@ -1,0 +1,18 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''
+SMODS.saved = false
+'''
+position = "before"
+payload = '''
+if SpikedBall.show_game == false and G.GAME.modifiers.smallpox_bullethell_collision_gameover then
+    game_over = true
+end
+'''
+match_indent = true
