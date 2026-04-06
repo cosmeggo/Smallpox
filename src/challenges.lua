@@ -23,3 +23,22 @@ SMODS.Challenge {
         G.GAME.win_ante = 6
     end,
 }
+
+
+-- Muodonmuutosmestari
+SMODS.Challenge {
+    key = 'mestari',
+    rules = {
+        modifiers = {
+            { id = 'joker_slots', value = 3 },
+            { id = 'consumable_slots', value = 4 },
+        }
+    },
+    jokers = {
+        { id = 'j_smallpox_polymorphine', eternal = true },
+    },
+    consumeables = {
+        { id = 'c_emperor' },
+        { id = 'c_emperor' },
+    },
+}
