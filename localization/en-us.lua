@@ -1027,6 +1027,7 @@ return {
         challenge_names = {
             c_smallpox_pandemic = "Pandemic",
             c_smallpox_bullethell = "Bullet Hell",
+            c_smallpox_mestari = "Muodonmuutosmestari",
         },
         v_text = {
             ch_c_smallpox_bullethell_collision_gameover = { "{C:red}Lose the run{} if your cursor collides with an {C:attention}obstacle{}" },
