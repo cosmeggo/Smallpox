@@ -32,22 +32,24 @@ SMODS.Joker {
         G.E_MANAGER:add_event(Event({
             blockable = false,
             func = function()
-                card.canvas_text = SMODS.CanvasSprite {
-                    canvasW = 71, canvasH = 95,
-                    text_offset = { x = 55, y = 15 },
-                    text_colour = G.C.MONEY,
-                    text_width = 15,
-                    text_height = 10,
-                    ref_table = G.GAME,
-                    ref_value = "xiii_chair_cost",
-                }
+                if not card.canvas_text then
+                    card.canvas_text = SMODS.CanvasSprite {
+                        canvasW = 71, canvasH = 95,
+                        text_offset = { x = 55, y = 15 },
+                        text_colour = G.C.MONEY,
+                        text_width = 15,
+                        text_height = 10,
+                        ref_table = G.GAME,
+                        ref_value = "xiii_chair_cost",
+                    }
+                end
                 return true
             end
         }))
     end,
 
     calculate = function(self, card, context)
-        if context.joker_main and card.ability.extra.x_mult > 1 then
+        if context.joker_main then
             return {
                 x_mult = card.ability.extra.x_mult
             }
@@ -168,20 +170,14 @@ G.FUNCS.xiii_chair_button_click = function(e)
 end
 
 G.FUNCS.xiii_chair_button_func = function(e)
-    local can_use = G.shop_jokers and #G.shop_jokers.highlighted == 1 and
-        G.shop_jokers.highlighted[1].config.center.key ~= "j_smallpox_antique_chair"
+    local can_use = G.STATE == G.STATES.SHOP and G.shop_jokers and #G.shop_jokers.highlighted == 1 and G.shop_jokers.highlighted[1].config.center.key ~= "j_smallpox_antique_chair"
 
-    if not can_use then
-        e.config.colour = G.C.UI.BACKGROUND_INACTIVE
-        e.config.button = nil
-    else
-        e.config.colour = G.C.RED
-        e.config.button = 'xiii_chair_button_click'
-    end
+    e.config.colour = can_use and G.C.RED or G.C.UI.BACKGROUND_INACTIVE
+    e.config.button = can_use and 'xiii_chair_button_click' or nil
 end
 
 SMODS.DrawStep {
-    key = 'smallpox_chair_button',
+    key = 'chair_button',
     order = -30,
     func = function(card, layer)
         if card.children.smallpox_chair_button then
@@ -194,10 +190,8 @@ SMODS.draw_ignore_keys.smallpox_chair_button = true
 
 local highlight_ref = Card.highlight
 function Card.highlight(self, is_highlighted)
-    if is_highlighted and self.ability.set == "Joker" and self.area == G.jokers and self.config.center.key == "j_smallpox_antique_chair" then
-        if not self.children.smallpox_chair_button then
-            self.children.smallpox_chair_button = xiii_chair_UIButton(self)
-        end
+    if is_highlighted and self.config.center.key == "j_smallpox_antique_chair" and self.area == G.jokers then
+        self.children.smallpox_chair_button = xiii_chair_UIButton(self)
     elseif self.children.smallpox_chair_button then
         self.children.smallpox_chair_button:remove()
         self.children.smallpox_chair_button = nil
