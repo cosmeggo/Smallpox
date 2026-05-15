@@ -16,7 +16,7 @@ SMODS.Joker {
     blueprint_compat = true, -- set to false if you dont want blueprint to copy
     discovered = false,
     unlocked = true,
-    config = { extra = { xmult = 0, increase = 0.1 }, },
+    config = { extra = { xmult = 0, increase = 0.2 }, },
     loc_vars = function(self, info_queue, card)
         return { vars = { 1 + card.ability.extra.xmult } }
     end,
@@ -45,7 +45,7 @@ SMODS.Joker {
     smallpox_credits = {
 		{
 			text = {
-                "By: Hunter",
+                "By: ARandomHunter",
                 "Code: SLDTyp0"
             },
 			color = G.C.SECONDARY_SET.Planet
