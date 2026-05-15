@@ -513,7 +513,7 @@ return {
                     "Notebook Sketch",
                 },
                 text = {
-                    "Gain {X:mult,C:white}X0.1{} Mult per hand drawn,",
+                    "Gain {X:mult,C:white}X0.2{} Mult when cards are drawn,",
                     "{C:attention}halves{} all gained XMult at end of ante",
                     "{C:inactive}[Currently {X:mult,C:white}X#1#{C:inactive}]"
                 },
