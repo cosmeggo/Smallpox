@@ -30,7 +30,7 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
     pools = {["Smallpox"] = true, ["Typ0Addition"] = true},
 
-    config = { extra = { min = 7, max = 35, moneymin = 1, moneymax = 40, mult_n = 1, mult_d = 2, X_n = 1, X_d = 2} }, --kept throwing errors when i tried to uses mult_n and mult_d directly and X_n and X_d so idk
+    config = { extra = { min = 2, max = 21, moneymin = 1, moneymax = 40, mult_n = 1, mult_d = 2, X_n = 1, X_d = 2} }, --kept throwing errors when i tried to uses mult_n and mult_d directly and X_n and X_d so idk
 
 
     loc_vars = function(self, info_queue, card)
@@ -147,8 +147,8 @@ SMODS.Joker {
             end
 
             -- this whole block is so overcomplicated lmao i could do this way better but nested ifs it is
-            if faces == 1 and aces == 1 and numbers == 0 then
-                if SMODS.pseudorandom_probability(card, "black_spot", 1, 2) then
+            if faces >= 1 and aces >= 1 and numbers >= 2 then
+                if SMODS.pseudorandom_probability(card, "chips_or_mult", 1, 2) then
                     if SMODS.pseudorandom_probability(card, "X_prob", 1, 2) then
                         return {
                             Xmult = pseudorandom('BJrandMult', card.ability.extra.min, card.ability.extra.max),
