@@ -45,7 +45,7 @@ SMODS.Joker {
     smallpox_credits = {
 		{
 			text = {
-                "By: Hunter",
+                "By: ARandomHunter",
                 "Code: SLDTyp0"
             },
 			color = G.C.SECONDARY_SET.Planet
