@@ -44,7 +44,6 @@ SMODS.Joker {
             table.insert(G.GAME.SPOX_OROSHINY, card.edition or "base")
         end
     end,
-    in_pool = function() return G.GAME.SPOX_OROSHINY and #G.GAME.SPOX_OROSHINY < 1 end,
     smallpox_credits = {
 		{
 			text = "By: candycanearter",
